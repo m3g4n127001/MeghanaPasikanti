@@ -13,35 +13,21 @@ function typeWriter()
     }
 }
 
-// const swiper=new Swiper('.swiper-container' , {
-//     slidesPerView: 3,
-//     spaceBetween: 30,
-//     slidesPerGroup: 3,
-//     // loop: true,
-//     // loopFillGroupWithBlank: false,
-//     // Optional parameters
-//   init: true,
-//   direction: 'horizontal',
-// //   loop: true,
-//   preloadImages: true,
+$('.multi-item-carousel').carousel({
+    interval: false
+});
 
-//   /* THIS PAL RIGHT HERE*/ 
-//   slidesPerView: 'auto'
+$('.multi-item-carousel .item').each(function(){
+    var next = $(this).next();
+    if (!next.length) {
+      next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
     
-// });
+    if (next.next().length>0) {
+      next.next().children(':first-child').clone().appendTo($(this));
+    } else {
+        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    }
+  });
 
-var swiper = new Swiper ('.swiper-container', {
-//     slidesPerView: 3,
-//     slidesPerColumn: 2,
-//     // spaceBetween: 30,
-//     // speed: 2000,
-    // loop: true,
-//     // setTimeout(function(){
-//     //   mySwiper.update(true);
-//     //   mySwiper.slideTo(0, 0)
-//     // }, 100);
-//     // autoplay: {
-//     //   delay: 1000,
-//     //   disableOnInteraction: false,
-//     // }
-}),
