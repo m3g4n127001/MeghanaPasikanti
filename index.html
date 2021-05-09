@@ -13,6 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="about.css">
         <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="animation.css">
     
     <title>My portfolio</title>
     <script src="about.js">
@@ -21,6 +22,9 @@
         //         $('.two').css({"background-color":"skyblue", "position" : "absolute", "top": "0", "bottom": "0", "left" : "0", "right" : "0"})
         //     })
         // })
+    </script>
+    <script>
+        
     </script>
     
 </head>
@@ -60,82 +64,63 @@
 
         <div class="swiper-container ">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#" id="about">
-                    <img src="images/1.png" width="20px" height="25px"  id="up about" onclick="console.log()" >
-                </a>
-                <h1 class="slide-title one">About</h1>
-                <div class="slide1">
-                    <div class="container" id="about-container">
-                        <a href="#">
-                            <img src="images/4.png" id="down">
-                        </a>
-                        <div>
-                            <img src="images/meghala.png" id="profilepic">
-                        </div>
-                        <h4>
-                            Hello!! My name is Meghala.
-                             I am an undergraduate at Indian Institute of Technology, Guwahati. 
-                            <!-- include study here itself..Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
-                            took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                             but also the leap into electronic typesetting, remaining essentially unchanged. -->
-                        </h4>
+                <div class="swiper-slide one" id="one">
+                    <a href="#" id="about" onclick="myFunction(1)">
+                        <img src="images/1.png" width="20px" height="25px"  id="upone" >
+                    </a>
+                    <h1 class="slide-title">About</h1>
+                    <div class="slide container">
+                        <h1>hey there!</h1>
                     </div>
-                </div>
-
-              </div>
-              <div class="swiper-slide two">
-                <a href="#" id="skills" onclick="about.html">
-                    <img src="images/1.png" width="20px" height="25px" id="up">
+    
+                  </div>
+              <div class="swiper-slide two" id="two">
+                <a href="#" id="skills" onclick="myFunction(2)">
+                    <img src="images/1.png" width="20px" height="25px" id="uptwo">
                 </a>
                 <h1 class="slide-title">Skills</h1>
-                <div class="slide2">
+                <div class="slide">
                     <div class="container" id="skills-container">
                         <a href="#">
                             <img src="images/4.png" id="down">
                         </a>
-                        <div>
-                            <img src="images/meghala.png" id="profilepic">
-                        </div>
-                        <div style="text-align: center; overflow-wrap: break-word;">
-                            <h4>
-                                Hello!! My name is Meghala.
-                                 <!-- I am an undergraduate at Indian Institute of Technology, Guwahati. 
-                                include study here itself..Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
-                                took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                 but also the leap into electronic typesetting, remaining essentially unchanged. -->
-                            </h4>
-                        </div>
+                        <img src="images/meghala.png" id="profilepic">
+                        <p style="width: inherit; height: inherit;">
+                            Hello!! My name is Meghala.
+                                I am an undergraduate at Indian Institute of Technology, Guwahati. 
+                            <!-- include study here itself..Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+                            took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. -->
+                        </p>
                     </div>
                 </div>
             </div>
-              <div class="swiper-slide three">
-                <a href="#" id="projects">
-                    <img src="images/1.png" width="20px" height="25px"  id="up">
+              <div class="swiper-slide three" id="three">
+                <a href="#" id="projects" onclick="myFunction(3)">
+                    <img src="images/1.png" width="20px" height="25px"  id="upthree" >
                 </a>
                 <h1 class="slide-title">Projects</h1>
-                <div class="slide3">
+                <div class="slide container">
                     <h1>hey there!</h1>
                 </div>
 
               </div>
-              <div class="swiper-slide four">
-                <a href="#" id="extra">
-                    <img src="images/1.png" width="20px" height="25px"  id="up">
+              <div class="swiper-slide four" id="four">
+                <a href="#" id="extra" onclick="myFunction(4)">
+                    <img src="images/1.png" width="20px" height="25px"  id="upfour">
                 </a>
                 <h1 class="slide-title">Extracurriculars</h1>
-                <div class="slide4">
+                <div class="slide container">
                     <h1>hey there!</h1>
                 </div>
               </div>
-              <div class="swiper-slide five">
-                <a href="#" id="contact">
-                    <img src="images/1.png" width="20px" height="25px"  id="up">
+              <div class="swiper-slide five" id="five">
+                <a href="#" id="contact" onclick="myFunction(5)">
+                    <img src="images/1.png" width="20px" height="25px"  id="upfive">
                 </a>
                 <h1 class="slide-title">Contact</h1>
-                <div class="slide5">
+                <div class="slide container">
                     <h1>hey there!</h1>
 
                 </div>

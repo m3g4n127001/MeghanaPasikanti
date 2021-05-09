@@ -1,0 +1,80 @@
+.addClass {
+    top: 0;
+    /* background-color: rgb(25, 207, 231); */
+    background-color:currentColor;
+    
+    overflow-y: scroll;
+    overflow-x: hidden;
+    animation: 1s addClassAni 1 forwards;
+    animation-duration: reverse;
+}
+
+@keyframes addClassAni {
+    
+    0% {
+        background-color: transparent;
+        /* transform: translateX(40%); */
+    }
+    100% {
+        width: 100vw;
+        height: 100vh;
+        /* transform: translateX(40%);
+
+        transform: translateY(-100%); */
+        
+    }
+}
+.wrapper {
+    overflow-x: hidden;
+}
+.addClass > .container >  {
+    /* background-color: pink; */
+    align-items: center;
+    contain: content;
+    background-color: rgb(74, 76, 82) ;
+}
+
+.downAni  {
+    animation: 1s down 1 forwards;
+}
+
+@keyframes down {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+    /* 50% {
+        transform: rotate(90deg);
+    } */
+    100% {
+        transform: rotate(180deg);
+    }
+}
+.upAni {
+    animation: 1s up 1 forwards;
+}
+@keyframes up {
+    0% {
+        transform: rotate(0deg);
+    }
+    /* 50% {
+        transform: rotate(-90%);
+    } */
+    100% {
+        transform: rotate((-180%));
+    }
+}
+
+.removeClass {
+    animation: 1s remove 1 forwards;
+}
+@keyframes remove {
+    0% {
+        width: 100vw;
+        height: 100vh;
+    }
+    100% {
+        width: 50vw;
+        height: 40vh;
+    } 
+}
