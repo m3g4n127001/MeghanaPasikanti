@@ -31,3 +31,4 @@ $('.multi-item-carousel .item').each(function(){
     }
   });
 
+
