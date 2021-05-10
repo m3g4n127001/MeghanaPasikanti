@@ -15,13 +15,7 @@
         <link rel="stylesheet" href="style.css"/>
     
     <title>My portfolio</title>
-    <script src="about.js">
-        // $(document).ready(function () {
-        //     $('#skills').click(function () {
-        //         $('.two').css({"background-color":"skyblue", "position" : "absolute", "top": "0", "bottom": "0", "left" : "0", "right" : "0"})
-        //     })
-        // })
-    </script>
+    
     
 </head>
 <body onload="typeWriter()" >
@@ -51,7 +45,7 @@
             </div>
             <div class="text2">
                 <h4>I am</h4>
-                <img src="/images/name.png">
+                <img class="img-responsive" src="/images/name.png">
             </div>
             <div class="text3">
                 <h4 id="intro_text"></h4>
@@ -60,92 +54,68 @@
 
         <div class="swiper-container ">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#" id="about">
-                    <img src="images/1.png" width="20px" height="25px"  id="up about" onclick="console.log()" >
-                </a>
-                <h1 class="slide-title one">About</h1>
-                <div class="slide1">
-                    <div class="container" id="about-container">
-                        <a href="#">
-                            <img src="images/4.png" id="down">
-                        </a>
-                        <div>
-                            <img src="images/meghala.png" id="profilepic">
-                        </div>
-                        <h4>
-                            Hello!! My name is Meghala.
-                             I am an undergraduate at Indian Institute of Technology, Guwahati. 
-                            <!-- include study here itself..Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
-                            took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                             but also the leap into electronic typesetting, remaining essentially unchanged. -->
-                        </h4>
-                    </div>
-                </div>
-
-              </div>
-              <div class="swiper-slide two">
-                <a href="#" id="skills" onclick="about.html">
-                    <img src="images/1.png" width="20px" height="25px" id="up">
-                </a>
-                <h1 class="slide-title">Skills</h1>
-                <div class="slide2">
-                    <div class="container" id="skills-container">
-                        <a href="#">
-                            <img src="images/4.png" id="down">
-                        </a>
-                        <div>
-                            <img src="images/meghala.png" id="profilepic">
-                        </div>
-                        <div style="text-align: center; overflow-wrap: break-word;">
+                <div class="swiper-slide one">
+                    <a href="#" id="about">
+                        <img class="img-responsive" src="images/1.png" width="20px" height="25px"  id="up about" onclick="console.log()" >
+                    </a>
+                    <h1 class="slide-title one">About</h1>
+                    <div class="slide1">
+                        <div class="container" id="about-container">
+                            <a href="#">
+                                <img class="img-responsive" src="images/4.png" id="down">
+                            </a>
+                            <div>
+                                <img class="img-responsive" src="images/meghala.png" id="profilepic">
+                            </div>
                             <h4>
                                 Hello!! My name is Meghala.
-                                 <!-- I am an undergraduate at Indian Institute of Technology, Guwahati. 
-                                include study here itself..Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                I am an undergraduate at Indian Institute of Technology, Guwahati. 
+                                <!-- include study here itself..Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
                                 took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                 but also the leap into electronic typesetting, remaining essentially unchanged. -->
+                                but also the leap into electronic typesetting, remaining essentially unchanged. -->
                             </h4>
                         </div>
                     </div>
                 </div>
-            </div>
-              <div class="swiper-slide three">
-                <a href="#" id="projects">
-                    <img src="images/1.png" width="20px" height="25px"  id="up">
-                </a>
-                <h1 class="slide-title">Projects</h1>
-                <div class="slide3">
-                    <h1>hey there!</h1>
+                <div class="swiper-slide two">
+                    <a href="#" id="skills">
+                        <img class="img-responsive" src="images/1.png" width="20px" height="25px" id="up">
+                    </a>
+                    <h1 class="slide-title">Skills</h1>
+                    <div class="slide2">
+                        <h1>hey there!</h1>
+                    </div>
                 </div>
-
-              </div>
-              <div class="swiper-slide four">
-                <a href="#" id="extra">
-                    <img src="images/1.png" width="20px" height="25px"  id="up">
-                </a>
-                <h1 class="slide-title">Extracurriculars</h1>
-                <div class="slide4">
-                    <h1>hey there!</h1>
+                <div class="swiper-slide three">
+                    <a href="#" id="projects">
+                        <img class="img-responsive" src="images/1.png" width="20px" height="25px"  id="up">
+                    </a>
+                    <h1 class="slide-title">Projects</h1>
+                    <div class="slide3">
+                        <h1>hey there!</h1>
                 </div>
-              </div>
-              <div class="swiper-slide five">
-                <a href="#" id="contact">
-                    <img src="images/1.png" width="20px" height="25px"  id="up">
-                </a>
-                <h1 class="slide-title">Contact</h1>
-                <div class="slide5">
-                    <h1>hey there!</h1>
-
+                <div class="swiper-slide four">
+                    <a href="#" id="extra">
+                        <img class="img-responsive"  src="images/1.png" width="20px" height="25px"  id="up">
+                    </a>
+                    <h1 class="slide-title">Extracurriculars</h1>
+                    <div class="slide4">
+                        <h1>hey there!</h1>
+                    </div>
                 </div>
-              </div>
+                <div class="swiper-slide five">
+                    <a href="#" id="contact">
+                        <img class="img-responsive"  src="images/1.png" width="20px" height="25px"  id="up">
+                    </a>
+                    <h1 class="slide-title">Contact</h1>
+                    <div class="slide5">
+                        <h1>hey there!</h1>
+                    </div>
+                </div>
             </div>
         </div>
-       
     </div>
-    <script>
-        
-    </script>
+       
 </body>
 </html>

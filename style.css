@@ -8,9 +8,7 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    /* overflow-y: hidden; */
     background-color: #212121;
-
 }
 .container-fluid {
     background-size: 100vw 100vh;
@@ -126,17 +124,13 @@ body {
 }
 .swiper-slide {
     width: 50%;
-    background-color: transparent;
     margin: 0 45px;
     display: inline-block;
     flex: 0 0 auto;
-    /* border: 1px solid black; */
     scroll-snap-align: center;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* background-image: url('images/name.png'); */
-    /* opacity: 0.6; */
 }
 .swiper-container ::-webkit-scrollbar{
     display:none;
@@ -160,44 +154,11 @@ body {
 }
 .slide1, .slide2, .slide3, .slide4, .slide5 {
     margin: 0 auto;
-    /* opacity: 0.8; */
+    opacity: 0.8;
     width: 100%;
+    height: fit-content;
     margin-top: 30px;
-    animation-name: slide;
-    animation-duration: 4s;
 
 }
 
-@keyframes slide {
 
-    0% { bottom: 0;}
-    100% {  bottom: 350px;}
-}
-
-
-
-/* .slider-wrapper :nth-child(1) 
-{
-    background-color: white;
-} */
-
-
-.nav > li > a:hover {
-    /* animation: increase 1s 1; */
-}
-
-@keyframes increase {
-    
-    from {font-size: 24px;}
-    to {font-size: 50px;}
-}
-
-.slide2 :hover{
-    animation: moveup 4s 1;
-    height: 100%;
-}
-
-@keyframes moveup {
-    from {}
-    to { position: absolute; top: 0;}
-}
