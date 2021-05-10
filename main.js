@@ -58,11 +58,32 @@ function myFunction(num)
     document.getElementById('up' + currcls).classList.add('upAni')
     x[0].classList.add('removeClass');
     console.log("removed class")
+
+    let wrapper = document.getElementsByClassName('swiper-wrapper')[0];
+    for(let i=0;i<5;i++)
+    {
+      let others = wrapper.children[i].classList[1];
+      if(others != currcls)
+      {
+        if(document.getElementById(others).style.display != "none")
+        {
+          console.log("not none")
+          document.getElementById(others).style.display = "none";
+        }
+        else 
+        {
+          console.log("none")
+          document.getElementById(others).style.display = "inline-block";
+         }
+      }
+    }
+
     x[0].classList.remove('addClass');
   }
   else {
     // document.getElementById('up').style.transform = "scaleY(-1)"
     //inverting the arrow button
+
     if (document.getElementById('up' + currcls).classList.contains('upAni'))
     {
       console.log("contains upAni ->" + currcls )
@@ -72,25 +93,36 @@ function myFunction(num)
     x[0].classList.add('addClass');
     console.log("added class")
     x[0].classList.remove('removeClass')
+
+    let wrapper = document.getElementsByClassName('swiper-wrapper')[0];
+    setTimeout(() => {
+      for(let i=0;i<5;i++)
+      {
+        let others = wrapper.children[i].classList[1];
+        if(others != currcls)
+        {
+          if(document.getElementById(others).style.display != "none")
+          {
+            console.log("not none")
+            document.getElementById(others).style.display = "none";
+          }
+          else 
+          {
+            console.log("none")
+            document.getElementById(others).style.display = "inline-block";
+           }
+        }
+      }
+    }, 1000);  
+  
   }
-  let wrapper = document.getElementsByClassName('swiper-wrapper')[0];
-  // setTimeout(() => {
-  //   for(let i=0;i<5;i++)
-  //   {
-  //     let others = wrapper.children[i].classList[1];
-  //     if(others != currcls)
-  //     {
-  //       if(document.getElementById(others).style.display != "none")
-  //       {
-  //         console.log("not none")
-  //         document.getElementById(others).style.display = "none";
-  //       }
-  //       else 
-  //       {
-  //         console.log("none")
-  //         document.getElementById(others).style.display = "inline-block";
-  //       }
-  //     }
-  //   }
-  // }, 1000);  
 }
+
+//left and right arrow functioning
+function move (num)
+{
+  let slide = document.getElementsByClassName('swiper-wrapper')[0];
+  slide.scrollBy(num,0)
+
+}
+

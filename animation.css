@@ -67,14 +67,18 @@
 
 .removeClass {
     animation: 1s remove 1 forwards;
+    
 }
 @keyframes remove {
     0% {
         width: 100vw;
         height: 100vh;
+        background-color: currentColor;
     }
     100% {
         width: 50vw;
         height: 40vh;
+        background-color: transparent;
     } 
 }
+
