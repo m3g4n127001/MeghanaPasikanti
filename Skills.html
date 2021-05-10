@@ -18,46 +18,115 @@
                 <h1>C</h1>
             </div>
             <div class="percentage">
-                <p>
-                    <var>per</var>%
-                </p>
+                <span class="counter" data-target="60">0</span>%
             </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="circle cpp">
                 <h1>C++</h1>
             </div>
+            <div class="percentage">
+                <span class="counter" data-target="50">0</span>%
+            </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="circle html">
                 <h1>HTML</h1>
+            </div>
+            <div class="percentage">
+                <span class="counter" data-target="70">0</span>%
             </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="circle css">
                 <h1>CSS</h1>
             </div>
+            <div class="percentage">
+                <span class="counter" data-target="50">0</span>%
+            </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="circle js">
                 <h1>JS</h1>
+            </div>
+            <div class="percentage">
+                <span class="counter" data-target="70">0</span>%
             </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="circle react">
                 <h1>REACT</h1>
             </div>
+            <div class="percentage">
+                <span class="counter" data-target="50">0</span>%
+            </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="circle bootstrap">
                 <h1>BOOTSTRAP</h1>
+            </div>
+            <div class="percentage">
+                <span class="counter" data-target="70">0</span>%
             </div>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="circle arduino">
                 <h1>ARDUINO</h1>
             </div>
+            <div class="percentage">
+                <span class="counter" data-target="50">0</span>%
+            </div>
         </div>
     </div>
+    <script>
+        flexFont = function () {
+            var divs = document.getElementsByTagName('h1');
+            console.log(divs.length);
+            for(var i = 0; i < divs.length; i++) {
+                var len=divs[i].innerText.length;
+                if(len<=2)
+                    len++;
+                else if(len==5)
+                    len--;
+                else if(len>=6&&len<=7)
+                    len-=3;
+                else if(len>7)
+                    len-=4;
+                console.log("length is "+len);
+                var fs=100/len;
+                divs[i].style.fontSize = fs+'px';
+            }
+        };
+
+        window.onload = function(event) {
+            flexFont();
+        };
+        window.onresize = function(event) {
+            flexFont();
+        };
+        const counters=document.querySelectorAll('.counter');
+        const speed=200;
+
+        setTimeout(() => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target=+counter.getAttribute('data-target');
+                    const count= +counter.innerText;
+                    
+                    if(count<target)
+                    {
+                        counter.innerText++;
+                        setTimeout(updateCount,45);
+                    }
+                    else
+                    {
+                        counter.innerText=target;
+                    }
+                };
+                updateCount();
+            });
+        }, 2000);
+        
+    </script>
 </body>
 </html>
