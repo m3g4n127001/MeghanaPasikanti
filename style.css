@@ -10,7 +10,6 @@ body {
     height: 100vh;
     overflow-x: hidden;
     background-color: #212121;
-
 }
 .container-fluid {
     background-size: 100vw 100vh;
@@ -135,7 +134,6 @@ body {
     margin: 0 45px;
     display: inline-block;
     flex: 0 0 auto;
-    /* border: 1px solid black; */
     scroll-snap-align: center;
     justify-content: center;
     align-items: center;
@@ -168,23 +166,10 @@ body {
 }
 .slide {
     margin: 0 auto;
-    /* opacity: 0.8; */
+    opacity: 0.8;
     width: 100%;
+    height: fit-content;
     margin-top: 30px;
-    animation-name: slide;
-    animation-duration: 4s;
 
 }
 
-@keyframes slide {
-
-    0% { bottom: 0;}
-    100% {  bottom: 350px;}
-}
-
-
-
-/* .slider-wrapper :nth-child(1) 
-{
-    background-color: white;
-} */
