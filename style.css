@@ -136,13 +136,9 @@ body {
     flex: 0 0 auto;
     scroll-snap-align: center;
     justify-content: center;
-    align-items: center;
     text-align: center;
     height: 40vh;
     contain: content;
-    
-    /* background-image: url('images/name.png'); */
-    /* opacity: 0.6; */
 }
 .swiper-container ::-webkit-scrollbar{
     display:none;
@@ -154,15 +150,20 @@ body {
     bottom: 0;
     width: 100%;
     margin-left: 0px;
+    flex-shrink: 1;
 }
-
 
 .slide-title {
     font-size: 30px;
-    color: red;
-    /* opacity: 0.8; */
-    margin: 5px;
+    color: rgb(255, 2, 2);
+    opacity: 0.5;
+    padding-bottom: 0;
+    margin-bottom: 0;
     font-weight: 900;
+    display: inline;
+    flex-shrink: 2;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 .slide {
     margin: 0 auto;
@@ -173,3 +174,15 @@ body {
 
 }
 
+.titleWrapper {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 2vh;
+}
+.titleWrapper > a > img{
+    opacity: 0.5;
+}
+.titleWrapper > a :hover {
+    opacity: 1;
+}
