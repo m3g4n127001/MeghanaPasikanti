@@ -1,3 +1,8 @@
+html,body {
+    position: relative;
+    height: 100%;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,11 +23,11 @@ body {
     height: 100vh;
     overflow-y: hidden;
 }
- .container-fluid ::-webkit-scrollbar-{
+.container-fluid ::-webkit-scrollbar{
     display: none;
 }
 
-/* navigation bar css */
+/* navigation bar css */ /* header*/
 .header {
     top: 0;
     overflow-x: hidden;
@@ -38,7 +43,7 @@ body {
     list-style-type: none;
     background-color: #3d4f53;
     width: 100vw;
-
+    
 }
 .nav > li {
     padding: 18px;
@@ -54,6 +59,7 @@ body {
 }
 
 /* body css */
+/* body css */
 .body {
     padding-top: 8%;
     display: flex;
@@ -64,7 +70,7 @@ body {
     border-bottom: 0;
     text-align: center;
     overflow-y: hidden;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 .body > div {
     padding-bottom: 1%;
@@ -113,8 +119,49 @@ body {
         border-color: white;
     }
 }
+/* swiper */
+.swiper-container {
+    scroll-behavior: smooth;
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    margin-left: 0%;
+    flex-shrink: 1;
+    height: 100%;
+    justify-content: center;
 
-/* slider css */
+} 
+
+.swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+        
+    overflow: hidden;
+    width: 50vw !important;
+    background-color: transparent;
+    margin: 0 45px;
+    display: inline-block;
+    flex: 0 0 auto;
+    scroll-snap-align: center !important;
+    justify-content: center;
+    text-align: center;
+    height: 40vh;
+    contain: content;
+    margin: 0 auto;
+}
+
 
 .swiper-container> .swiper-wrapper {
     white-space: nowrap;
@@ -122,38 +169,16 @@ body {
     flex: 1;
     flex-direction: row;
     flex-wrap: nowrap;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory !important;
+    scroll-padding: 50%;
     position: absolute;
     bottom: 0;
     width: 100vw;
-    padding-left: 25vw;
+    margin: 0 auto;
+    align-items: center;
+    transform: translateX(20vw);
 }
-.swiper-slide {
-    width: 50vw;
-    background-color: transparent;
-    margin: 0 45px;
-    display: inline-block;
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-    justify-content: center;
-    text-align: center;
-    height: 40vh;
-    contain: content;
-}
-.swiper-container ::-webkit-scrollbar{
-    display:none;
-}
-.swiper-container  {
-    /* cursor: grab; */
-    scroll-behavior: smooth;
-    margin-top: 50px;
-    bottom: 0;
-    width: 100%;
-    margin-left: 0px;
-    flex-shrink: 1;
-}
+
 
 .slide-title {
     font-size: 30px;
@@ -183,48 +208,14 @@ body {
     margin-top: 2vh;
 }
 .titleWrapper > a > img{
-    opacity: 0.7;
+    opacity: 0;
 }
 .titleWrapper > a :hover {
     opacity: 1;
 }
 
-/* project css */
-.proContainer {
-    height: 100%;
-    margin: 0 auto;
+
+.container {
+    background-color: rgb(74, 76, 82) ;
 }
 
-.proCard {
-    background-color: rgb(55, 56, 52);
-    height: 50%;
-    width: auto;
-    /* border: 2px solid black; */
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-right: 0px;
-}
-.proTitle {
-    width: 100%;
-    padding: 20px 0;
-    background-color: gray;
-    font-weight: 800;
-    font-size: 24px;
-}
-
-.proDesc {
-    margin: 20px 0;
-}
-
-.proLink {
-    width: 80%;
-    padding: 10px 10px;
-    border-radius: 99px;
-    background-color: rgb(19, 15, 15);
-    font-size: 24px;
-    color:cadetblue;
-
-}
