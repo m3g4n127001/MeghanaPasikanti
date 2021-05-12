@@ -1,173 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="main.js"></script>
-        
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="about.css">
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="stylesheet" href="animation.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>My portfolio</title>
-    <script src="about.js">
-        // $(document).ready(function () {
-        //     $('#skills').click(function () {
-        //         $('.two').css({"background-color":"skyblue", "position" : "absolute", "top": "0", "bottom": "0", "left" : "0", "right" : "0"})
-        //     })
-        // })
-    </script>
-    <script>
-        
-    </script>
+    <!--bootstrap links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title>Swiper demo</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text\css"/>
 
-</head>
-<body onload="typeWriter()" >
+    <!-- Demo styles -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="animation.css" type="text/css"> 
+    <script src="main.js"></script>
+  </head>
+
+  <body onload="typeWriter()">
     <div class="container-fluid mb-0 pb-0">
-        <header class="header">
-            <ul class="nav">
-                <li>
-                    <a href="#" onclick="myFunction(1)">About</a>
-                </li>
-                <li>
-                    <a href="#" onclick="myFunction(2)">Skills</a>
-                </li>
-                <li>
-                    <a href="#" onclick="myFunction(3)">Projects</a>
-                </li>
-                <li>
-                    <a href="#" onclick="myFunction(4)">Extracurriculars</a>
-                </li>
-                <li>
-                    <a href="#" onclick="myFunction(5)">Contact</a>
-                </li>
-            </ul>
-        </header>
-        <div class="body">
-            <div class="text1">
-                <h4>Hey There !!</h4>
-            </div>
-            <div class="text2">
-                <h4>I am</h4>
-                <img class="img-responsive" src="/images/name.png">
-            </div>
-            <div class="text3">
-                <h4 id="intro_text"></h4>
-            </div>
+      
+      <header class="header">
+        <ul class="nav">
+            <li>
+                <a href="#" onclick="gotoslide(5)">About</a>
+            </li>
+            <li>
+                <a href="#" onclick="gotoslide(1)">Skills</a>
+            </li>
+            <li>
+                <a href="#" onclick="gotoslide(2)" >Projects</a>
+            </li>
+            <li>
+                <a href="#" onclick="gotoslide(3)">Extracurriculars</a>
+            </li>
+            <li>
+                <a href="#" onclick="gotoslide(4)">Contact</a>
+            </li>
+        </ul>
+      </header>
+
+      <div class="body">
+        <div class="text1">
+            <h4>Hey There !!</h4>
         </div>
-
-        <div class="swiper-container ">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide one" id="one">
-                    <a href="#" id="about" onclick="myFunction(1)">
-                        <img src="images/1.png" width="20px" height="25px"  id="upone" >
-                    </a>
-                    <div class="titleWrapper">
-                        <a href="#" id="left" onclick="move(-50)">
-                            <img src="images/1.png"  width="20px" height="25px" style="transform: rotate(-90deg);">
-                        </a>
-                        <h1 class="slide-title">About</h1>
-                        <a href="#" id="right" onclick="move(-50)">
-                            <img src="images/1.png" width="20px" height="25px" style="transform: rotate(90deg);" >
-                        </a>
-                    </div>
-                    <div class="slide container">
-                        <h1>hey there!</h1>
-                    </div>
-    
-                  </div>
-              <div class="swiper-slide two" id="two">
-                <a href="#" id="skills" onclick="myFunction(2)">
-                    <img src="images/1.png" width="20px" height="25px" id="uptwo">
-                </a>
-                <div class="titleWrapper">
-                    <a href="#" id="left" onclick="move(50)" class="left">
-                        <img src="images/1.png" width="20px" height="25px" style="transform: rotate(-90deg);">
-                    </a>        
-                    <h1 class="slide-title">Skills</h1>
-                    <a href="#" id="right" onclick="move(-50)" class="right">
-                        <img src="images/1.png" width="20px" height="25px" style="transform: rotate(90deg);">
-                    </a>
-                </div>
-                <div class="slide">
-                    <div class="container" id="skills-container">
-                        <a href="#">
-                            <img src="images/4.png" id="down">
-                        </a>
-                        <img src="images/meghala.png" id="profilepic">
-                        <p style="width: inherit; height: inherit;">
-                            Hello!! My name is Meghala.
-                                I am an undergraduate at Indian Institute of Technology, Guwahati. 
-                            <!-- include study here itself..Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
-                            took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. -->
-                        </p>
-                    </div>
-                </div> 
-            </div>
-              <div class="swiper-slide three" id="three">
-                <a href="#" id="projects" onclick="myFunction(3)">
-                    <img src="images/1.png" width="20px" height="25px"  id="upthree" >
-                </a>
-                <div class="titleWrapper">
-                    <a href="#" id="left" onclick="move(50)">
-                        <img src="images/1.png" width="20px" height="25px" style="transform: rotate(-90deg);" >
-                    </a>
-                    <h1 class="slide-title">Projects</h1>
-                    <a href="#" id="right" onclick="move(-50)">
-                        <img src="images/1.png" width="20px" height="25px" style="transform: rotate(90deg);" >
-                    </a>
-                </div>
-                <div class="slide container">
-                    <h1>hey there!</h1>
-
-                </div>
-
-              </div>
-              <div class="swiper-slide four" id="four">
-                <a href="#" id="extra" onclick="myFunction(4)">
-                    <img src="images/1.png" width="20px" height="25px"  id="upfour">
-                </a>
-                <div class="titleWrapper">
-                    <a href="#" id="left" onclick="move(50)">
-                        <img src="images/1.png" width="20px" height="25px" style="transform: rotate(-90deg);">
-                    </a>
-                    <h1 class="slide-title">Extracurriculars</h1>
-                    <a href="#" id="right" onclick="move(-50)">
-                        <img src="images/1.png" width="20px" height="25px" style="transform: rotate(90deg);">
-                    </a>
-                </div>
-                <div class="slide container">
-                    <h1>hey there!</h1>
-                </div>
-              </div>
-              <div class="swiper-slide five" id="five">
-                <a href="#" id="contact" onclick="myFunction(5)">
-                    <img src="images/1.png" width="20px" height="25px"  id="upfive">
-                </a>
-                <div class="titleWrapper">
-                    <a href="#" id="left" onclick="move(50)">
-                        <img src="images/1.png" width="20px" height="25px" style="transform: rotate(-90deg);">
-                    </a>
-                    <h1 class="slide-title">Contact</h1>
-                    <a href="#" id="right" onclick="move(-50)">
-                        <img src="images/1.png" width="20px" height="25px" style="transform: rotate(90deg);">
-                    </a>
-                </div>
-                <div class="slide container">
-                    <h1>hey there!</h1>
-
-                </div>
-            </div>
+        <div class="text2">
+            <h4>I am</h4>
+            <img class="img-responsive" src="/images/name.png">
         </div>
+        <div class="text3">
+            <h4 id="intro_text"></h4>
+        </div>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- slide one -->
+          <div class="swiper-slide one" id="one">
+            <a href="#" id="about" onclick="myFunction(1)">
+              <img src="images/1.png" width="20px" height="25px"  id="upone" >
+            </a>
+            <div class="titleWrapper">
+              <h1 class="slide-title">About</h1>
+            </div>
+            <div class="slide container">
+              <h1>hey there!</h1>
+            </div>
+          </div>
+
+          <!-- slide two -->
+          <div class="swiper-slide two" id="two">
+            <a href="#" id="skills" onclick="myFunction(2)">
+              <img src="images/1.png" width="20px" height="25px"  id="uptwo" >
+            </a>
+            <div class="titleWrapper">
+              <h1 class="slide-title">Skills</h1>
+            </div>
+            <div class="slide container">
+              <h1>hey there!</h1> 
+            </div>
+          </div>
+
+          <!-- slide three -->
+          <div class="swiper-slide three" id="three">
+            <a href="#" id="projects" onclick="myFunction(3)">
+              <img src="images/1.png" width="20px" height="25px"  id="upthree">
+            </a>
+            <div class="titleWrapper">
+              <h1 class="slide-title">projects</h1>
+            </div>
+            <div class="slide container">
+              <h1>hey there!</h1>
+            </div>
+          </div>
+
+          <!-- slide four -->
+          <div class="swiper-slide four" id="four">
+            <a href="#" id="extra" onclick="myFunction(4)">
+              <img src="images/1.png" width="20px" height="25px"  id="upfour">
+            </a>
+            <div class="titleWrapper">
+              <h1 class="slide-title">Extracurriculars</h1>
+            </div>
+            <div class="slide container">
+              <h1>hey there!</h1>
+            </div>
+          </div>
+
+          <!-- slide five -->
+          <div class="swiper-slide five" id="five">
+            <a href="#" id="contact" onclick="myFunction(5)">
+              <img src="images/1.png" width="20px" height="25px"  id="upfive">
+            </a>
+            <div class="titleWrapper">
+              <h1 class="slide-title">Contact</h1>
+            </div>
+            <div class="slide container">
+              <h1>hey there!</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-       
-</body>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" type="text/javascript"></script>
+
+    <!-- Initialize Swiper -->
+    <script type="text/javascript">
+      let swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 45,
+        loopedSlides : 5,
+        centeredSlides: true,
+        loop :true,
+        grabCursor: true,
+      });
+      function gotoslide(ind)
+      {
+        swiper.slideTo(ind,1000,true);
+      }
+
+    </script>
+  </body>
 </html>
