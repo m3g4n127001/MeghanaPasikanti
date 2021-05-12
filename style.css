@@ -31,7 +31,7 @@ body {
 .header {
     top: 0;
     overflow-x: hidden;
-    position: fixed;
+    position: sticky;
     /* background-color: skyblue; */
 }
 .header > .nav {
@@ -50,7 +50,7 @@ body {
 }
 .nav > li > a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 24px;
     color: gray;
 }
 .nav > li  :hover {
@@ -195,10 +195,10 @@ body {
 .slide {
     margin: 0 auto;
     opacity: 0.8;
+    width: 100%;
+    height: fit-content;
     margin-top: 30px;
-    display: flex;
-    flex: 1;
-    flex-shrink: 1;
+
 }
 
 .titleWrapper {
@@ -213,7 +213,6 @@ body {
 .titleWrapper > a :hover {
     opacity: 1;
 }
-
 
 .container {
     background-color: rgb(74, 76, 82) ;
