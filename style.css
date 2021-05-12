@@ -18,15 +18,15 @@ body {
     height: 100vh;
     overflow-y: hidden;
 }
- .container-fluid ::-webkit-scrollbar{
-     display: none;
- }
+ .container-fluid ::-webkit-scrollbar-{
+    display: none;
+}
 
 /* navigation bar css */
 .header {
     top: 0;
     overflow-x: hidden;
-    position: sticky;
+    position: fixed;
     /* background-color: skyblue; */
 }
 .header > .nav {
@@ -45,7 +45,7 @@ body {
 }
 .nav > li > a {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
     color: gray;
 }
 .nav > li  :hover {
@@ -64,6 +64,7 @@ body {
     border-bottom: 0;
     text-align: center;
     overflow-y: hidden;
+    overflow-x: auto;
 }
 .body > div {
     padding-bottom: 1%;
@@ -127,6 +128,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100vw;
+    padding-left: 25vw;
 }
 .swiper-slide {
     width: 50vw;
@@ -168,10 +170,10 @@ body {
 .slide {
     margin: 0 auto;
     opacity: 0.8;
-    width: 100%;
-    height: fit-content;
     margin-top: 30px;
-
+    display: flex;
+    flex: 1;
+    flex-shrink: 1;
 }
 
 .titleWrapper {
@@ -181,8 +183,48 @@ body {
     margin-top: 2vh;
 }
 .titleWrapper > a > img{
-    opacity: 0.5;
+    opacity: 0.7;
 }
 .titleWrapper > a :hover {
     opacity: 1;
+}
+
+/* project css */
+.proContainer {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.proCard {
+    background-color: rgb(55, 56, 52);
+    height: 50%;
+    width: auto;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 0px;
+}
+.proTitle {
+    width: 100%;
+    padding: 20px 0;
+    background-color: gray;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.proDesc {
+    margin: 20px 0;
+}
+
+.proLink {
+    width: 80%;
+    padding: 10px 10px;
+    border-radius: 99px;
+    background-color: rgb(19, 15, 15);
+    font-size: 24px;
+    color:cadetblue;
+
 }

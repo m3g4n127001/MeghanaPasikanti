@@ -3,6 +3,7 @@ let speed=150;
 let i=0;
 let text="I am a computer science undergrad at NITW making this website . ";
 
+
 function typeWriter() 
 {
     if(i<text.length)
@@ -77,13 +78,11 @@ function myFunction(num)
          }
       }
     }
-
     x[0].classList.remove('addClass');
   }
   else {
     // document.getElementById('up').style.transform = "scaleY(-1)"
     //inverting the arrow button
-
     if (document.getElementById('up' + currcls).classList.contains('upAni'))
     {
       console.log("contains upAni ->" + currcls )
@@ -93,7 +92,6 @@ function myFunction(num)
     x[0].classList.add('addClass');
     console.log("added class")
     x[0].classList.remove('removeClass')
-
     let wrapper = document.getElementsByClassName('swiper-wrapper')[0];
     setTimeout(() => {
       for(let i=0;i<5;i++)
@@ -110,19 +108,37 @@ function myFunction(num)
           {
             console.log("none")
             document.getElementById(others).style.display = "inline-block";
-           }
+          }
         }
       }
     }, 1000);  
-  
   }
+  
 }
 
 //left and right arrow functioning
 function move (num)
 {
+  console.log(window.innerWidth + "-> inneer width")
   let slide = document.getElementsByClassName('swiper-wrapper')[0];
   slide.scrollBy(num,0)
-
+  // console.log(slide.parentElement.className)
+  console.log(slide.scrollWidth + "-> tot width")
+  console.log(slide.scrollLeft + "-> left")
+  
 }
 
+
+
+function myfn() 
+{
+  console.log("khushi")
+}
+function nav(num)
+{
+  let y = document.getElementsByClassName('swiper-wrapper')[0];
+  let tot = y.scrollWidth
+  y.scrollLeft = tot * (num - 1) /5;
+  if(num == 5)
+    y.scrollLeft = tot
+}

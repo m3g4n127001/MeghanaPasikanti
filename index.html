@@ -14,38 +14,33 @@
         <link rel="stylesheet" href="about.css">
         <link rel="stylesheet" href="style.css"/>
         <link rel="stylesheet" href="animation.css">
-    
-    <title>My portfolio</title>
-    <script src="about.js">
-        // $(document).ready(function () {
-        //     $('#skills').click(function () {
-        //         $('.two').css({"background-color":"skyblue", "position" : "absolute", "top": "0", "bottom": "0", "left" : "0", "right" : "0"})
-        //     })
-        // })
-    </script>
-    <script>
-        
-    </script>
+        <link rel="stylesheet" href="extra.css"> 
+        <!-- swiper cdn -->
+        <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+        <title>My portfolio</title>
 </head>
 <body onload="typeWriter()" >
-    <div class="container-fluid mb-0 pb-0">
+    <div class="container-fluid mb-0 pb-0" >
         <header class="header">
             <ul class="nav">
                 <li>
-                    <a href="#" onclick="myFunction(1)">About</a>
+                    <a href="#" onclick="nav(1)" id="nav1">About</a>
                 </li>
                 <li>
-                    <a href="#" onclick="myFunction(2)">Skills</a>
+                    <a href="#" onclick="nav(2)" id="nav2">Skills</a>
                 </li>
                 <li>
-                    <a href="#" onclick="myFunction(3)">Projects</a>
+                    <a href="#" onclick="nav(3)" id="nav3">Projects</a>
                 </li>
                 <li>
-                    <a href="#" onclick="myFunction(4)">Extracurriculars</a>
+                    <a href="#" onclick="nav(4)" id="nav4">Extracurriculars</a>
                 </li>
                 <li>
-                    <a href="#" onclick="myFunction(5)">Contact</a>
+                    <a href="#" onclick="nav(5)" id="nav5">Contact</a>
                 </li>
             </ul>
         </header>
@@ -73,8 +68,8 @@
                             <img src="images/1.png"  width="20px" height="25px" style="transform: rotate(-90deg);">
                         </a>
                         <h1 class="slide-title">About</h1>
-                        <a href="#" id="right" onclick="move(-50)">
-                            <img src="images/1.png" width="20px" height="25px" style="transform: rotate(90deg);" >
+                        <a href="#"  onclick="move(-50)">
+                            <img src="images/1.png" width="20px" height="25px" id="right" style="transform: rotate(90deg);" >
                         </a>
                     </div>
                     <div class="slide container">
@@ -87,12 +82,12 @@
                     <img src="images/1.png" width="20px" height="25px" id="uptwo">
                 </a>
                 <div class="titleWrapper">
-                    <a href="#" id="left" onclick="move(50)" class="left">
+                    <a href="#" id="left" onclick="move(50)">
                         <img src="images/1.png" width="20px" height="25px" style="transform: rotate(-90deg);">
                     </a>        
                     <h1 class="slide-title">Skills</h1>
-                    <a href="#" id="right" onclick="move(-50)" class="right">
-                        <img src="images/1.png" width="20px" height="25px" style="transform: rotate(90deg);">
+                    <a href="#" id="right" onclick="move(-50)">
+                        <img src="images/1.png" width="20px" height="25px" id="right" style="transform: rotate(90deg);">
                     </a>
                 </div>
                 <div class="slide">
@@ -101,11 +96,11 @@
                             <img src="images/4.png" id="down">
                         </a>
                         <img src="images/meghala.png" id="profilepic">
-                        <p style="width: inherit; height: inherit;">
+                        <p style="overflow-x: auto;">
                             Hello!! My name is Meghala.
                                 I am an undergraduate at Indian Institute of Technology, Guwahati. 
-                            <!-- include study here itself..Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+                             include study here itself..Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                           <!-- Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
                             took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
                                 but also the leap into electronic typesetting, remaining essentially unchanged. -->
                         </p>
@@ -126,8 +121,77 @@
                     </a>
                 </div>
                 <div class="slide container">
-                    <h1>hey there!</h1>
-
+                    <div class="proContainer row">
+                        <div class="proCard col col-xs-12 col-sm-12 col-md-6">
+                            <div class="proTitle">Techniche App </div>
+                            <div class="proDesc">
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                            </div>
+                            <div class="proLink">
+                                <a href="#" style="text-decoration: none;">
+                                    view documentation
+                                </a>
+                            </div>
+                        </div>
+                        <div class="proCard col col-xs-12 col-sm-12 col-md-6">
+                            <div class="proTitle">Techniche App </div>
+                            <div class="proDesc">
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                            </div>
+                            <div class="proLink">
+                                <a href="#" style="text-decoration: none;">
+                                    view documentation
+                                </a>
+                            </div>
+                        </div>
+                        <div class="proCard col col-xs-12 col-sm-12 col-md-6">
+                            <div class="proTitle">Techniche App </div>
+                            <div class="proDesc">
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                            </div>
+                            <div class="proLink">
+                                <a href="#" style="text-decoration: none;">
+                                    view documentation
+                                </a>
+                            </div>
+                        </div>
+                        <div class="proCard col col-xs-12 col-sm-12 col-md-6">
+                            <div class="proTitle">Techniche App </div>
+                            <div class="proDesc">
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                                <div> My name is Meghala.</div>
+                            </div>
+                            <div class="proLink">
+                                <a href="#" style="text-decoration: none;">
+                                    view documentation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
 
               </div>
@@ -145,7 +209,17 @@
                     </a>
                 </div>
                 <div class="slide container">
-                    <h1>hey there!</h1>
+                    <div class="extraContainer" onload="myfn()">
+                        <div class="aboutArt row">
+                            <div class="col col-md-4">
+                                <h1>one
+                                    Hello!! My name is Meghala.
+                                    I am an undergraduate at Indian Institute of Technology, Guwahati. 
+                                 include study here itself..Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
               <div class="swiper-slide five" id="five">
@@ -162,7 +236,7 @@
                     </a>
                 </div>
                 <div class="slide container">
-                    <h1>hey there!</h1>
+                    <!-- <h1>hey there!</h1> -->
 
                 </div>
             </div>

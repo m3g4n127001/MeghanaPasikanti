@@ -82,3 +82,13 @@
     } 
 }
 
+/* .container-fluid > ::-webkit-scrollbar-track {
+    background: red;
+}
+.container-fluid ::-webkit-scrollbar {
+    width: 50px;
+}
+.container-fluid ::-webkit-scrollbar-thumb {
+    background: blue;
+} */
+
