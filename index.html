@@ -14,68 +14,67 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text\css"/>
 
     <!-- Demo styles -->
-    <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="animation.css" type="text/css"> 
     <script src="main.js"></script>
   </head>
-
+  
   <body onload="typeWriter()">
     <div class="container-fluid mb-0 pb-0">
       
       <header class="header">
         <ul class="nav">
-            <li>
-                <a href="#" onclick="gotoslide(5)">About</a>
-            </li>
-            <li>
-                <a href="#" onclick="gotoslide(1)">Skills</a>
-            </li>
-            <li>
-                <a href="#" onclick="gotoslide(2)" >Projects</a>
-            </li>
-            <li>
-                <a href="#" onclick="gotoslide(3)">Extracurriculars</a>
-            </li>
-            <li>
-                <a href="#" onclick="gotoslide(4)">Contact</a>
-            </li>
+          <li>
+            <a href="#" onclick="gotoslide(5)">About</a>
+          </li>
+          <li>
+            <a href="#" onclick="gotoslide(1)">Skills</a>
+          </li>
+          <li>
+            <a href="#" onclick="gotoslide(2)" >Projects</a>
+          </li>
+          <li>
+            <a href="#" onclick="gotoslide(3)">Extracurriculars</a>
+          </li>
+          <li>
+            <a href="#" onclick="gotoslide(4)">Contact</a>
+          </li>
         </ul>
       </header>
-
+      
       <div class="body">
         <div class="text1">
-            <h4>Hey There !!</h4>
+          <h4>Hey There !!</h4>
         </div>
         <div class="text2">
-            <h4>I am</h4>
-            <img class="img-responsive" src="/images/name.png">
+          <h4>I am</h4>
+          <img class="img-responsive" src="/images/name.png">
         </div>
         <div class="text3">
             <h4 id="intro_text"></h4>
-        </div>
-      </div>
-
-      <!-- Swiper -->
-      <div class="swiper-container mySwiper">
-        <div class="swiper-wrapper">
-
-          <!-- slide one -->
-          <div class="swiper-slide one" id="one">
-            <a href="#" id="about" onclick="myFunction(1)">
-              <img src="images/1.png" width="20px" height="25px"  id="upone" >
-            </a>
-            <div class="titleWrapper">
-              <h1 class="slide-title">About</h1>
-            </div>
-            <div class="slide container">
-              <h1>hey there!</h1>
-            </div>
           </div>
-
-          <!-- slide two -->
-          <div class="swiper-slide two" id="two">
-            <a href="#" id="skills" onclick="myFunction(2)">
-              <img src="images/1.png" width="20px" height="25px"  id="uptwo" >
+        </div>
+        
+        <!-- Swiper -->
+        <div class="swiper-container mySwiper">
+          <div class="swiper-wrapper">
+            
+            <!-- slide one -->
+            <div class="swiper-slide one" id="one">
+              <a href="#" id="about" onclick="myFunction(1)" class="upwrap">
+                <img src="images/1.png" width="20px" height="25px"  id="upone" >
+              </a>
+              <div class="titleWrapper">
+                <h1 class="slide-title">About</h1>
+              </div>
+              <div class="slide container">
+                <h1>hey there!</h1>
+              </div>
+            </div>
+            
+            <!-- slide two -->
+            <div class="swiper-slide two" id="two">
+              <a href="#" id="skills" onclick="myFunction(2)" class="upwrap">
+                <img src="images/1.png" width="20px" height="25px"  id="uptwo"  >
             </a>
             <div class="titleWrapper">
               <h1 class="slide-title">Skills</h1>
@@ -84,10 +83,10 @@
               <h1>hey there!</h1> 
             </div>
           </div>
-
+          
           <!-- slide three -->
           <div class="swiper-slide three" id="three">
-            <a href="#" id="projects" onclick="myFunction(3)">
+            <a href="#" id="projects" onclick="myFunction(3)" class="upwrap">
               <img src="images/1.png" width="20px" height="25px"  id="upthree">
             </a>
             <div class="titleWrapper">
@@ -97,24 +96,24 @@
               <h1>hey there!</h1>
             </div>
           </div>
-
+          
           <!-- slide four -->
           <div class="swiper-slide four" id="four">
-            <a href="#" id="extra" onclick="myFunction(4)">
-              <img src="images/1.png" width="20px" height="25px"  id="upfour">
+            <a href="#" id="extra" onclick="myFunction(4)" class="upwrap">
+              <img src="images/1.png" width="20px" height="25px"  id="upfour" >
             </a>
             <div class="titleWrapper">
               <h1 class="slide-title">Extracurriculars</h1>
             </div>
             <div class="slide container">
-              <h1>hey there!</h1>
+              <h1>hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!hey there!</h1>
             </div>
           </div>
-
+          
           <!-- slide five -->
           <div class="swiper-slide five" id="five">
-            <a href="#" id="contact" onclick="myFunction(5)">
-              <img src="images/1.png" width="20px" height="25px"  id="upfive">
+            <a href="#" id="contact" onclick="myFunction(5)" class="upwrap">
+              <img src="images/1.png" width="20px" height="25px"  id="upfive" >
             </a>
             <div class="titleWrapper">
               <h1 class="slide-title">Contact</h1>
@@ -125,11 +124,12 @@
           </div>
         </div>
       </div>
-
+      
     </div>
-
+    
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
 
     <!-- Initialize Swiper -->
     <script type="text/javascript">
@@ -140,7 +140,9 @@
         centeredSlides: true,
         loop :true,
         grabCursor: true,
-      });
+        },
+        
+      );
       function gotoslide(ind)
       {
         swiper.slideTo(ind,1000,true);
