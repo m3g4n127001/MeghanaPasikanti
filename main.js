@@ -17,37 +17,66 @@ function typeWriter()
 let expanded = false;
 function myFunction(num)
 {
-    console.log(num);
+    // console.log(num);
     let ele = document.getElementsByClassName("swiper-slide-active");
     let elep=document.getElementsByClassName("swiper-slide-prev");
     if(expanded)
     {
-        console.log(ele[0].classList);
-        console.log(elep[0].classList);
+        // console.log(ele[0].classList);
+        // console.log(elep[0].classList);
         expanded = false;
-        console.log('if')
+        // console.log('if')
         elep[0].classList.remove('outani')
         elep[0].classList.add('inani')
         ele[0].classList.remove('outani')
         ele[0].classList.remove('upani')
         ele[0].classList.add('downani')
-        
+        let r = document.querySelector(':root');
+        // r.style.setProperty('--scroll', 'hidden')
+        r.style.setProperty('--height', '40vh')
     }
     else {
-        console.log(ele[0].classList);
-        console.log(elep[0].classList);
+        // document.getElementsByClassName('swiper-wrapper')[0].classList.add('disabled')
+        // console.log(ele[0].classList);
+        // console.log(elep[0].classList);
         expanded = true;
-        console.log('else')
+        // console.log('else')
         elep[0].classList.remove('inani')
         ele[0].classList.remove('inani')
         elep[0].classList.add('outani')
         ele[0].classList.remove('downani')
         ele[0].classList.add("upani");
-        console.log(swiper.params)
         swiper.params.grabCursor=false;
         swiper.unsetGrabCursor();
-        
+        let r = document.querySelector(':root');
+        // r.style.setProperty('--scroll', 'scroll')
+        r.style.setProperty('--height','100vh')
     }
 
 }
 
+let galleryExpanded = false;
+function showGrid () 
+{
+    let grid = document.getElementById('gallery');
+    if(!galleryExpanded)
+    {
+        galleryExpanded = true;
+        // console.log('shown')
+        grid.classList.remove('hidegrid')
+        grid.classList.add('showgrid');
+        let r = document.querySelector(':root')
+        r.style.setProperty('--top','-'+ grid.offsetTop + 'px')
+        r.style.setProperty('--scroll', 'scroll')
+
+    }
+    else 
+    {
+        galleryExpanded = false;
+        // console.log('hided');
+        grid.classList.remove('showgrid')
+        grid.classList.add('hidegrid')
+        let r = document.querySelector(':root')
+        r.style.setProperty('--scroll', 'hidden')
+    }
+}
