@@ -46,8 +46,12 @@ function myFunction(num)
         console.log(swiper.params)
         swiper.params.grabCursor=false;
         swiper.unsetGrabCursor();
-        
+        setTimeout(() => {
+            // swiper.params.allowSlideNext= false;
+            // swiper.params.allowSlidePrev= false;
+            // swiper.update();
+            
+        }, 3000);
+
     }
-
 }
-
