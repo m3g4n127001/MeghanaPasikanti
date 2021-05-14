@@ -1,94 +1,113 @@
-.addClass {
-    top: 0;
-    /* background-color: rgb(25, 207, 231); */
-    background-color:currentColor;
-    
-    overflow-y: scroll;
-    overflow-x: hidden;
-    animation: 1s addClassAni 1 forwards;
-    animation-duration: reverse;
+:root{
+    --top : 0;
+    --height : 40vh;
 }
 
-@keyframes addClassAni {
-    
-    0% {
+.disabled {
+    transform: translate3d(0px, 0, 0) !important;
+}
+
+.upani{
+    animation-name : moveup ;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal ;
+}
+@keyframes moveup {
+    from {
         background-color: transparent;
-        /* transform: translateX(40%); */
+        width: 50vw;
+        transform: translateX(0);
     }
-    100% {
+    to {
+        background-color: rgb(74, 76, 82);
+        height: var(--height);
         width: 100vw;
-        height: 100vh;
-        /* transform: translateX(40%);
-
-        transform: translateY(-100%); */
-        
+        transform: translateX(-25vw);
     }
 }
-.wrapper {
-    overflow-x: hidden;
-}
-.addClass > .container >  {
-    /* background-color: pink; */
-    align-items: center;
-    contain: content;
-    background-color: rgb(74, 76, 82) ;
-}
 
-.downAni  {
-    animation: 1s down 1 forwards;
+.upani > .upwrap > img {
+    animation: rotate 1s forwards;
 }
-
-@keyframes down {
-    
-    0% {
+@keyframes rotate {
+    from {
         transform: rotate(0deg);
     }
-    /* 50% {
-        transform: rotate(90deg);
-    } */
-    100% {
+    to {
         transform: rotate(180deg);
     }
 }
-.upAni {
-    animation: 1s up 1 forwards;
+.downani {
+    animation-name: movedown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
-@keyframes up {
-    0% {
-        transform: rotate(0deg);
-    }
-    /* 50% {
-        transform: rotate(-90%);
-    } */
-    100% {
-        transform: rotate((-180%));
-    }
-}
-
-.removeClass {
-    animation: 1s remove 1 forwards;
-    
-}
-@keyframes remove {
-    0% {
+@keyframes movedown {
+    from {
+        background-color: rgb(74, 76, 82);
         width: 100vw;
         height: 100vh;
-        background-color: currentColor;
+        transform: translateX(-25vw);
     }
-    100% {
-        width: 50vw;
-        height: 40vh;
+    to {
         background-color: transparent;
-    } 
+        height: 40vh;
+        width: 50vw;
+        transform: translateX(0);
+        overflow: hidden;
+    }
 }
 
-/* .container-fluid > ::-webkit-scrollbar-track {
-    background: red;
+.outani {
+    animation: moveout 1s forwards;
 }
-.container-fluid ::-webkit-scrollbar {
-    width: 50px;
+@keyframes moveout {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-25vw);
+        
+    }
 }
-.container-fluid ::-webkit-scrollbar-thumb {
-    background: blue;
-} */
 
+.inani {
+    animation: movein 1s forwards;
+
+}
+@keyframes movein {
+    from{
+        transform: translateX(-25vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.showgrid {
+    animation: showgrid 1s forwards;
+    /* overflow-y: visible; */
+}
+
+@keyframes showgrid {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: translateY(var(--top ));
+    }
+}
+
+.hidegrid {
+    animation: hidegrid 1s forwards;
+}
+
+@keyframes hidegrid {
+    from {
+        transform: translateY(var(--top));
+    }
+    to {
+        transform: translateY(0);
+    }
+}
