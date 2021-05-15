@@ -13,8 +13,12 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text\css"/>
 
+    <!-- responsive css -->
+    <link rel="stylesheet" href="responsive.css">
+
     <!-- Demo styles -->
     <script src="main.js"></script>
+
   </head>
   
   <body onload="typeWriter()">
@@ -79,15 +83,84 @@
             <div class="swiper-slide two" id="two">
               <a href="#" id="skills" onclick="myFunction(2)" class="upwrap">
                 <img src="images/1.png" width="20px" height="25px"  id="uptwo"  >
-            </a>
-            <div class="titleWrapper">
-              <h1 class="slide-title">Skills</h1>
+              </a>
+              <div class="titleWrapper">
+                <h1 class="slide-title">Skills</h1>
+              </div>
+              <div class="slide container">
+                <div class="skills-text">
+                  <h4>"The best way to sharpen skills is by using them"</h4> 
+                </div>
+                <div class="skills-wrapper">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="circle c">
+                        <h1 class="skill-name">C</h1>
+                      </div>
+                      <div class="percentage">
+                        <span class="counter" data-target="70">0</span>%
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="circle cpp">
+                          <h1 class="skill-name">C++</h1>
+                      </div>
+                      <div class="percentage">
+                          <span class="counter" data-target="70">0</span>%
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="circle html">
+                        <h1 class="skill-name">HTML</h1>
+                      </div>
+                      <div class="percentage">
+                        <span class="counter" data-target="80">0</span>%
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="circle css">
+                        <h1 class="skill-name">CSS</h1>
+                      </div>
+                      <div class="percentage">
+                        <span class="counter" data-target="60">0</span>%
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="circle js">
+                        <h1 class="skill-name">JS</h1>
+                      </div>
+                      <div class="percentage">
+                        <span class="counter" data-target="50">0</span>%
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="circle react">
+                        <h1 class="skill-name">REACT</h1>
+                      </div>
+                      <div class="percentage">
+                        <span class="counter" data-target="50">0</span>%
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="circle bootstrap">
+                        <h1 class="skill-name">BOOTSTRAP</h1>
+                      </div>
+                      <div class="percentage">
+                        <span class="counter" data-target="40">0</span>%
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="circle arduino">
+                        <h1 class="skill-name">ARDUINO</h1>
+                      </div>
+                      <div class="percentage">
+                        <span class="counter" data-target="50">0</span>%
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
             </div>
-            <div class="slide container">
-              <h1>hey there!</h1> 
-            </div>
-          </div>
-          
           <!-- slide three -->
           <div class="swiper-slide three" id="three">
             <a href="#" id="projects" onclick="myFunction(3)" class="upwrap">
@@ -225,6 +298,8 @@
         centeredSlides: true,
         loop :true,
         grabCursor: true,
+        allowSlidePrev:true,
+        allowSlideNext : true,
         },
         
       );
