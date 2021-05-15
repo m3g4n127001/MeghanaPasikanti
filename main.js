@@ -14,6 +14,7 @@ function typeWriter()
     }
 }
 
+let r = document.querySelector(':root');
 let expanded = false;
 function myFunction(num)
 {
@@ -22,35 +23,36 @@ function myFunction(num)
     let elep=document.getElementsByClassName("swiper-slide-prev");
     if(expanded)
     {
-        // console.log(ele[0].classList);
-        // console.log(elep[0].classList);
         expanded = false;
         // console.log('if')
+        // r.style.setProperty('--scroll', 'hidden')
+        r.style.setProperty('--height', '40vh')
         elep[0].classList.remove('outani')
-        elep[0].classList.add('inani')
         ele[0].classList.remove('outani')
         ele[0].classList.remove('upani')
         ele[0].classList.add('downani')
-        let r = document.querySelector(':root');
-        // r.style.setProperty('--scroll', 'hidden')
-        r.style.setProperty('--height', '40vh')
+        elep[0].classList.add('inani')
+        // document.getElementsByClassName('arttag')[0].classList.remove('arttagani')
+
     }
     else {
-        // document.getElementsByClassName('swiper-wrapper')[0].classList.add('disabled')
-        // console.log(ele[0].classList);
-        // console.log(elep[0].classList);
         expanded = true;
         // console.log('else')
-        elep[0].classList.remove('inani')
-        ele[0].classList.remove('inani')
-        elep[0].classList.add('outani')
-        ele[0].classList.remove('downani')
-        ele[0].classList.add("upani");
-        swiper.params.grabCursor=false;
-        swiper.unsetGrabCursor();
-        let r = document.querySelector(':root');
+        
         // r.style.setProperty('--scroll', 'scroll')
         r.style.setProperty('--height','100vh')
+        elep[0].classList.remove('inani')
+        ele[0].classList.remove('inani')
+        ele[0].classList.remove('downani')
+        ele[0].classList.add("upani");
+        elep[0].classList.add('outani')
+        setTimeout(() => {
+            document.getElementsByClassName('arttag')[0].classList.add('arttagani')
+            // console.log(document.getElementsByClassName('arttag')[0].classList)
+            // console.log('added')
+        }, 1000);
+        swiper.params.grabCursor=false;
+        swiper.unsetGrabCursor();
     }
 
 }
@@ -64,10 +66,9 @@ function showGrid ()
         galleryExpanded = true;
         // console.log('shown')
         grid.classList.remove('hidegrid')
-        grid.classList.add('showgrid');
-        let r = document.querySelector(':root')
         r.style.setProperty('--top','-'+ grid.offsetTop + 'px')
         r.style.setProperty('--scroll', 'scroll')
+        grid.classList.add('showgrid');
 
     }
     else 
@@ -76,7 +77,6 @@ function showGrid ()
         // console.log('hided');
         grid.classList.remove('showgrid')
         grid.classList.add('hidegrid')
-        let r = document.querySelector(':root')
         r.style.setProperty('--scroll', 'hidden')
     }
 }
