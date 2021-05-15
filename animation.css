@@ -9,10 +9,9 @@
 
 .upani{
     animation-name : moveup ;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-direction: normal ;
-    overflow-y: scroll;
 }
 @keyframes moveup {
     from {
@@ -21,7 +20,7 @@
         transform: translateX(0);
     }
     to {
-        background-color: rgb(74, 76, 82);
+        background-color: rgb(0, 0, 0);
         height: var(--height);
         width: 100vw;
         transform: translateX(-25vw);
@@ -29,7 +28,7 @@
 }
 
 .upani > .upwrap > img {
-    animation: rotate 1s forwards;
+    animation: rotate 0.5s forwards;
 }
 @keyframes rotate {
     from {
@@ -41,12 +40,12 @@
 }
 .downani {
     animation-name: movedown;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 @keyframes movedown {
     from {
-        background-color: rgb(74, 76, 82);
+        background-color: rgb(0, 0, 0);
         width: 100vw;
         height: 100vh;
         transform: translateX(-25vw);
@@ -61,7 +60,7 @@
 }
 
 .downani > .upwrap > img {
-    animation: revRotate 1s forwards;
+    animation: revRotate 0.5s forwards;
 }
 @keyframes revRotate {
     from {
@@ -72,7 +71,7 @@
     }
 }
 .outani {
-    animation: moveout 1s forwards;
+    animation: moveout 0.5s forwards;
 }
 @keyframes moveout {
     from {
@@ -85,7 +84,7 @@
 }
 
 .inani {
-    animation: movein 1s forwards;
+    animation: movein 0.5s forwards;
 
 }
 @keyframes movein {
@@ -97,22 +96,25 @@
     }
 }
 
-.arttagani .arttag {
-    animation: tagdisplay 1s forwards;
+.arttagani {
+    display: block;
+    animation: arttag 0.5s 1;
 }
 
-@keyframes tagdisplay {
+@keyframes arttag {
     from {
-        display: none;
+
+        font-size: 0;
     }
     to {
-        display: block;
+        font-size: 34px;
     }
 }
 
 .showgrid {
-    animation: showgrid 1s forwards;
+    animation: showgrid 0.5s forwards;
     /* overflow-y: visible; */
+    opacity: 1;
 }
 
 @keyframes showgrid {
@@ -124,8 +126,19 @@
     }
 }
 
+.showgrid > a >img {
+    animation: rotgridarrow 0.5s forwards;
+}
+@keyframes rotgridarrow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
 .hidegrid {
-    animation: hidegrid 1s forwards;
+    animation: hidegrid 0.5s forwards;
 }
 
 @keyframes hidegrid {
@@ -134,5 +147,17 @@
     }
     to {
         transform: translateY(0);
+    }
+}
+
+.hidegrid > a >img {
+    animation: revrotgridarrow 0.5s forwards;
+}
+@keyframes revrotgridarrow {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
     }
 }

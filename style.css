@@ -27,7 +27,6 @@ body {
     margin: 0;
     width: 100vw;
     overflow-x: hidden;
-    background-color: #212121;
 }
 .container-fluid {
     /* background-size: 100vw 100vh; */
@@ -168,7 +167,7 @@ body {
     height: 40vh;
     contain: content;
     margin: 0 auto;
-    /* overflow-y: scroll; */
+    overflow: scroll;
     
 }
 
@@ -176,6 +175,9 @@ body {
     overflow: var(--scroll);
 }
 
+#four > .container {
+    background-color: rgb(46, 66, 73) ;
+}
 .swiper-container> .swiper-wrapper {
     white-space: nowrap;
     display: flex;
@@ -219,7 +221,7 @@ body {
 }
 .slide {
     margin: 0 auto;
-    opacity: 0.8;
+    opacity: 1;
     width: 100%;
     height: fit-content;
     margin-top: 30px;
@@ -241,17 +243,19 @@ body {
 
 .container {
     /* background color of every swiper slide container  */
-    background-color: rgb(46, 66, 73) ;
+    /* background-color: rgb(46, 66, 73) ; */
     height: 100%;
     /* max-width: 90%; */
     column-gap: 1vw;
     text-align: center;
-    padding-top: 5vh;
-    /* overflow-y: scroll; */
+
 }
 
 /* extracurriculars */
 
+#four > .slide {
+    padding-top: 1vw;
+}
 
 .arttag {
     font-weight: 800;
@@ -262,6 +266,7 @@ body {
     word-wrap: break-word;
     white-space: pre-wrap;
     display: none;
+    padding-top: 20px;
 }
 
 
@@ -287,6 +292,9 @@ body {
 .gridArrow img {
     width: inherit;
 }
+
+
+
 
 #gallery > .row {
     display: flex;
@@ -318,14 +326,33 @@ body {
         flex: 100%;
     }
 }
-
-.column img :hover {
-    cursor: grab;
-    z-index: 10;
+@media screen and (max-width: 500px) {
+    .artdesc {
+        font-size: 16px;
+        font-weight: 500;
+    }
 }
+@media screen and (max-height: 500px) {
+    .artdesc {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+
 /* project */
 
+#three > .slide > .row {
+    background-color: rgb(46, 66, 73);
+    padding: 10px;
+    
+}
 
+#proWrapper {
+    background-image: url('images/greenbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #proWrapper .cardWrapper {
     width: 100%;
     display: flex;
@@ -337,10 +364,13 @@ body {
     border-top-left-radius: 5vh;
     border-bottom-right-radius: 5vh; 
     padding: 10px 0;
-    background-color: rgb(133, 128, 129);
-    opacity: 0.5;
+    opacity: 0.8;
     word-wrap: break-word;
     white-space: pre-wrap;
+    background-image: url('images/bluebg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .proCard {
@@ -352,15 +382,16 @@ body {
 } 
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 799px) {
+    
     .proCard {
-        flex: 100%;
+        flex: 50%;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .proCard {
-        flex: 50%;
+        flex: 100%;
     }
 }
 
@@ -446,26 +477,142 @@ body {
 /* about */
 
 .aboutWrapper {
-
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
     overflow-wrap: break-word;
     word-wrap: break-word;
     white-space: pre-wrap;
-    display: flexbox;
+    /* background-color: rgb(46, 66, 73); */
+    display: flex;
     flex: 100%;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:safe;
+    align-items: center;
+    padding: 1vh;
+    overflow-y: scroll;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .aboutWrapper {
+        width: 100%;
+
+    }
+}
+@media screen and (max-device-width: 799px) {
+    .aboutWrapper {
+        width: 90% ;
+    }
+}
+
+@media screen and (max-device-width: 1500px) {
+    .aboutWrapper {
+        width: 80%;
+    }
+}
+
+
+
+#one > .container {
+    padding: 0;
+    /* background-color: rgb(74, 76, 82); */
+}
+#one {
+    
+    overflow-x: hidden;
+}
+#profilepic {
+    width: 25vh;
+    height: auto;
+    max-width: 100%;
+    /* border: 10px solid rgb(0, 0, 0); */
+    background-color: grey;
+    border-radius: 100vw;
+    margin-top: 1vw;
+    animation: flip 5s forwards;
+}
+
+
+/* @keyframes flip {
+    from {
+        transform: perspective(100px) scaleX(-1);
+    }  
+    to {
+        transform:  perspective(100px) scaleX(0.5);
+    } 
+} */
+
+.myname {
+    font-size: 300%;
+    font-weight: 700;
+    color: rgb(255, 251, 0);
+    font-family: serif;
+    font-style: italic;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.profilePicWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.ppicWrapper {
-    max-width: 400px;
+.aboutDesc {
+    font-size: 150%;
+    font-weight: 700;
+    color: black;
+    font-family: serif;
+    font-style: italic;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin: 1vw;
+}
+.aboutWrapper > .resumelink {
+    
+    background-color: grey;
+    padding: 10px 20px;
+    border-radius: 99px;
+    border: 2px solid black;
+}
+.aboutWrapper > div > a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    font-family: serif;
+    font-style: italic;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    flex-shrink: 1;
 }
 
-.profilepic {
-    max-width: 400px;
+.aboutWrapper > div > a:hover {
+    animation: expand 1s forwards;
+}
+
+@keyframes expand {
+    from {
+        font-size: 24px;
+    }
+    to {
+        font-size: 30px;
+        
+    }
 }
 /* skills page css */
 
+#two > .container {
 
+    background-color: rgb(46, 66, 73) ;
+}
 .skills-wrapper {
     display: flex;
     justify-content: center;
