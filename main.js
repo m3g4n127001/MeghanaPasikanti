@@ -39,13 +39,8 @@ function myFunction(num)
         // console.log('else')
         
         // r.style.setProperty('--scroll', 'scroll')
+        
         r.style.setProperty('--height','100vh')
-        if(num==2)
-        {
-            let s=document.getElementsByClassName("circle");
-            for(let i=0;i<s.length;i++)
-                s[i].classList.remove('circleani');
-        }
         elep[0].classList.remove('inani')
         ele[0].classList.remove('inani')
         ele[0].classList.remove('downani')
@@ -58,8 +53,6 @@ function myFunction(num)
         }, 1000);
         swiper.params.grabCursor=false;
         swiper.unsetGrabCursor();
-        let r = document.querySelector(':root');
-        r.style.setProperty('--height','100vh')
         if(num==2)
         {
            let s= document.getElementsByClassName("circle");
