@@ -823,3 +823,56 @@ background: linear-gradient(90deg, rgb(78, 99, 3) 0%, rgb(95, 172, 172) 30%, rgb
         width: 100%;
     }
 }
+
+/* contact css  */
+.contact-container {
+    width: 100%;
+    height: 100vh   ;
+    background-color: rgb(46, 66, 73);
+    overflow: hidden;
+}
+.fullName-wrapper {
+    width: 70%;
+    height: auto;
+}
+#fullname {
+    width: 100%;
+    height: 70%;
+}
+
+.contact-text-wrapper {
+    width: 100%;
+}
+
+#contact-text {
+    font-size: 300%;
+    font-weight: 700;
+    font-family: serif;
+    font-style: italic;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-all;
+    text-align: left;
+    margin: 1% 5%;
+    color: rgb(196, 196, 196);
+}
+.contact-links-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 1% 5%;
+}
+.link-wrapper {
+    background-color: gray;
+    width: 10%;
+    height: auto;
+    border-radius: 2000px;
+    float: left;
+    margin: 1%;
+}
+.link-icon {
+    height: auto;
+    width: 100%;
+}
+.link-icon:hover {
+    cursor:pointer;
+}
