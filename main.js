@@ -1,7 +1,7 @@
 
 let speed=150;
 let i=0;
-let text="I am a computer science undergrad at NITW making this website . ";
+let text="I am a computer science undergrad at NIT Warangal and blah blah blah."; 
 
 
 function typeWriter() 
@@ -29,9 +29,19 @@ function myFunction(num)
         ele[0].classList.remove('upani')
         ele[0].classList.add('downani')
         elep[0].classList.add('inani')
-        document.getElementsByClassName('arttag')[0].classList.remove('arttagani')
-
-        
+        document.getElementsByClassName('arttag')[0].classList.remove('arttagani');
+        swiper.params.grabCursor=true;
+        swiper.setGrabCursor();
+        if(num==2)
+        {
+            let s= document.getElementsByClassName("circle");
+            let c=document.getElementsByClassName('counter');
+            for(let i=0;i<s.length;i++)
+            {
+                s[i].classList.remove('circleani');
+                c[i].innerText=0;
+            }
+        }
     }
     else {
         expanded = true;

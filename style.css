@@ -5,23 +5,22 @@
     --per:0;
     --w:13vw;
     --h:200px;
-
 }
-
 html,body {
     position: relative;
     height: 100%;
     max-width: 100%;
     overflow-y: hidden;
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 } 
-h1 {
+h1,h2,h3,h4,h5,h6,p,div,a {
+    font-family: 'Josefin Sans', sans-serif;
     word-break: break-all;
+    font-weight: bold;
 }
 body {
     margin: 0;
@@ -29,8 +28,7 @@ body {
     overflow-x: hidden;
 }
 .container-fluid {
-    /* background-size: 100vw 100vh; */
-    background-color: #212121;
+    background-color: #141A1C;
     width: 100vw;
     height: 100vh;
 }
@@ -42,7 +40,6 @@ body {
 .header {
     top: 0;
     position: sticky;
-    /* background-color: skyblue; */
 }
 .header > .nav {
     display: flex;
@@ -51,24 +48,27 @@ body {
     align-items: center;
     flex-direction: row;
     list-style-type: none;
-    background-color: #3d4f53;
+    background-color: #233033;
     width: 100vw;
-    
+}
+.nav > .name-header >img{
+    height: 60px;
+    width: auto;
+    padding: 0px;
 }
 .nav > li {
-    padding: 18px;
+    padding:5px 15px;
 }
 .nav > li > a {
     text-decoration: none;
     font-size: 24px;
-    color: gray;
+    color: #ACACAC;
 }
 .nav > li  :hover {
     color: white;
     text-shadow: 3px 3px 1px black ;
 }
 
-/* body css */
 /* body css */
 .body {
     padding-top: 8%;
@@ -101,15 +101,6 @@ body {
     align-items: center;
     flex-direction: row;
 }
-/* .text1 {
-    background-color: yellow;
-}
-.text2 {
-    background-color: green;
-}
-.text3 {
-    background-color: blue;
-} */
 .text2 > img {
     width: 50%;
     height: auto;
@@ -176,7 +167,7 @@ body {
 }
 
 #four > .container {
-    background-color: rgb(46, 66, 73) ;
+    background-color: #233033 ;
 }
 .swiper-container> .swiper-wrapper {
     white-space: nowrap;
@@ -195,21 +186,20 @@ body {
 }
 
 .swiper-slide-active > .titleWrapper > .slide-title{
-    color: rgb(255, 2, 2);
+    color: #94A19D;
 }
-.upwrap {
-
-    margin-top: 1vh;
+.upwrap >img {
+    margin-top: 3vh;
 }
 .swiper-slide-active > .upwrap >    img {
     opacity: 1;
 }
 .upwrap > img{
-    opacity: 0.2;
+    opacity: 0.1;
 }
 .slide-title {
     font-size: 30px;
-    color: rgb(63, 59, 59);
+    color: #393d3c;
     opacity: 0.5;
     padding-bottom: 0;
     margin-bottom: 0;
@@ -225,7 +215,6 @@ body {
     width: 100%;
     height: fit-content;
     margin-top: 30px;
-
 }
 
 .titleWrapper {
@@ -234,21 +223,14 @@ body {
     justify-content: center; 
     margin-top: 2vh;
 }
-.titleWrapper > a > img{
-    opacity: 0;
-}
-.titleWrapper > a :hover {
-    opacity: 1;
-}
+
 
 .container {
     /* background color of every swiper slide container  */
-    /* background-color: rgb(46, 66, 73) ; */
+    background-color: #233033;
     height: 100%;
-    /* max-width: 90%; */
     column-gap: 1vw;
     text-align: center;
-
 }
 
 /* extracurriculars */
@@ -260,9 +242,7 @@ body {
 .arttag {
     font-weight: 800;
     font-size: 30px;
-    font-family: serif;
-    font-style: italic;
-    color:rgb(0, 0, 0);
+    color:black;
     word-wrap: break-word;
     white-space: pre-wrap;
     display: none;
@@ -275,8 +255,6 @@ body {
     word-wrap: break-word;
     font-weight: 700;
     font-size: 24px;
-    font-family: serif;
-    font-style: italic;
     color: whitesmoke;
     width: 80%;
     margin: 0 auto;
@@ -293,14 +271,11 @@ body {
     width: inherit;
 }
 
-
-
-
 #gallery > .row {
     display: flex;
     flex: 100%;
     flex-direction: row;
-    background-color: rgb(46, 66, 73);
+    background-color: #233033;
     padding: 1vh;
 }
 .column {
@@ -349,9 +324,7 @@ body {
 }
 
 #proWrapper {
-    background-image: url('images/greenbg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #233033;
 }
 #proWrapper .cardWrapper {
     width: 100%;
@@ -367,23 +340,18 @@ body {
     opacity: 0.8;
     word-wrap: break-word;
     white-space: pre-wrap;
-    background-image: url('images/bluebg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(360deg, rgb(8, 42, 90) 0%, rgb(96, 126, 138) 100%);
 
 }
 
 .proCard {
     display: flex;
     flex: 50%;
-     width: 100%;
-
+    width: 100%;
     height: inherit;
 } 
 
-
 @media screen and (max-width: 799px) {
-    
     .proCard {
         flex: 50%;
     }
@@ -400,8 +368,6 @@ body {
     font-size: 200%;
     font-weight: 700;
     color: rgb(3, 42, 58);
-    font-family: serif;
-    font-style: italic;
     padding-top: 10px;
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -414,9 +380,8 @@ body {
     word-wrap: break-word;
     white-space: pre-wrap;
     font-size: 24px;
-    font-style:italic;
+    /* font-style:italic; */
     padding: 20px 20px;
-    font-family: 'Times New Roman', Times, serif;
 }
 .techUsed {
     display: flex;
@@ -430,7 +395,6 @@ body {
 
 .techUsed span{
     border: 2px solid black;
-    font-family: sans-serif;
     font-style:oblique;
     font-weight: 800;
     color: rgb(0, 0, 0);
@@ -456,9 +420,7 @@ body {
     font-size: 20px;
     color: black;
     font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    
+   
 }
 .proLink a:hover {
     z-index: 2;
@@ -477,14 +439,11 @@ body {
 /* about */
 
 .aboutWrapper {
-    background-image: url('images/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #233033;
     opacity: 0.8;
     overflow-wrap: break-word;
     word-wrap: break-word;
     white-space: pre-wrap;
-    /* background-color: rgb(46, 66, 73); */
     display: flex;
     flex: 100%;
     flex-direction: column;
@@ -497,8 +456,6 @@ body {
     margin: 0 auto;
     width: 100%;
 }
-
-
 
 @media screen and (max-width: 600px) {
     .aboutWrapper {
@@ -518,27 +475,20 @@ body {
     }
 }
 
-
-
 #one > .container {
     padding: 0;
-    /* background-color: rgb(74, 76, 82); */
 }
 #one {
-    
     overflow-x: hidden;
 }
 #profilepic {
     width: 25vh;
     height: auto;
     max-width: 100%;
-    /* border: 10px solid rgb(0, 0, 0); */
     background-color: grey;
     border-radius: 100vw;
-    margin-top: 1vw;
     animation: flip 5s forwards;
 }
-
 
 /* @keyframes flip {
     from {
@@ -553,12 +503,10 @@ body {
     font-size: 300%;
     font-weight: 700;
     color: rgb(255, 251, 0);
-    font-family: serif;
-    font-style: italic;
     word-wrap: break-word;
     white-space: pre-wrap;
 }
-.profilePicWrapper {
+.ppicWrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -568,15 +516,13 @@ body {
 .aboutDesc {
     font-size: 150%;
     font-weight: 700;
-    color: black;
-    font-family: serif;
-    font-style: italic;
+    color: #a1b2b6;
     word-wrap: break-word;
     white-space: pre-wrap;
-    margin: 1vw;
+    margin: 1vw 2vw;
 }
-.aboutWrapper > .resumelink {
-    
+.aboutWrapper > .resumelink 
+{    
     background-color: grey;
     padding: 10px 20px;
     border-radius: 99px;
@@ -587,8 +533,6 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: black;
-    font-family: serif;
-    font-style: italic;
     word-wrap: break-word;
     white-space: pre-wrap;
     flex-shrink: 1;
@@ -604,14 +548,12 @@ body {
     }
     to {
         font-size: 30px;
-        
     }
 }
 /* skills page css */
 
 #two > .container {
-
-    background-color: rgb(46, 66, 73) ;
+    background-color: #233033;
 }
 .skills-wrapper {
     display: flex;
@@ -682,11 +624,15 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .skills-text > h4 {
     word-wrap: break-word;
     white-space: pre-wrap;
     font-size: 30px;
     color: rgb(209, 207, 207);
+}
+.skills-text {
+    padding-top: 50px;
 }
 .percentage {
     height: 1vh;
@@ -695,7 +641,7 @@ body {
     top: 180px;
 }
 .counter,.percentage {
-    color: rgb(35, 34, 36);
+    color: #476e80;
     font-size: 1.5vw;
 }
 .circleani::before {
@@ -714,7 +660,8 @@ body {
     left: -50%; /* Center sauare */
     height: 200%;
     width: 200%;
-    background-color: #f8f8f8 ;
+    background-color: #fdfdfd ;
+    opacity: 0.7;
     border-radius: 35%; /* Smooth edges to appear like liquid */
     animation: spin 4s ease-in-out both; /* Set to forwards to freeze on last frame */
 }
@@ -733,111 +680,53 @@ body {
     --lvl:-60%;
 }
 .cpp {
-background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
---lvl:-60%;
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    --lvl:-60%;
 }
 .html {
     background: linear-gradient(254deg, rgb(81, 149, 150) 0%, rgb(139, 121, 82) 100%);
---lvl:-65%;
+    --lvl:-65%;
 }
 .css {
-background: linear-gradient(90deg, rgb(95, 202, 188) 0%, rgba(136,136,186,1) 30%, rgb(132, 139, 101) 100%);
---lvl:-53%;
+    background: linear-gradient(90deg, rgb(95, 202, 188) 0%, rgba(136,136,186,1) 30%, rgb(132, 139, 101) 100%);
+    --lvl:-53%;
 }
 .js {
     background: linear-gradient(90deg, rgba(134,128,248,1) 0%, rgb(116, 75, 75) 30%, rgb(137, 81, 145) 100%);
---lvl:-50%;
+    --lvl:-50%;
 }
 .react {
-background: linear-gradient(90deg, rgb(206, 194, 154) 0%, rgb(25, 112, 79) 30%, rgba(0,212,255,1) 100%);
---lvl:-50%;
+    background: linear-gradient(90deg, rgb(206, 194, 154) 0%, rgb(25, 112, 79) 30%, rgba(0,212,255,1) 100%);
+    --lvl:-50%;
 }
 .bootstrap {
-background: linear-gradient(90deg, rgb(108, 84, 136) 0%, rgb(144, 156, 124) 30%, rgba(0,212,255,1) 100%);
---lvl:-45%;
+    background: linear-gradient(90deg, rgb(108, 84, 136) 0%, rgb(144, 156, 124) 30%, rgba(0,212,255,1) 100%);
+    --lvl:-45%;
 }
 .arduino {
-background: linear-gradient(90deg, rgb(78, 99, 3) 0%, rgb(95, 172, 172) 30%, rgb(190, 118, 175) 100%);
---lvl:-50%;
+    background: linear-gradient(90deg, rgb(78, 99, 3) 0%, rgb(95, 172, 172) 30%, rgb(190, 118, 175) 100%);
+    --lvl:-50%;
 }
-/* responsive trash */
-@media all and (max-device-width: 1300px){
-    .circle {
-        flex:100%;
-        width: 16vw;
-        height: 16vw;
-    }
-    .skills-wrapper > .row > .col-md-3,.col-sm-6,.col-xs-12{
-        flex: 50%;
-        margin: 0%;
-        width: 100%;
-    }
-    .skills-wrapper > .row {
-        flex: 50%;
-        margin: 0%;
-        width: 100%;
-    }
-    .counter {
-        position: relative;
-        top: 0px;
-        bottom: 0px;
-    }
-}
-@media all and (max-device-width: 990) {
-    .circle {
-        flex:50%;
-        width: 20vw;
-        height: 20vw;
-    }
-    .skills-wrapper > .row > .col-md-3,.col-sm-6,.col-xs-12{
-        flex: 50%;
-        margin: 0%;
-        width: 100%;
-    }
-    .skills-wrapper > .row {
-        flex: 50%;
-        margin: 0%;
-        width: 100%;
-    }
-    .counter {
-        position: relative;
-        top: 0px;
-        bottom: 0px;
-    }
-}
-@media all and (max-device-width:700) {
-    .circle{
-        flex: 50%;
-        width: 20vw;
-        height: 20vw;
-        margin: 50%;
-    }
-    .skills-wrapper > .row > .col-md-3,.col-sm-6,.col-xs-12{
-        flex: 50%;
-        margin: 0%;
-        width: 100%;
-    }
-    .skills-wrapper > .row {
-        flex: 50%;
-        margin: 0%;
-        width: 100%;
-    }
-}
-
 /* contact css  */
 .contact-container {
     width: 100%;
     height: 100vh   ;
-    background-color: rgb(46, 66, 73);
+    background-color: #233033;
     overflow: hidden;
 }
 .fullName-wrapper {
-    width: 70%;
+    width: 50%;
     height: auto;
+    align-items: center;
+    margin: 1vw;
 }
 #fullname {
     width: 100%;
     height: 70%;
+    display: flex;
+    flex: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-text-wrapper {
@@ -847,8 +736,6 @@ background: linear-gradient(90deg, rgb(78, 99, 3) 0%, rgb(95, 172, 172) 30%, rgb
 #contact-text {
     font-size: 300%;
     font-weight: 700;
-    font-family: serif;
-    font-style: italic;
     word-wrap: break-word;
     white-space: pre-wrap;
     word-break: break-all;
@@ -862,16 +749,15 @@ background: linear-gradient(90deg, rgb(78, 99, 3) 0%, rgb(95, 172, 172) 30%, rgb
     margin: 1% 5%;
 }
 .link-wrapper {
-    background-color: gray;
     width: 10%;
     height: auto;
     border-radius: 2000px;
     float: left;
-    margin: 1%;
+    margin:0 ;
 }
 .link-icon {
     height: auto;
-    width: 100%;
+    width: 50%;
 }
 .link-icon:hover {
     cursor:pointer;
