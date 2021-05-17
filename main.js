@@ -1,8 +1,6 @@
-
 let speed=150;
 let i=0;
 let text="I am a computer science undergrad at NIT Warangal and blah blah blah."; 
-
 
 function typeWriter() 
 {
@@ -23,15 +21,16 @@ function myFunction(num)
     if(expanded)
     {
         expanded = false;
+
         r.style.setProperty('--height', '40vh')
         elep[0].classList.remove('outani')
         ele[0].classList.remove('outani')
         ele[0].classList.remove('upani')
         ele[0].classList.add('downani')
         elep[0].classList.add('inani')
-        document.getElementsByClassName('arttag')[0].classList.remove('arttagani');
         swiper.params.grabCursor=true;
         swiper.setGrabCursor();
+        swiper.params.cssMode=false;
         if(num==2)
         {
             let s= document.getElementsByClassName("circle");
@@ -41,6 +40,10 @@ function myFunction(num)
                 s[i].classList.remove('circleani');
                 c[i].innerText=0;
             }
+        }
+        else if(num==4)
+        {
+            document.getElementsByClassName("arttag")[0].classList.remove('arttagani');
         }
     }
     else {
@@ -53,12 +56,8 @@ function myFunction(num)
         ele[0].classList.add("upani");
         elep[0].classList.add('outani')
         
-        setTimeout(() => {
-            document.getElementsByClassName('arttag')[0].classList.add('arttagani')
-            // if(document.getElementsByClassName('aboutWrapper')[0].clientHeight )
-
-        }, 1000);
         swiper.params.grabCursor=false;
+        swiper.params.cssMode=true;
         swiper.unsetGrabCursor();
         if(num==2)
         {
@@ -75,6 +74,14 @@ function myFunction(num)
                 
             }, 2000);
         }
+        else if(num==4)
+        {
+            console.log("extra slide button clicked")
+            console.log(document.getElementsByClassName('arttag')[0].classList)
+            setTimeout(() => {
+                document.getElementsByClassName('arttag')[0].classList.add('arttagani')
+            }, 1000);
+        }
     }
     
 }
@@ -83,21 +90,23 @@ let galleryExpanded = false;
 function showGrid () 
 {
     let grid = document.getElementById('gallery');
+    console.log("entered show grid ");
+    console.log("gallery expanded = "+galleryExpanded);
     if(!galleryExpanded)
     {
         galleryExpanded = true;
-        grid.classList.remove('hidegrid')
-        r.style.setProperty('--top','-'+ grid.offsetTop + 'px')
-        r.style.setProperty('--scroll', 'scroll')
         grid.classList.add('showgrid');
-
+        grid.classList.remove('hidegrid');
+        r.style.setProperty('--top','-'+ grid.offsetTop + 'px');
+        console.log(getComputedStyle(r).getPropertyValue('--top'))
+        r.style.setProperty('--scroll', 'scroll');
     }
     else 
     {
         galleryExpanded = false;
-        grid.classList.remove('showgrid')
-        grid.classList.add('hidegrid')
-        r.style.setProperty('--scroll', 'hidden')
+        grid.classList.remove('showgrid');
+        grid.classList.add('hidegrid');
+        r.style.setProperty('--scroll', 'hidden');
     }
 }
 
