@@ -2,6 +2,12 @@ let speed=150;
 let i=0;
 let text="I am a computer science undergrad at NITW making this website . ";
 
+window.onresize = function() {
+    console.log(document.getElementsByClassName('swiper-slide-active')[0].children)
+    document.getElementsByClassName('swiper-slide-active')[0].classList.add('resize')
+
+}
+
 function typeWriter() 
 {
     if(i<text.length)
@@ -29,7 +35,7 @@ function myFunction(num)
         ele[0].classList.add('downani')
         elep[0].classList.add('inani')
         // console.log('added downani')
-        document.getElementsByClassName('arttag')[0].classList.remove('arttagani')
+        // document.getElementsByClassName('arttag')[0].classList.remove('arttagani')
         swiper.params.grabCursor = true;
         swiper.params.grabCursor = true;
         swiper.params.cssMode = false;
@@ -90,19 +96,18 @@ function myFunction(num)
     
 }
 
+let galleryExpanded = false;
 function showGrid () 
 {
     let grid = document.getElementById('gallery');
-    console.log("entered show grid ");
-    console.log("gallery expanded = "+galleryExpanded);
     if(!galleryExpanded)
     {
         galleryExpanded = true;
-        grid.classList.add('showgrid');
         grid.classList.remove('hidegrid');
+        r.style.setProperty('--scroll', 'scroll');
         r.style.setProperty('--top','-'+ grid.offsetTop + 'px');
         console.log(getComputedStyle(r).getPropertyValue('--top'))
-        r.style.setProperty('--scroll', 'scroll');
+        grid.classList.add('showgrid');
     }
     else 
     {
@@ -121,7 +126,7 @@ flexFont = function () {
     var divs = document.getElementsByClassName('skill-name');
     console.log(divs.length);
     for(var i = 0; i < divs.length; i++) {
-        var len=divs[i].innerText.length;
+        var len=divs[i].innerText.length; 
         if(len<=2)
             len++;
         else if(len==5)

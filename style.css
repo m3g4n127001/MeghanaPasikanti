@@ -259,13 +259,13 @@ body {
     padding-top: 1vw;
 }
 
-.arttag > h1{
+.arttag{
     font-weight: 800;
     font-size: 30px;
     color:rgb(105, 105, 105);
     word-wrap: break-word;
     white-space: pre-wrap;
-    padding-top: 20px;
+    margin-top: 20px;
     display: none;
 }
 

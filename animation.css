@@ -108,16 +108,18 @@
 
 .arttagani {
     display: block;
-    animation: arttag 0.5s forwards;
+    animation: arttag 1s forwards;
     
 }
 
-@keyframes arttagi {
+@keyframes arttag {
     from {
         font-size: 0;
+        display: none;
     }
     to {
         font-size: 34px;
+        display: block;
     }
 }
 
@@ -125,12 +127,12 @@
     animation: showgrid 0.5s forwards;
     /* overflow-y: visible; */
     opacity: 1;
-    padding-top: 20px;
+    
 }
 
 @keyframes showgrid {
     from {
-        transform: translateY(-50px);
+        transform: translateY(0);
     }
     to {
         transform: translateY(var(--top ));
@@ -171,4 +173,9 @@
     to {
         transform: rotate(0deg);
     }
+}
+
+.resize {
+    z-index: 10;
+    resize: horizontal;
 }
