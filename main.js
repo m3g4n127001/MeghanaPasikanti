@@ -1,8 +1,11 @@
-
+let galleryExpanded = false;
 let speed=150;
 let i=0;
-let text="I am a computer science undergrad at NIT Warangal and blah blah blah."; 
+let text="I am a computer science undergrad at NITW making this website . ";
 
+window.onload = function() {
+    document.getElementById('loader').classList.add('loaderhide')
+}
 
 function typeWriter() 
 {
@@ -29,37 +32,30 @@ function myFunction(num)
         ele[0].classList.remove('upani')
         ele[0].classList.add('downani')
         elep[0].classList.add('inani')
-        document.getElementsByClassName('arttag')[0].classList.remove('arttagani');
-        swiper.params.grabCursor=true;
-        swiper.setGrabCursor();
-        if(num==2)
-        {
-            let s= document.getElementsByClassName("circle");
-            let c=document.getElementsByClassName('counter');
-            for(let i=0;i<s.length;i++)
-            {
-                s[i].classList.remove('circleani');
-                c[i].innerText=0;
-            }
-        }
+        // console.log('added downani')
+        document.getElementsByClassName('arttag')[0].classList.remove('arttagani')
+        swiper.params.grabCursor = true;
+        swiper.params.grabCursor = true;
+        swiper.params.cssMode = false;
+        
     }
     else {
         expanded = true;
         
         r.style.setProperty('--height','100vh')
+        ele[0].classList.add("upani");
+        elep[0].classList.add('outani')
         elep[0].classList.remove('inani')
         ele[0].classList.remove('inani')
         ele[0].classList.remove('downani')
-        ele[0].classList.add("upani");
-        elep[0].classList.add('outani')
-        
+        // console.log('added upani')
         setTimeout(() => {
             document.getElementsByClassName('arttag')[0].classList.add('arttagani')
             // if(document.getElementsByClassName('aboutWrapper')[0].clientHeight )
-
         }, 1000);
         swiper.params.grabCursor=false;
         swiper.unsetGrabCursor();
+        swiper.params.cssMode = true;
         if(num==2)
         {
             let s= document.getElementsByClassName("circle");
@@ -72,28 +68,31 @@ function myFunction(num)
             flexFont();
             setTimeout(() => {
                 docounting();
-                
             }, 2000);
         }
     }
     
 }
 
-let galleryExpanded = false;
 function showGrid () 
 {
-    let grid = document.getElementById('gallery');
+    let grid = document.querySelector('#gallery');
     if(!galleryExpanded)
     {
         galleryExpanded = true;
         grid.classList.remove('hidegrid')
+        console.log(grid.offsetTop)
         r.style.setProperty('--top','-'+ grid.offsetTop + 'px')
         r.style.setProperty('--scroll', 'scroll')
+        // console.log(getComputedStyle(r).getPropertyValue('--top'))
         grid.classList.add('showgrid');
+        // console.log(grid.classList);
 
     }
     else 
     {
+        console.log('hide')
+        r.style.setProperty('--top','-'+ grid.offsetTop + 'px')
         galleryExpanded = false;
         grid.classList.remove('showgrid')
         grid.classList.add('hidegrid')

@@ -17,6 +17,23 @@ html,body {
     margin: 0;
     padding: 0;
 } 
+
+#loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: pink;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    user-select: none;
+    pointer-events: none;
+}
+.loaderhide {
+    display: none;
+}
 h1,h2,h3,h4,h5,h6,p,div,a {
     font-family: 'Josefin Sans', sans-serif;
     word-break: break-all;
@@ -43,10 +60,10 @@ body {
 }
 .header > .nav {
     display: flex;
-    flex: 1;
+    flex: 100%;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: row;
     list-style-type: none;
     background-color: #233033;
     width: 100vw;
@@ -55,6 +72,7 @@ body {
     height: 60px;
     width: auto;
     padding: 0px;
+    margin: 0;
 }
 .nav > li {
     padding:5px 15px;
@@ -73,9 +91,9 @@ body {
 .body {
     padding-top: 8%;
     display: flex;
-    flex: 1;
+    flex: 100%;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     border-bottom: 0;
     text-align: center;
@@ -94,6 +112,7 @@ body {
     font-size: 34px;
     color: #ffffff;
     margin: 0;
+    flex-shrink: 2;
 }
 .text2 {
     display: flex;
@@ -105,6 +124,7 @@ body {
     width: 50%;
     height: auto;
     padding: 0 20px;
+    flex-shrink: 2;
 }
 #intro_text {
     color: white;
@@ -126,7 +146,7 @@ body {
     margin-top: 50px;
     bottom: 0;
     width: 100%;
-    margin-left: 0%;
+    margin-left: 0;
     flex-shrink: 1;
     height: 100%;
     justify-content: center;
@@ -172,7 +192,7 @@ body {
 .swiper-container> .swiper-wrapper {
     white-space: nowrap;
     display: flex;
-    flex: 1;
+    flex: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory !important;
@@ -182,7 +202,7 @@ body {
     width: 100vw;
     margin: 0 auto;
     align-items: center;
-    transform: translateX(20vw);
+    /* transform: translateX(20vw); */
 }
 
 .swiper-slide-active > .titleWrapper > .slide-title{
@@ -191,11 +211,11 @@ body {
 .upwrap >img {
     margin-top: 3vh;
 }
-.swiper-slide-active > .upwrap >    img {
-    opacity: 1;
-}
 .upwrap > img{
     opacity: 0.1;
+}
+.swiper-slide-active > .upwrap >    img {
+    opacity: 1;
 }
 .slide-title {
     font-size: 30px;
@@ -213,7 +233,7 @@ body {
     margin: 0 auto;
     opacity: 1;
     width: 100%;
-    height: fit-content;
+    /* height: fit-content; */
     margin-top: 30px;
 }
 
@@ -241,7 +261,7 @@ body {
 
 .arttag {
     font-weight: 800;
-    font-size: 30px;
+    font-size: 28px;
     color:black;
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -290,7 +310,7 @@ body {
     padding: 1vh;
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
     .column {
         flex: 50%;
     }
@@ -306,27 +326,24 @@ body {
         font-size: 16px;
         font-weight: 500;
     }
-}
-@media screen and (max-height: 500px) {
-    .artdesc {
-        font-size: 16px;
-        font-weight: 500;
-    }
-}
-
+} */
 
 /* project */
 
+#three > .container {
+    height: auto;
+}
+
 #three > .slide > .row {
-    background-color: rgb(46, 66, 73);
     padding: 10px;
     
 }
 
 #proWrapper {
     background-color: #233033;
+    height: auto;
 }
-#proWrapper .cardWrapper {
+#proWrapper > .proCard > .cardWrapper {
     width: 100%;
     display: flex;
     align-items: center;
@@ -395,7 +412,7 @@ body {
 
 .techUsed span{
     border: 2px solid black;
-    font-style:oblique;
+    font-style:normal;
     font-weight: 800;
     color: rgb(0, 0, 0);
     padding: 0 5px;
