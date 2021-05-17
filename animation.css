@@ -108,16 +108,18 @@
 
 .arttagani {
     display: block;
-    animation: arttag 0.5s forwards;
+    animation: arttag 1s forwards;
     
 }
 
 @keyframes arttag {
     from {
         font-size: 0;
+        display: none;
     }
     to {
         font-size: 34px;
+        display: block;
     }
 }
 
@@ -173,6 +175,6 @@
 }
 
 .resize {
-    resize: both;
-    margin: 0 auto;
+    z-index: 10;
+    resize: horizontal;
 }
