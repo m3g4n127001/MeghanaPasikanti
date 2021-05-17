@@ -13,6 +13,9 @@
     
     <title>My Portfolio</title>
 
+    <!-- loading links  -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text\css"/>
 
@@ -22,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
     <!-- responsive css -->
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="responsive.css" type="text\css">
 
     <!-- Demo styles -->
     <script src="main.js"></script>
@@ -30,9 +33,6 @@
   </head>
   
   <body onload="typeWriter()">
-    <div id="loader">
-      hey am i visible
-    </div>
     <div class="container-fluid mb-0 pb-0">
       
       <header class="header">
@@ -306,7 +306,7 @@
                     <img src="/images/fullname3.png" id="fullname">
                 </div>
                 <div class="contact-text-wrapper">
-                  <p id="contact-text">Have created accounts on multiple platforms.<br>slide in to any one to contact me.</p>
+                  <p id="contact-text">Have created accounts on multiple platforms.<br>slide in to any one to contact me.So here are those click any one of the below links. I have no text so writing something :)</p>
                 </div>
                 <div class="contact-links-wrapper">
                   <div class="link-wrapper">
@@ -355,6 +355,9 @@
 
     <!-- Initialize Swiper -->
     <script type="text/javascript">
+      imagesLoaded( document.querySelector('#gallery'), function(  ) {
+        console.log('all images are loaded');
+      });
       let swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
         spaceBetween: 85,

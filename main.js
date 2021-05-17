@@ -1,11 +1,6 @@
-let galleryExpanded = false;
 let speed=150;
 let i=0;
 let text="I am a computer science undergrad at NITW making this website . ";
-
-window.onload = function() {
-    document.getElementById('loader').classList.add('loaderhide')
-}
 
 function typeWriter() 
 {
@@ -26,6 +21,7 @@ function myFunction(num)
     if(expanded)
     {
         expanded = false;
+
         r.style.setProperty('--height', '40vh')
         elep[0].classList.remove('outani')
         ele[0].classList.remove('outani')
@@ -38,6 +34,23 @@ function myFunction(num)
         swiper.params.grabCursor = true;
         swiper.params.cssMode = false;
         
+        swiper.params.grabCursor=true;
+        swiper.setGrabCursor();
+        swiper.params.cssMode=false;
+        if(num==2)
+        {
+            let s= document.getElementsByClassName("circle");
+            let c=document.getElementsByClassName('counter');
+            for(let i=0;i<s.length;i++)
+            {
+                s[i].classList.remove('circleani');
+                c[i].innerText=0;
+            }
+        }
+        else if(num==4)
+        {
+            document.getElementsByClassName("arttag")[0].classList.remove('arttagani');
+        }
     }
     else {
         expanded = true;
@@ -48,11 +61,6 @@ function myFunction(num)
         elep[0].classList.remove('inani')
         ele[0].classList.remove('inani')
         ele[0].classList.remove('downani')
-        // console.log('added upani')
-        setTimeout(() => {
-            document.getElementsByClassName('arttag')[0].classList.add('arttagani')
-            // if(document.getElementsByClassName('aboutWrapper')[0].clientHeight )
-        }, 1000);
         swiper.params.grabCursor=false;
         swiper.unsetGrabCursor();
         swiper.params.cssMode = true;
@@ -70,33 +78,40 @@ function myFunction(num)
                 docounting();
             }, 2000);
         }
+        else if(num==4)
+        {
+            console.log("extra slide button clicked")
+            console.log(document.getElementsByClassName('arttag')[0].classList)
+            setTimeout(() => {
+                document.getElementsByClassName('arttag')[0].classList.add('arttagani')
+            }, 1000);
+        }
     }
     
 }
 
 function showGrid () 
 {
-    let grid = document.querySelector('#gallery');
+    let grid = document.getElementById('gallery');
+    console.log("entered show grid ");
+    console.log("gallery expanded = "+galleryExpanded);
     if(!galleryExpanded)
     {
         galleryExpanded = true;
-        grid.classList.remove('hidegrid')
-        console.log(grid.offsetTop)
-        r.style.setProperty('--top','-'+ grid.offsetTop + 'px')
-        r.style.setProperty('--scroll', 'scroll')
-        // console.log(getComputedStyle(r).getPropertyValue('--top'))
         grid.classList.add('showgrid');
-        // console.log(grid.classList);
-
+        grid.classList.remove('hidegrid');
+        r.style.setProperty('--top','-'+ grid.offsetTop + 'px');
+        console.log(getComputedStyle(r).getPropertyValue('--top'))
+        r.style.setProperty('--scroll', 'scroll');
     }
     else 
     {
         console.log('hide')
         r.style.setProperty('--top','-'+ grid.offsetTop + 'px')
         galleryExpanded = false;
-        grid.classList.remove('showgrid')
-        grid.classList.add('hidegrid')
-        r.style.setProperty('--scroll', 'hidden')
+        grid.classList.remove('showgrid');
+        grid.classList.add('hidegrid');
+        r.style.setProperty('--scroll', 'hidden');
     }
 }
 
