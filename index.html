@@ -32,7 +32,14 @@
 
   </head>
   
-  <body onload="typeWriter()">
+  <body onload="stoploading()" style=" -webkit-scrollbar:none ">
+    <div id="loader" 
+      style="width: 100vw; 
+            height: 100vh; 
+            background: black url('images/loading2.gif') no-repeat center; 
+            z-index: 10; 
+            position: fixed;">
+    </div>
     <div class="container-fluid mb-0 pb-0">
       
       <header class="header">
@@ -260,31 +267,37 @@
                 </a>
                 <div class="row">
                   <div class="column">
-                    <img src="arts/AA.jpg">
-                    <img src="arts/sonusood.JPEG" >
-                    <img src="arts/customart.jpg">
-                    <img src="arts/groom2.jpg">
-                    <img src="arts/babygirl.jpeg">
+                    <img src="arts/AA.jpg" style="width: 100%;">
+                    <img src="arts/sonusood.JPEG"  style="width: 100%;">
+                    <img src="arts/customart.jpg"  style="width: 100%;">
+                    <img src="arts/groom2.jpg"  style="width: 100%;">
+                    <img src="arts/babygirl.jpeg"  style="width: 100%;">
                   </div>
                   <div class="column"> 
-                    <img src="arts/millie.jpg">
-                    <img src="arts/groom.jpg">
-                    <img src="arts/turban.jpg"> 
-                    <img src="arts/vinayakudu.jpg">
-                    <img src="arts/draupadhi.jpg">
+                    <img src="arts/millie.jpg"  style="width: 100%;">
+                    <img src="arts/groom.jpg"  style="width: 100%;">
+                    <img src="arts/turban.jpg"  style="width: 100%;"> 
+                    <img src="arts/vinayakudu.jpg"  style="width: 100%;">
+                    <img src="arts/draupadhi.jpg"  style="width: 100%;">
+
+                    <img src="arts/babygirl.jpeg"  style="width: 100%;">
+                    <img src="arts/babygirl.jpeg"  style="width: 100%;">
+
                   </div>
                   <div class="column">
-                    <img src="arts/buddha.jpg">
-                    <img src="arts/saipallavi.jpg">
-                    <img src="arts/ranveer.jpg">
-                    <img src="arts/suriya.jpg">
+                    <img src="arts/buddha.jpg"  style="width: 100%;">
+                    <img src="arts/saipallavi.jpg"  style="width: 100%;">
+                    <img src="arts/ranveer.jpg"  style="width: 100%;">
+                    <img src="arts/suriya.jpg"  style="width: 100%;">
+                    <img src="arts/draupadhi.jpg"  style="width: 100%;">
+
                   </div>
                   <div class="column">
-                    <img src="arts/krishna.jpg">
-                    <img src="arts/friends.jpg">
-                    <img src="arts/godess.jpg">
-                    <img src="arts/krishna2.jpg">
-                    <img src="arts/bride.jpg">
+                    <img src="arts/krishna.jpg"  style="width: 100%;">
+                    <img src="arts/friends.jpg"  style="width: 100%;">
+                    <img src="arts/godess.jpg"  style="width: 100%;">
+                    <img src="arts/krishna2.jpg"  style="width: 100%;">
+                    <img src="arts/bride.jpg"  style="width: 100%;">
                   </div>
                 </div>
               </div>
@@ -309,34 +322,34 @@
                   <p id="contact-text">Have created accounts on multiple platforms.<br>slide in to any one to contact me.So here are those click any one of the below links. I have no text so writing something :)</p>
                 </div>
                 <div class="contact-links-wrapper">
-                  <div class="link-wrapper">
+                  <div class="link-wrapper" style="width: 10%; height: auto;">
                     <a href="#">
-                      <img id="mail" src="images/mail.png" class="link-icon">
+                      <img id="mail" src="images/mail.png" class="link-icon"  style="width: 50%; height: 50%;">
                     </a>
                   </div>
-                  <div class="link-wrapper">
+                  <div class="link-wrapper" style="width: 10%; height: auto;">
                     <a href="#">
-                      <img id="linkedin" src="images/linkedin.png" class="link-icon">
+                      <img id="linkedin" src="images/linkedin.png" class="link-icon"  style="width: 50%;  height: 50%;">
                     </a>
                   </div>
-                  <div class="link-wrapper">
+                  <div class="link-wrapper" style="width: 10%; height: auto;">
                     <a href="#">
-                      <img id="github" src="images/github.png" class="link-icon">
+                      <img id="github" src="images/github.png" class="link-icon"  style="width: 50%;  height: 50%;">
                     </a>
                   </div>
-                  <div class="link-wrapper">
+                  <div class="link-wrapper" style="width: 10%; height: auto;">
                     <a href="#">
-                      <img id="twitter" src="images/twitter.png" class="link-icon">
+                      <img id="twitter" src="images/twitter.png" class="link-icon"  style="width:50%;  height: 50%;">
                     </a>
                   </div>
-                  <div class="link-wrapper">
+                  <div class="link-wrapper" style="width: 10%; height: auto;">
                     <a href="#">
-                      <img id="instagram" src="images/instagram.png" class="link-icon">
+                      <img id="instagram" src="images/instagram.png" class="link-icon"  style="width: 50%;  height: 50%;">
                     </a>
                   </div>
-                  <div class="link-wrapper">
+                  <div class="link-wrapper" style="width: 10%; height: auto;">
                     <a href="#">
-                      <img id="facebook" src="images/facebook.png" class="link-icon">
+                      <img id="facebook" src="images/facebook.png" class="link-icon"  style="width: 50%;  height: 50%;">
                     </a>
                   </div>
               </div>
@@ -355,9 +368,17 @@
 
     <!-- Initialize Swiper -->
     <script type="text/javascript">
-      imagesLoaded( document.querySelector('#gallery'), function(  ) {
-        console.log('all images are loaded');
-      });
+      var preloader=document.getElementById('loader');
+      function stoploading() 
+      {
+        setTimeout(() => {
+          preloader.style.display="none";
+          preloader.fadeOut="slow";
+          // preloader.style.transition="background 300ms ease-in 200ms" ;
+          typeWriter();
+        }, 2000);
+          typeWriter();
+      }
       let swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
         spaceBetween: 85,

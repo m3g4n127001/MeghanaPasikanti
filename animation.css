@@ -112,7 +112,7 @@
     
 }
 
-@keyframes arttagi {
+@keyframes arttag {
     from {
         font-size: 0;
     }
@@ -123,14 +123,12 @@
 
 .showgrid {
     animation: showgrid 0.5s forwards;
-    /* overflow-y: visible; */
     opacity: 1;
-    padding-top: 20px;
 }
 
 @keyframes showgrid {
     from {
-        transform: translateY(-50px);
+        transform: translateY(0);
     }
     to {
         transform: translateY(var(--top ));
@@ -139,6 +137,7 @@
 
 .showgrid > a >img {
     animation: rotgridarrow 0.5s forwards;
+    z-index: 5;
 }
 @keyframes rotgridarrow {
     from {
@@ -171,4 +170,9 @@
     to {
         transform: rotate(0deg);
     }
+}
+
+.resize {
+    resize: both;
+    margin: 0 auto;
 }

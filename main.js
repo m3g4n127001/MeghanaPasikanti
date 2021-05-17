@@ -1,6 +1,12 @@
+
 let speed=150;
 let i=0;
 let text="I am a computer science undergrad at NITW making this website . ";
+
+window.onresize = function() {
+    document.getElementsByClassName('swiper-slide-active')[0].classList.add('resize')
+    console.log(document.getElementsByClassName('swiper-slide-active')[0].children)
+}
 
 function typeWriter() 
 {
@@ -54,6 +60,7 @@ function myFunction(num)
     }
     else {
         expanded = true;
+        document.getElementsByClassName("arttag")[0].classList.remove('arttagani');
         
         r.style.setProperty('--height','100vh')
         ele[0].classList.add("upani");
@@ -90,19 +97,18 @@ function myFunction(num)
     
 }
 
+let galleryExpanded=false;
 function showGrid () 
 {
     let grid = document.getElementById('gallery');
-    console.log("entered show grid ");
-    console.log("gallery expanded = "+galleryExpanded);
     if(!galleryExpanded)
     {
         galleryExpanded = true;
-        grid.classList.add('showgrid');
         grid.classList.remove('hidegrid');
+        r.style.setProperty('--scroll', 'scroll');
         r.style.setProperty('--top','-'+ grid.offsetTop + 'px');
         console.log(getComputedStyle(r).getPropertyValue('--top'))
-        r.style.setProperty('--scroll', 'scroll');
+        grid.classList.add('showgrid');
     }
     else 
     {
