@@ -24,42 +24,65 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
-    <!-- responsive css -->
-    <link rel="stylesheet" href="responsive.css" type="text\css">
-
     <!-- Demo styles -->
     <script src="main.js"></script>
-
   </head>
   
-  <body onload="stoploading()" style=" -webkit-scrollbar:none ">
+  <body onload="stoploading()" style="scrollbar-width: 0;">
     <div id="loader" 
-      style="width: 100vw; 
-            height: 100vh; 
+    style="width: 100%; 
+            height: 100%; 
             background: black url('images/loading2.gif') no-repeat center; 
-            z-index: 10; 
-            position: fixed;">
+            z-index: 9999; 
+            position: fixed ;
+            overflow: hidden; ">
     </div>
+    <script type="text/javascript">
+      var preloader=document.getElementById('loader');
+      function stoploading() 
+      {
+        setTimeout(() => {
+          preloader.style.display="none";
+          typeWriter();
+        }, 2000);
+      }
+      </script>
     <div class="container-fluid mb-0 pb-0">
       
       <header class="header">
         <ul class="nav">
+          <li>
+            <div class="dropdown-res" >
+              <div class="dropdown-icon-res" onclick="dropmenu()">
+                <a><i class="fa fa-bars"></i></a>
+              </div>
+              <div class="dropdown-list-res">
+                <ul class="bar-nav">
+                  <a href="#" onclick="gotoslide(5)">About</a>
+                  <a href="#" onclick="gotoslide(1)">Skills</a>
+                  <a href="#" onclick="gotoslide(2)" >Projects</a>
+                  <a href="#" onclick="gotoslide(3)">Extracurriculars</a>
+                  <a href="#" onclick="gotoslide(4)">Contact</a>
+                </ul>
+              </div>
+            </div>
+          </li>
           <li class="name-header">
             <img src="images/fullname-header.png" >
           </li>
-          <li>
+          <li class="links">
             <a href="#" onclick="gotoslide(5)">About</a>
           </li>
-          <li>
+          <li class="links">
             <a href="#" onclick="gotoslide(1)">Skills</a>
           </li>
-          <li>
+          <li class="links">
             <a href="#" onclick="gotoslide(2)" >Projects</a>
           </li>
-          <li>
+          <li class="links">
             <a href="#" onclick="gotoslide(3)">Extracurriculars</a>
           </li>
-          <li>
+          <li class="links">
             <a href="#" onclick="gotoslide(4)">Contact</a>
           </li>
         </ul>
@@ -79,7 +102,6 @@
         </div>
         
         <!-- Swiper -->
-        <div class="lunchbox">
 
         <div class="swiper-container mySwiper">
           <div class="swiper-wrapper">
@@ -153,7 +175,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3">
                       <div class="circle js">
-                        <h1 class="skill-name">Javascript</h1>
+                        <h1 class="skill-name">JAVASCRIPT</h1>
                       </div>
                       <div class="percentage">
                         <span class="counter" data-target="80">0</span>%
@@ -187,198 +209,146 @@
                 </div>
               </div>
             </div>
-          <!-- slide three -->
-          <div class="swiper-slide three" id="three">
-            <a href="#" id="projects" onclick="myFunction(3)" class="upwrap">
-              <img src="images/up pointer.png" width="25px" height="25px"  id="upthree">
-            </a>
-            <div class="titleWrapper">
-              <h1 class="slide-title">projects</h1>
-            </div>
-            <div class="slide container slide-content">
-              <div class="row" id="proWrapper">
+            <!-- slide three -->
+            <div class="swiper-slide three" id="three">
+              <a href="#" id="projects" onclick="myFunction(3)" class="upwrap">
+                <img src="images/up pointer.png" width="25px" height="25px"  id="upthree">
+              </a>
+              <div class="titleWrapper">
+                <h1 class="slide-title">projects</h1>
+              </div>
+              <div class="slide container slide-content">
+                <div class="row" id="proWrapper">
                 
-                <div class="proCard">
-                  <div class="cardWrapper">
-                    <div class="proTitle"><u>Portfolio Website</u></div>
-                    <div class="proDesc">Designed and Developed the responsive and interactive Website that you are watching now.</div>
-                    <div class="techUsed">
-                      <span>HTML</span>
-                      <span>CSS</span>
-                      <span>Javascript</span>
-                      <span>BootStrap</span>
+                  <div class="proCard">
+                    <div class="cardWrapper">
+                      <div class="proTitle"><u>Portfolio Website</u></div>
+                      <div class="proDesc">Designed and Developed the responsive and interactive Website that you are watching now.</div>
+                      <div class="techUsed">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>BootStrap</span>
+                      </div>
+                      <div class="proLink"><a href="#">view documentation</a></div>
+                      <div class="proLink"><a href="#">get the website link</a></div>
                     </div>
-                    <div class="proLink"><a href="#">view documentation</a></div>
-                    <div class="proLink"><a href="#">get the website link</a></div>
                   </div>
-                </div>
-                <div class="proCard">
-                  <div class="cardWrapper">
-                    <div class="proTitle"><u>Techniche Website</u></div>
-                    <div class="proDesc">Contributed to the Techniche Website as a part of WebOperations team.</div>
-                    <div class="techUsed">
-                      <span>django</span>
-                      <span>Javascript</span>
+                  <div class="proCard">
+                    <div class="cardWrapper">
+                      <div class="proTitle"><u>Techniche Website</u></div>
+                      <div class="proDesc">Contributed to the Techniche Website as a part of WebOperations team.</div>
+                      <div class="techUsed">
+                        <span>django</span>
+                        <span>Javascript</span>
+                      </div>
+                      <div class="proLink"><a href="#">view documentation</a></div>
                     </div>
-                    <div class="proLink"><a href="#">view documentation</a></div>
                   </div>
-                </div>
-                <div class="proCard">
-                  <div class="cardWrapper">
-                    <div class="proTitle"><u>Techniche App</u></div>
-                    <div class="proDesc">Contributed to the Tehcniche App as a front end developer. The main aim of this app is to make the things easy for the participants and also visitors of Techniche, The annual techno management festival of IIT Guwahati.</div>
-                    <div class="techUsed">
-                      <span>React native</span>
-                      <span>Firebase</span>
+                  <div class="proCard">
+                    <div class="cardWrapper">
+                      <div class="proTitle"><u>Techniche App</u></div>
+                      <div class="proDesc">Contributed to the Tehcniche App as a front end developer. The main aim of this app is to make the things easy for the participants and also visitors of Techniche, The annual techno management festival of IIT Guwahati. A user can register to various techniche events, view the complete details about every event, make</div>
+                      <div class="techUsed">
+                        <span>React native</span>
+                        <span>Firebase</span>
+                      </div>
+                      <div class="proLink"><a href="#">view documentation</a></div>
                     </div>
-                    <div class="proLink"><a href="#">view documentation</a></div>
                   </div>
-                </div>
-                <div class="proCard">
-                  <div class="cardWrapper">
-                    <div class="proTitle"><u>Quiz App</u></div>
-                    <div class="proDesc">Developed a quiz app on my path towards learning React Native. In this app a user can choose one of the themes present and can give a quiz of utmost 10 mcqs and finally their result will be given. </div>
-                    <div class="techUsed">
-                      <span>React Native</span>
+                  <div class="proCard">
+                    <div class="cardWrapper">
+                      <div class="proTitle"><u>Quiz App</u></div>
+                      <div class="proDesc">Developed a quiz app on my path towards learning React Native. In this app a user can choose one of the themes present and can give a quiz of utmost 10 mcqs and finally their result will be given. </div>
+                      <div class="techUsed">
+                        <span>React Native</span>
+                      </div>
+                      <div class="proLink"><a href="#">view documentation</a></div>
                     </div>
-                    <div class="proLink"><a href="#">view documentation</a></div>
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
-          </div>
           
-          <!-- slide four -->
-          <div class="swiper-slide four" id="four">
-            <a href="#" id="extra" onclick="myFunction(4)" class="upwrap">
-              <img src="images/up pointer.png" width="25px" height="25px"  id="upfour" >
-            </a>
-            <div class="titleWrapper">
-              <h1 class="slide-title">Extracurriculars</h1>
-            </div>
-            <div class="slide container">
-              <div class="arttag">...Welcome to my ART world...</div>
-              <div class="artdesc"><p>Art is one thing that i always loved doing in my free times. This first covid lockdown gave a looottt of free time. and thus i did artworks way more than i used to do. or something related to art and some catchy lines so that they get impressed. centuries, but also the leap into electronic typesetting</p></div>
-              
-              <div class="galleryWrapper" id="gallery">
-                <a href="#" class="gridArrow" onclick="showGrid()">
-                  <img src="images/expandarrow.png"> 
-                </a>
-                <div class="row" >
-                  <div class="column">
-                    <img src="arts/AA.jpg" style="width: 100%;">
-                    <img src="arts/sonusood.JPEG"  style="width: 100%;">
-                    <img src="arts/customart.jpg"  style="width: 100%;">
-                    <img src="arts/groom2.jpg"  style="width: 100%;">
-                    <img src="arts/babygirl.jpeg"  style="width: 100%;">
-                  </div>
-                  <div class="column"> 
-                    <img src="arts/millie.jpg"  style="width: 100%;">
-                    <img src="arts/groom.jpg"  style="width: 100%;">
-                    <img src="arts/turban.jpg"  style="width: 100%;"> 
-                    <img src="arts/vinayakudu.jpg"  style="width: 100%;">
-                    <img src="arts/draupadhi.jpg"  style="width: 100%;">
-
-                    <img src="arts/babygirl.jpeg"  style="width: 100%;">
-                    <img src="arts/babygirl.jpeg"  style="width: 100%;">
-
-                  </div>
-                  <div class="column">
-                    <img src="arts/buddha.jpg"  style="width: 100%;">
-                    <img src="arts/saipallavi.jpg"  style="width: 100%;">
-                    <img src="arts/ranveer.jpg"  style="width: 100%;">
-                    <img src="arts/suriya.jpg"  style="width: 100%;">
-                    <img src="arts/draupadhi.jpg"  style="width: 100%;">
-
-                  </div>
-                  <div class="column">
-                    <img src="arts/krishna.jpg"  style="width: 100%;">
-                    <img src="arts/friends.jpg"  style="width: 100%;">
-                    <img src="arts/godess.jpg"  style="width: 100%;">
-                    <img src="arts/krishna2.jpg"  style="width: 100%;">
-                    <img src="arts/bride.jpg"  style="width: 100%;">
-                  </div>
-                </div>
+            <!-- slide four -->
+            <div class="swiper-slide four" id="four">
+              <a href="#" id="extracurriculars" onclick="myFunction(4)" class="upwrap">
+                <img src="images/up pointer.png" width="25px" height="25px"  id="upfour">
+              </a>
+              <div class="titleWrapper">
+                <h1 class="slide-title">Extracurriculars</h1>
               </div>
-              
-            </div>
-          </div>
+              <div class="slide container slide-content">
+                <div class="artWrapper">
+                  <div class="arttag" id="tag">...Welcome to my ART world...</div>
+                  <div class="artdesc"><p>Art is one thing that i always loved doing in my free times. This first covid lockdown gave a looottt of free time. and thus i did artworks way more than i used to do. or something related to art and some catchy lines so that they get impressed. centuries, but also the leap into electronic typesetting</p></div>
+                  <div class="galleryWrapper" id="gallery"> 
+                    <div><a href="#" class="gridArrow" onclick="showGrid()"><img src="images/expandarrow.png"></a></div>
+                    <div class="gridRow">
+                      <div class="gridColumn">
           
-          <!-- slide five -->
-          <div class="swiper-slide five" id="five">
-            <a href="#" id="contact" onclick="myFunction(5)" class="upwrap">
-              <img src="images/up pointer.png" width="25px" height="25px"  id="upfive" >
-            </a>
-            <div class="titleWrapper">
-              <h1 class="slide-title">Contact</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                
+              </div>
             </div>
-            <div class="slide container">
-              <div class="contact-container">
-                <div class="fullName-wrapper">
-                    <img src="/images/fullname3.png" id="fullname">
+          
+          
+            <!-- slide five -->
+            <div class="swiper-slide five" id="five">
+              <a href="#" id="contact" onclick="myFunction(5)" class="upwrap">
+                <img src="images/up pointer.png" width="25px" height="25px"  id="upfive" >
+              </a>
+              <div class="titleWrapper">
+                <h1 class="slide-title">Contact</h1>
+              </div>
+              <div class="slide container">
+                <div class="contact-container">
+                  <div class="fullName-wrapper">
+                    <img src="/images/fullname3.png" id="fullname" >
+                  </div>
+                  <div class="contact-text-wrapper">
+                    <p id="contact-text">Have created accounts on multiple platforms.<br>slide in to any one to contact me.So here are those click any one of the below links. I have no text so writing something :)</p>
+                  </div>
+                  <div class="contact-links-wrapper">
+                    <div class="link-wrapper" style="width: 10%; height: auto;">
+                      <a href="#" class="fa fa-envelope-o" class="link-icon" style="font-size: 200%; color: white; text-decoration: none;"></a>
+                    </div>
+                    <div class="link-wrapper" style="width: 10%; height: auto;">
+                      <a href="#" class="fa fa-linkedin" class="link-icon" style="font-size: 200%; color: white; text-decoration: none;"></a>
+                    </div>
+                    <div class="link-wrapper" style="width: 10%; height: auto;">
+                      <a href="#" class="fa fa-github" class="link-icon" style="font-size: 200%; color: white; text-decoration: none;"></a>
+                    </div>
+                    <div class="link-wrapper" style="width: 10%; height: auto;">
+                      <a href="#" class="fa fa-twitter" class="link-icon" style="font-size: 200%; color: white; text-decoration: none;"></a>
+                    </div>
+                    <div class="link-wrapper" style="width: 10%; height: auto;">
+                      <a href="#" class="fa fa-instagram" class="link-icon" style="font-size: 200%; color: white; text-decoration: none;"></a>
+                    </div>
+                    <div class="link-wrapper" style="width: 10%; height: auto;">
+                      <a href="#" class="fa fa-facebook" class="link-icon" style="font-size: 200%; color: white; text-decoration: none;"></a>
+                  </div>
                 </div>
-                <div class="contact-text-wrapper">
-                  <p id="contact-text">Have created accounts on multiple platforms.<br>slide in to any one to contact me.So here are those click any one of the below links. I have no text so writing something :)</p>
-                </div>
-                <div class="contact-links-wrapper">
-                  <div class="link-wrapper" style="width: 10%; height: auto;">
-                    <a href="#">
-                      <img id="mail" src="images/mail.png" class="link-icon"  style="width: 50%; height: 50%;">
-                    </a>
-                  </div>
-                  <div class="link-wrapper" style="width: 10%; height: auto;">
-                    <a href="#">
-                      <img id="linkedin" src="images/linkedin.png" class="link-icon"  style="width: 50%;  height: 50%;">
-                    </a>
-                  </div>
-                  <div class="link-wrapper" style="width: 10%; height: auto;">
-                    <a href="#">
-                      <img id="github" src="images/github.png" class="link-icon"  style="width: 50%;  height: 50%;">
-                    </a>
-                  </div>
-                  <div class="link-wrapper" style="width: 10%; height: auto;">
-                    <a href="#">
-                      <img id="twitter" src="images/twitter.png" class="link-icon"  style="width:50%;  height: 50%;">
-                    </a>
-                  </div>
-                  <div class="link-wrapper" style="width: 10%; height: auto;">
-                    <a href="#">
-                      <img id="instagram" src="images/instagram.png" class="link-icon"  style="width: 50%;  height: 50%;">
-                    </a>
-                  </div>
-                  <div class="link-wrapper" style="width: 10%; height: auto;">
-                    <a href="#">
-                      <img id="facebook" src="images/facebook.png" class="link-icon"  style="width: 50%;  height: 50%;">
-                    </a>
-                  </div>
               </div>
             </div>
           </div>
         </div>
-          </div>
-      </div>
-      
+      </div> 
     </div>
     
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="animation.css" type="text/css"> 
+    <link rel="stylesheet" href="responsive.css" type="text/css">
 
     <!-- Initialize Swiper -->
     <script type="text/javascript">
-      var preloader=document.getElementById('loader');
-      function stoploading() 
-      {
-        setTimeout(() => {
-          preloader.style.display="none";
-          preloader.fadeOut="slow";
-          // preloader.style.transition="background 300ms ease-in 200ms" ;
-          typeWriter();
-        }, 2000);
-          typeWriter();
-      }
       let swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
         spaceBetween: 85,
@@ -388,9 +358,25 @@
         grabCursor: true,
         allowSlidePrev:true,
         allowSlideNext : true,
-        },
-        
-      );
+        breakpoints : {
+          320 : {
+            spaceBetween:30,
+            // slidesPerView :1.2,
+          },
+          600 : {
+            spaceBetween: 30,
+            // slidesPerView : 1.3,
+          },
+          900 : {
+            spaceBetween : 50,
+            // slidesPerView:1.5,
+          },
+          1200 : {
+            spaceBetween : 85,
+            slidesPerView : "auto",
+          }
+        }
+      });
       function gotoslide(ind)
       {
         swiper.slideTo(ind,1000,true);

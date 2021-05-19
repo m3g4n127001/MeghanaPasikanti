@@ -3,12 +3,6 @@ let speed=150;
 let i=0;
 let text="I am a computer science undergrad at NITW making this website . ";
 
-window.onresize = function() {
-    console.log(document.getElementsByClassName('swiper-slide-active')[0].children)
-    document.getElementsByClassName('swiper-slide-active')[0].classList.add('resize')
-
-}
-
 function typeWriter() 
 {
     if(i<text.length)
@@ -23,8 +17,26 @@ let r = document.querySelector(':root');
 let expanded = false;
 function myFunction(num)
 {
+    document.getElementsByClassName('dropdown-list-res')[0].style.display="none";
     let ele = document.getElementsByClassName("swiper-slide-active");
     let elep=document.getElementsByClassName("swiper-slide-prev");
+    window.onresize = function() {
+        expanded = true;
+        document.getElementsByClassName('swiper-slide-active')[0].classList.add('center')
+        myFunction(0)
+    }
+    if(document.getElementById('four').classList.contains('swiper-slide-active') || document.getElementById('four').classList.contains('swiper-slide-duplicate-active')) {
+        console.log(document.getElementById('four').classList)
+        console.log('hope')
+        console.log(document.getElementsByClassName('container')[3].childNodes)
+        setTimeout(() => {
+            document.getElementById('tag').classList.add('arttagani')
+        }, 1000);
+    }
+    else {
+        console.log(document.getElementById('four').classList)
+        console.log('no hope')
+    }
     if(expanded)
     {
         expanded = false;
@@ -35,11 +47,6 @@ function myFunction(num)
         ele[0].classList.remove('upani')
         ele[0].classList.add('downani')
         elep[0].classList.add('inani')
-        // console.log('added downani')
-        // document.getElementsByClassName('arttag')[0].classList.remove('arttagani')
-        swiper.params.grabCursor = true;
-        swiper.params.grabCursor = true;
-        swiper.params.cssMode = false;
         
         swiper.params.grabCursor=true;
         swiper.setGrabCursor();
@@ -54,14 +61,10 @@ function myFunction(num)
                 c[i].innerText=0;
             }
         }
-        else if(num==4)
-        {
-            document.getElementsByClassName("arttag")[0].classList.remove('arttagani');
-        }
+        
     }
     else {
         expanded = true;
-        document.getElementsByClassName("arttag")[0].classList.remove('arttagani');
         
         r.style.setProperty('--height','100vh')
         ele[0].classList.add("upani");
@@ -79,54 +82,33 @@ function myFunction(num)
             for(let i=0;i<s.length;i++)
             {
                 s[i].classList.add('circleani');
-                c[i].innerText=0;
+                c[i].innerText="0";
             }
             flexFont();
             setTimeout(() => {
-                docounting();
+                if(expanded)
+                    docounting();
             }, 2000);
         }
         else if(num==4)
         {
-            console.log("extra slide button clicked")
-            console.log(document.getElementsByClassName('arttag')[0].classList)
-            setTimeout(() => {
-                document.getElementsByClassName('arttag')[0].classList.add('arttagani')
-            }, 1000);
+            let a=document.getElementsByClassName('arttag')[0];
+            a.style.innerText="lskdh";
+            a.style.color="black"
+            console.log("gadf");
+            console.log(document.getElementById("four").classList)
         }
+        
     }
     
 }
 
-let galleryExpanded = false;
-function showGrid () 
-{
-    let grid = document.getElementById('gallery');
-    if(!galleryExpanded)
-    {
-        galleryExpanded = true;
-        grid.classList.remove('hidegrid');
-        r.style.setProperty('--scroll', 'scroll');
-        r.style.setProperty('--top','-'+ grid.offsetTop + 'px');
-        console.log(getComputedStyle(r).getPropertyValue('--top'))
-        grid.classList.add('showgrid');
-    }
-    else 
-    {
-        console.log('hide')
-        r.style.setProperty('--top','-'+ grid.offsetTop + 'px')
-        galleryExpanded = false;
-        grid.classList.remove('showgrid');
-        grid.classList.add('hidegrid');
-        r.style.setProperty('--scroll', 'hidden');
-    }
-}
 
 // skills js
 
 flexFont = function () {
     var divs = document.getElementsByClassName('skill-name');
-    console.log(divs.length);
+    // console.log(divs.length);
     for(var i = 0; i < divs.length; i++) {
         var len=divs[i].innerText.length; 
         if(len<=2)
@@ -135,9 +117,11 @@ flexFont = function () {
             len--;
         else if(len>=6&&len<=7)
             len-=3;
-        else if(len>7)
+        else if(len>7 && len<=9)
             len-=5;
-        console.log("length is "+len);
+        else if(len>9)
+            len-=6
+        // console.log("length is "+len);
         var fs=100/len;
         divs[i].style.fontSize = fs+'px';
     }
@@ -153,17 +137,33 @@ function docounting()
         const updateCount = () => {
             const target=+counter.getAttribute('data-target');
             const count= +counter.innerText;
-            
-            if(count<target)
+            if(count<target && expanded)
             {
                 counter.innerText++;
-                setTimeout(updateCount,15);
+                setTimeout(updateCount,(15-target/10));
             }
-            else
+            else 
             {
                 counter.innerText=target;
             }
         };
         updateCount();
     });
+}
+
+function dropmenu() 
+{
+    console.log("dropmenu")
+    let ele=document.getElementsByClassName('dropdown-list-res');
+    if(ele[0].style.display!="none" && ele[0].style.display!="")
+    {
+        console.log("if")
+        ele[0].style.display="none";
+    }
+    else
+    {
+        ele[0].style.display="block";
+        ele[0].style.position="absolute";
+        ele[0].style.boxShadow="0px 8px 16px 0px rgba(0,0,0,0.8)";
+    }
 }
