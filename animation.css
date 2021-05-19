@@ -22,6 +22,7 @@
     }
     to {
         transform: translateX(-25vw);
+        transition: smooth;
         background-color: #141A1C;
         height: var(--height);
         width: 100vw;
@@ -106,75 +107,26 @@
     }
 }
 
-.arttagani {
-    display: block;
-    animation: arttag 1s forwards;
-    
-}
 
-@keyframes arttag {
+.swiper-slide-duplicate-active  .arttagani {
+    display: block;
+    animation: tagani 1s forwards;
+}
+@keyframes tagani {
     from {
         font-size: 0;
-        display: none;
     }
     to {
-        font-size: 34px;
-        display: block;
+        font-size: 32px;
     }
 }
-
-.showgrid {
-    animation: showgrid 0.5s forwards;
-    opacity: 1;
-}
-
-@keyframes showgrid {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(var(--top ));
-    }
-}
-
-.showgrid > a >img {
-    animation: rotgridarrow 0.5s forwards;
-    z-index: 5;
-}
-@keyframes rotgridarrow {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(180deg);
-    }
-}
-.hidegrid {
-    animation: hidegrid 0.5s forwards;
-}
-
-@keyframes hidegrid {
-    from {
-        transform: translateY(var(--top));
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-.hidegrid > a >img {
-    animation: revrotgridarrow 0.5s forwards;
-}
-@keyframes revrotgridarrow {
-    from {
-        transform: rotate(180deg);
-    }
-    to {
-        transform: rotate(0deg);
-    }
-}
-
 .resize {
     z-index: 10;
     resize: horizontal;
 }
+
+
+.center {
+    margin: 0 auto;
+}
+
