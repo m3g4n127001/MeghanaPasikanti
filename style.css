@@ -260,7 +260,7 @@ body {
 }
 
 
-.artdesc {
+.artdesc, .artinfo {
     white-space: pre-wrap;
     word-wrap: break-word;
     font-weight: 700;
@@ -270,7 +270,12 @@ body {
     margin: 0 auto;
     
 }
-
+.artinfo {
+    color: rgb(255, 255, 255);
+}
+.artlink {
+    color: rgb(1, 29, 54);
+}
 .gridArrow {
     width: 4vh;
     height: 4vh;
@@ -279,27 +284,30 @@ body {
 
 .gridArrow img {
     width: inherit;
+    
 }
 
-#gallery > .gridrow {
+.galleryWrapper {
+    display: flex;
+    max-width: 100%;
+}
+.gridRow {
     display: flex;
     flex: 100%;
     flex-direction: row;
-    background-color: #233033;
     padding: 1vh;
 }
-.gridcolumn {
+.gridColumn {
     display: flex;
     flex-direction: column;
     flex: 25%;
+    justify-content: center;
 }
 
-.gridcolumn img {
+.gridColumn img {
     border-radius: 20px;
     padding: 1vh;
 }
-
-
 /* project */
 
 #three > .container {
