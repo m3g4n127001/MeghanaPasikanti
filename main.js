@@ -3,12 +3,6 @@ let speed=150;
 let i=0;
 let text="I am a computer science undergrad at NITW making this website . ";
 
-window.onresize = function() {
-    console.log(document.getElementsByClassName('swiper-slide-active')[0].children)
-    document.getElementsByClassName('swiper-slide-active')[0].classList.add('resize')
-
-}
-
 function typeWriter() 
 {
     if(i<text.length)
