@@ -17,6 +17,7 @@ let r = document.querySelector(':root');
 let expanded = false;
 function myFunction(num)
 {
+    console.log(window.getComputedStyle(document.documentElement).getPropertyValue('--w'));
     document.getElementsByClassName('dropdown-list-res')[0].style.display="none";
     let ele = document.getElementsByClassName("swiper-slide-active");
     let elep=document.getElementsByClassName("swiper-slide-prev");
@@ -112,7 +113,7 @@ flexFont = function () {
     for(var i = 0; i < divs.length; i++) {
         var len=divs[i].innerText.length; 
         if(len<=2)
-            len++;
+            len+=1.5;
         else if(len==5)
             len--;
         else if(len>=6&&len<=7)
@@ -121,9 +122,8 @@ flexFont = function () {
             len-=5;
         else if(len>9)
             len-=6
-        // console.log("length is "+len);
-        var fs=100/len;
-        divs[i].style.fontSize = fs+'px';
+        var fs=6/len;
+        divs[i].style.fontSize = fs+'vw';
     }
 };
 

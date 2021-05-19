@@ -2,9 +2,11 @@
     --lvl:100%;
     --rot:450deg;
     --per:0;
-    --w:13vw;
-    --h:200px;
-    --opacity: 0.2;
+    --w:11vw;
+    --clr : white;
+    --fnt :2.5vw;
+    --swid:50vw;
+    --ext:10%;
 }
 html,body {
     position: relative;
@@ -20,7 +22,6 @@ html,body {
 
 h1,h2,h3,h4,h5,h6,p,div,a {
     font-family: 'Josefin Sans', sans-serif;
-    word-break: break-all;
     font-weight: bold;
     word-break: keep-all;
 }
@@ -42,6 +43,7 @@ body {
 .header {
     top: 0;
     position: sticky;
+    margin: 0  !important;
 }
 .header > .nav {
     display: flex;
@@ -58,6 +60,7 @@ body {
     width: auto;
     padding: 0px;
     margin: 0;
+    margin-left: -100px;
 }
 .nav > li {
     padding:5px 15px;
@@ -67,9 +70,9 @@ body {
     font-size: 24px;
     color: #ACACAC;
 }
-.links:hover {
+.links:hover a{
     color: white;
-    text-shadow: 3px 3px 1px black ;
+    text-shadow: 1px 1px 5px rgb(39, 51, 54) ;
 }
 .dropdown-res {
     display: none;
@@ -80,7 +83,7 @@ body {
 
 /* body css */
 .body {
-    padding-top: 8%;
+    padding-top: 7%;
     display: flex;
     flex: 100%;
     flex-direction: column;
@@ -93,17 +96,20 @@ body {
 }
 .body > div {
     padding-bottom: 1%;
+    margin-top: 0;
 }
 .text1 > h4 {
-    font-size: 34px;
+    font-size: var(--fnt);
     color: #ffffff;
     margin: 0;
+    opacity: 0.8;
 }
 .text2 > h4 {
-    font-size: 34px;
+    font-size: var(--fnt);
     color: #ffffff;
     margin: 0;
     flex-shrink: 2;
+    opacity: 0.8;
 }
 .text2 {
     display: flex;
@@ -119,16 +125,17 @@ body {
 }
 #intro_text {
     color: white;
-    font-size: 30px;
-    border-right: 2px solid  white;
+    font-size: var(--fnt);
+    border-right: 2px solid  var(--clr);
     animation: blink .75s step-end infinite;
+    opacity: 0.8;
 }
 @keyframes blink {
     from,to {
         border-color: transparent;
     }
     50% {
-        border-color: white;
+        border-color: var(--clr);
     }
 }
 /* swiper */
@@ -158,7 +165,7 @@ body {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    width: 50vw;
+    width: var(--swid);
     background-color: transparent;
     margin: 0 45px;
     display: inline-block;
@@ -171,9 +178,6 @@ body {
     margin: 0 auto;
     overflow: scroll;
     
-}
-
-#four {
 }
 
 #four > .container {
@@ -254,7 +258,7 @@ body {
     font-weight: 800;
     font-size: 30px;
     color:rgb(105, 105, 105);
-    word-wrap: break-word;
+    word-wrap: keep-word;
     white-space: pre-wrap;
     margin-top: 20px;
     display: none;
@@ -262,7 +266,7 @@ body {
 
 .artdesc, .artinfo {
     white-space: pre-wrap;
-    word-wrap: break-word;
+    word-wrap: keep-word;
     font-weight: 700;
     font-size: 24px;
     color: whitesmoke;
@@ -391,7 +395,7 @@ body {
     border-bottom-right-radius: 5vh; 
     padding: 10px 0;
     opacity: 0.8;
-    word-wrap: break-word;
+    word-wrap: keep-word;
     white-space: pre-wrap;
     background: linear-gradient(360deg, rgb(8, 42, 90) 0%, rgb(96, 126, 138) 100%);
 
@@ -411,7 +415,7 @@ body {
     font-weight: 700;
     color: rgb(3, 42, 58);
     padding-top: 10px;
-    word-wrap: break-word;
+    word-wrap: keep-word;
     white-space: pre-wrap;
 
 }
@@ -419,7 +423,7 @@ body {
     color: black;
     text-align: center;
     font-weight: 800;
-    word-wrap: break-word;
+    word-wrap: keep-word;
     white-space: pre-wrap;
     font-size: 24px;
     /* font-style:italic; */
@@ -431,7 +435,7 @@ body {
     align-items:center;
     flex-wrap: wrap;
     text-align: center;
-    word-wrap: break-word;
+    word-wrap: keep-word;
     white-space: pre-wrap;
 }
 
@@ -482,8 +486,8 @@ body {
 
 .aboutWrapper {
     background-color: #233033;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    overflow-wrap: keep-word;
+    word-wrap: keep-word;
     white-space: pre-wrap;
     display: flex;
     flex: 100%;
@@ -525,8 +529,8 @@ body {
 .myname {
     font-size: 300%;
     font-weight: 700;
-    color: rgb(255, 251, 0);
-    word-wrap: break-word;
+    color: rgb(172, 158, 83);
+    word-wrap: keep-word;
     white-space: pre-wrap;
 }
 .ppicWrapper {
@@ -541,7 +545,7 @@ body {
     font-size: 150%;
     font-weight: 700;
     color: #a1b2b6;
-    word-wrap: break-word;
+    word-wrap: keep-word;
     white-space: pre-wrap;
     margin: 1vw 2vw;
 }
@@ -557,7 +561,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: black;
-    word-wrap: break-word;
+    word-wrap: keep-word;
     white-space: pre-wrap;
     flex-shrink: 1;
 }
@@ -585,12 +589,13 @@ body {
     align-items: center;
     width: 100%;
     height: auto;
+    padding-bottom: 1%;
 }
 
 .skills-wrapper > .row {
     text-align: center;
     align-items: center;
-    margin:2% 5%;
+    margin:auto 5%;
     display: flex;
     flex: 100%;
     align-items: center;
@@ -599,15 +604,15 @@ body {
 
 .circle {
     border-radius: 50%;
-    height: var(--w);
-    width: var(--w);
-    display: flex;
-    flex: 25%;
-    margin: 5%;
-    justify-content: center;
+    width: var(--w) !important;
+    height: var(--w) !important;
+    margin: 10% auto;
     align-items: center;
     position: relative;
     overflow: hidden;
+    contain: content;
+    display: flex;
+    justify-content: center;
 }
 
 .circle h1 {
@@ -615,6 +620,7 @@ body {
     z-index: 1;
     align-items: center;
     position: absolute;
+    font-weight:bold;
 }
 .skills-wrapper > .row > .col-md-3,.col-sm-6,.col-xs-12 {
     display: flex;
@@ -624,7 +630,7 @@ body {
 }
 
 .skills-text > h4 {
-    word-wrap: break-word;
+    word-wrap: keep-word;
     white-space: pre-wrap;
     font-size: 30px;
     color: rgb(209, 207, 207);
@@ -633,10 +639,9 @@ body {
     padding-top: 50px;
 }
 .percentage {
+    width: 2vw;
     height: 1vh;
-    position: absolute;
-    left: 200px;
-    top: 180px;
+    position:inherit ;
 }
 .counter,.percentage {
     color: #476e80;
@@ -665,6 +670,7 @@ body {
 }
 
 @keyframes spin {
+
     0% {
         transform: translateY(0) rotate(0deg);
     }
@@ -734,12 +740,12 @@ body {
 #contact-text {
     font-size: 30px;
     font-weight: 700;
-    word-wrap: break-word;
+    word-wrap: keep-word;
     white-space: pre-wrap;
-    word-break: break-all;
+    word-break: keep-all;
     text-align: left;
     margin: 1% 5%;
-    color: rgb(196, 196, 196);
+    color: rgb(182, 186, 201);
 }
 .contact-links-wrapper {
     width: 100%;
