@@ -1,4 +1,4 @@
-@media screen and (max-width:710px) {
+@media screen and (max-width:700px) {
     .links {
         display: none;
     }
@@ -43,7 +43,32 @@
         background-color: rgb(61, 67, 75);
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
-
+    .text3  {
+        border-right: transparent;
+        margin: 10px 20px;
+    }
+    .text3 > h2 {
+        font-size: 10px;
+        border-color: transparent;
+    }
+    .text2 > img {
+        margin-top: 1vw;
+        width: 60%;
+    }
+    .body > div {
+        padding-top: 10px;
+    }
+    :root {
+        --clr:transparent;
+        --fnt:4vw;
+        --swid:70vw;
+        --sx:-15vw;
+        --sy:10vw;
+        --w:13vw;
+    }
+    .body {
+        padding-top: 10vw;
+    }
 }
 @media screen and (max-width:550px) {
     .header .nav {
@@ -56,14 +81,66 @@
     }
     .dropdown-res {
         margin-left: 0;
+        
+    }
+    .text1 >h4 {
+        font-size: 6vw;
+    }
+    .text2 > h4 {
+        font-size: 6vw;
+    }
+    :root {
+        --fnt:5vw;
+        --swid : 80vw;
+        --sx:-10vw;
+        --sy:15vw;
+    }
+    .myname {
+        font-size: 200%;
+    }
+    #contact-text {
+        font-size: 25px;
+    }
+    .link-wrapper {
+        margin: 2% 5%;
+    }
+    .skills-wrapper > .row  {
+        margin:auto 3%;
+    }
+    .skills-text >h4 {
+        font-size: 4.5vw ;
+    }
+    .skills-text {
+        padding-top: 30px;
     }
 }
 @media screen and (max-width:355px) {
-    .dropdown-res {
-        display: none;
-    }
     .nav > .name-header >img {
-        margin: 0 2vw;
+        margin: 1vw 2vw;
+        height: 15vw;
+    }
+    .text2 > img {
+        margin-top: 1vw;
+        width: 70%;
+    }
+    :root {
+        --swid : 90vw;
+        --sx:-5vw;
+        --sy:20vw;
+    }
+    .link-wrapper {
+        margin: 2% 4%;
+    }
+    .contact-links-wrapper {
+        align-self: center;
+    }
+    .skills-text >h4 {
+        font-size: 5.5vw ;
+    }
+}
+@media screen and (max-width:950px) and (min-width:890px) {
+    :root {
+        --clr:white;
     }
 }
 @media screen and (max-width:950px) and (min-width : 700px){
@@ -76,6 +153,62 @@
         height: 40px;
         width: auto;
         padding: 0px;
-        margin: 1vw 0px;
+        margin: 1vw 0;
+    }
+    .text3  {
+        border-right: transparent;
+        margin: 10px 20px;
+        
+    }
+    .text3 > #intro-text {
+        border-color: transparent;
+    }
+    .text2 > img {
+        margin-top: 10px;
+    }
+    :root {
+        --clr:transparent;
+        --fnt : 3.5vw;
+        --swid : 60vw;
+        --sx:-20vw;
+        --sy:5vw;
+        --w:10vw;
+    }
+    .link-icon {
+        font-size: 250%;
+    }
+    .contact-links-wrapper {
+        margin: 3% 5%;
+    }
+    .fullName-wrapper {
+        width: 70%;
+    }
+    .percentage {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .nav > .name-header > img {
+        margin-left: -10px;
+    }
+    
+    .percentage , .counter{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width:765px) {
+    .link-wrapper {
+        margin: 2% 2%;
+        padding-bottom: 7%;
+    }
+    .fullName-wrapper {
+        width: 80%;
+    }
+    :root {
+        --w:12vw;
+    }
+    .percentage , .counter{
+        font-size: 2.5vw;
     }
 }
