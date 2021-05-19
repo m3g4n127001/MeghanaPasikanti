@@ -3,13 +3,6 @@ let speed=150;
 let i=0;
 let text="I am a computer science undergrad at NITW making this website . ";
 
-function getposition() {
-    console.log(
-
-        document.getElementById('hovereffect').offsetLeft
-    )
-}
-
 function typeWriter() 
 {
     if(i<text.length)
