@@ -3,6 +3,13 @@ let speed=150;
 let i=0;
 let text="I am a computer science undergrad at NITW making this website . ";
 
+function getposition() {
+    console.log(
+
+        document.getElementById('hovereffect').offsetLeft
+    )
+}
+
 function typeWriter() 
 {
     if(i<text.length)
@@ -132,7 +139,6 @@ flexFont = function () {
 function docounting() 
 {
     const counters=document.querySelectorAll('.counter');
-    const speed=400;
     counters.forEach(counter => {
         const updateCount = () => {
             const target=+counter.getAttribute('data-target');

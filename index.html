@@ -25,6 +25,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
     <!-- Demo styles -->
+  <script>
+    function stoploading() {
+      setTimeout(() => {
+        preloader.style.display="none";
+        preloader.fadeOut="slow";
+        // preloader.style.transition="background 300ms ease-in 200ms" ;
+        typeWriter();
+      }, 1000);
+
+    }
+  </script>
+
     <script src="main.js"></script>
   </head>
   
@@ -33,9 +45,9 @@
     style="width: 100%; 
             height: 100%; 
             background: black url('images/loading2.gif') no-repeat center; 
-            z-index: 9999; 
-            position: fixed ;
-            overflow: hidden; ">
+            z-index: 10; 
+            position: fixed;
+            ">
     </div>
     <script type="text/javascript">
       var preloader=document.getElementById('loader');
@@ -45,7 +57,7 @@
           preloader.style.display="none";
           typeWriter();
           flexFont();
-        }, 2000);
+        }, 1000);
       }
       </script>
     <div class="container-fluid p-0">
@@ -268,10 +280,9 @@
                     </div>
                   </div>
 
-                </div>
+                </div>  
               </div>
             </div>
-          
             <!-- slide four -->
             <div class="swiper-slide four" id="four">
               <a href="#" id="extracurriculars" onclick="myFunction(4)" class="upwrap">
@@ -283,13 +294,50 @@
               <div class="slide container slide-content">
                 <div class="artWrapper">
                   <div class="arttag" id="tag">...Welcome to my ART world...</div>
-                  <div class="artdesc"><p>Art is one thing that i always loved doing in my free times. This first covid lockdown gave a looottt of free time. and thus i did artworks way more than i used to do. or something related to art and some catchy lines so that they get impressed. centuries, but also the leap into electronic typesetting</p></div>
+                  <div class="artdesc"><p>Art is one thing that i always loved doing in my free times. This first covid lockdown gave a looottt of free time. and thus i did artworks way more than i used to do. or something related to art. </p></div>
+                  <div class="artinfo">Here I am presenting you some of my favourite arts that i have made... if u wish to view my whole gallery slide through my instagram page...<a href="#" class="artlink"><span class="fa fa-instagram"></span></a></div>
                   <div class="galleryWrapper" id="gallery"> 
-                    <div><a href="#" class="gridArrow" onclick="showGrid()"><img src="images/expandarrow.png"></a></div>
                     <div class="gridRow">
                       <div class="gridColumn">
-          
+                        <a href="#">
+                          <img src="arts/krishna.jpg" width="100%">
+                        </a>
+                        <a href="#">
+                          <img src="arts/groom.jpg" width="100%">
+                        </a>
+                        <a href="#">
+                          <img src="arts/godess.jpg" width="100%" >
+                        </a>
+                        </div>
+                        
+                        <div class="gridColumn">
+                          <a href="#">
+                            <img src="arts/millie.jpg" width="100%">
+                          </a>
+                          <a href="#">
+                            <img src="arts/AA.jpg" width="100%">
+                          </a>
+                          <a href="#">
+                            <img src="arts/turban.jpg" width="100%">
+                          </a>
+                          <a href="#">
+                            <img src="arts/saipallavi.jpg" width="100%">
+                          </a>
+                        <img>
                       </div>
+                      
+                      <div class="gridColumn">
+                        <a href="#">
+                        <img src="arts/babygirl.jpeg" width="100%">
+                        </a>
+                        <a href="#">
+                          <img src="arts/customart.jpg" width="100%">
+                          </a>
+                          <a href="#">
+                            <img src="arts/sonusood.JPEG" width="100%">
+                          </a>
+                    </div>
+
                     </div>
                   </div>
                 </div>
@@ -341,6 +389,7 @@
         </div>
       </div> 
     </div>
+    <script src="main.js"></script>
     
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" type="text/javascript"></script>
