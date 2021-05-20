@@ -7,6 +7,7 @@
     --fnt :2.5vw;
     --swid:50vw;
     --ext:10%;
+    --scroll : hidden;
 }
 html,body {
     position: relative;
@@ -171,13 +172,14 @@ body {
     margin: 0 45px;
     display: inline-block;
     flex: 0 0 auto;
-    scroll-snap-align: center !important;
+    scroll-snap-align: center ;
     justify-content: center;
     text-align: center;
     height: 40vh;
     contain: content;
     margin: 0 auto;
-    overflow: scroll;
+    overflow: var(--scroll);
+
     
 }
 
@@ -201,8 +203,9 @@ body {
 }
 
 .swiper-slide-active > .titleWrapper > .slide-title{
-    color: #94A19D;
+    color: #ffffff;
     font-weight: bolder;
+    opacity: 0.8;
 }
 .upwrap >img {
     margin-top: 3vh;
@@ -271,7 +274,7 @@ body {
     font-weight: 700;
     font-size: 24px;
     color: whitesmoke;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
