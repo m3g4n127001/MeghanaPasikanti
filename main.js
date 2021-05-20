@@ -21,23 +21,23 @@ function myFunction(num)
     document.getElementsByClassName('dropdown-list-res')[0].style.display="none";
     let ele = document.getElementsByClassName("swiper-slide-active");
     let elep=document.getElementsByClassName("swiper-slide-prev");
-    window.onresize = function() {
-        expanded = true;
-        document.getElementsByClassName('swiper-slide-active')[0].classList.add('center')
-        myFunction(0)
-    }
-    if(document.getElementById('four').classList.contains('swiper-slide-active') || document.getElementById('four').classList.contains('swiper-slide-duplicate-active')) {
-        console.log(document.getElementById('four').classList)
-        console.log('hope')
-        console.log(document.getElementsByClassName('container')[3].childNodes)
-        setTimeout(() => {
-            document.getElementById('tag').classList.add('arttagani')
-        }, 1000);
-    }
-    else {
-        console.log(document.getElementById('four').classList)
-        console.log('no hope')
-    }
+    // window.onresize = function() {
+    //     expanded = true;
+    //     document.getElementsByClassName('swiper-slide-active')[0].classList.add('center')
+    //     myFunction(0)
+    // }
+    // if(document.getElementById('four').classList.contains('swiper-slide-active') || document.getElementById('four').classList.contains('swiper-slide-duplicate-active')) {
+    //     console.log(document.getElementById('four').classList)
+    //     console.log('hope')
+    //     console.log(document.getElementsByClassName('container')[3].childNodes)
+    //     setTimeout(() => {
+    //         document.getElementById('tag').classList.add('arttagani')
+    //     }, 1000);
+    // }
+    // else {
+    //     console.log(document.getElementById('four').classList)
+    //     console.log('no hope')
+    // }
     if(expanded)
     {
         expanded = false;

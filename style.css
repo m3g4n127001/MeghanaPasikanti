@@ -296,23 +296,30 @@ body {
 }
 
 .galleryWrapper {
-    display: flex;
     max-width: 100%;
 }
 .gridRow {
     display: flex;
-    flex: 100%;
     flex-direction: row;
     padding: 1vh;
+    flex-wrap: wrap;
+}
+
+#fourthCol {
+    display: none;
+}
+#secondColDuplicate {
+    display: none;
 }
 .gridColumn {
-    display: flex;
+    flex: 33%;
     flex-direction: column;
-    flex: 25%;
     justify-content: center;
+    width: 100%;
 }
 
 .gridColumn img {
+    width: 100%;
     border-radius: 20px;
     padding: 1vh;
 }

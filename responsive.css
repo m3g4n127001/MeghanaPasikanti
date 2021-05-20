@@ -69,7 +69,10 @@
     .body {
         padding-top: 10vw;
     }
+    
 }
+
+
 @media screen and (max-width:550px) {
     .header .nav {
         justify-content: space-around;
@@ -196,6 +199,26 @@
     .percentage , .counter{
         font-size: 2vw;
     }
+    #secondCol {
+        display: none;
+    }
+    #secondColDuplicate {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    #fourthCol {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .gridColumn {
+        flex: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    
 }
 @media screen and (max-width:765px) {
     .link-wrapper {
@@ -211,4 +234,22 @@
     .percentage , .counter{
         font-size: 2.5vw;
     }
+    .gridColumn {
+        flex: 100%;
+        padding: 0 10%;
+    }
+    #fourthCol {
+        display: none;
+    }
+    #secondColDuplicate {
+        display: none;
+    }
+    #secondCol {
+        display: flex;
+    }
+    div, h1, h2, h3, h4, h5 ,h6, p, a, span{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
 }
