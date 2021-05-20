@@ -32,12 +32,6 @@
 }
 
 .upani > .upwrap > img {
-    padding: 4px;
-    border: 2px solid rgb(61, 62, 63);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: rgb(34, 39, 41);
     animation: rotate 0.5s forwards;
 }
 .upani .slide-title {

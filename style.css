@@ -100,23 +100,20 @@ body {
 }
 .text1 > h4 {
     font-size: var(--fnt);
-    color: #ffffff;
+    color: #dbdbdb;
     margin: 0;
-    opacity: 0.8;
-}
-.text2 > h4 {
-    font-size: var(--fnt);
-    color: #ffffff;
-    margin: 0;
-    flex-shrink: 2;
-    opacity: 0.8;
-    font-weight: 600;
 }
 .text2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+.text2 > h4 {
+    font-size: var(--fnt);
+    color: #dbdbdb;
+    margin: 0;
+    flex-shrink: 2;
 }
 .text2 > img {
     width: 50%;
@@ -757,6 +754,11 @@ body {
 .link-wrapper {
     border-radius: 2000px;
     float: left;
+}
+.link-icon {
+    font-size: 200%; 
+    color: rgb(83, 144, 148); 
+    text-decoration: none;
 }
 .link-icon:hover {
     cursor:pointer;

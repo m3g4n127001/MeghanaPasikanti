@@ -119,7 +119,9 @@
     .myname {
         font-size: 170%;
     }
-    
+    .proCard {
+        flex: 100%;
+    }
 }
 
 
@@ -149,7 +151,6 @@
     .dropdown-list-res{
         display: none;
         background-color: rgb(27, 34, 39);
-        z-index: 100;
     }
     .dropdown-list-res a{
         display: block;
@@ -161,9 +162,9 @@
         contain: content;
         font-size: 20px;
         white-space: pre-wrap;
-        overflow:visible;
+        overflow:hidden;
         padding: 0px 10px;
-        z-index: 1000;
+        z-index: 19;
     }
     .dropdown-list-res a:hover{
         background-color: rgb(61, 67, 75);
@@ -229,7 +230,7 @@
         font-size: 25px;
     }
     .link-wrapper {
-        margin: 2% 5%;
+        margin: 2% 2%;
     }
     .skills-wrapper > .row  {
         margin:0 ;
@@ -253,6 +254,9 @@
     .aboutWrapper .resumelink > a{
         font-size: 4vw;
     }
+    .link-icon {
+        font-size: 150%;
+    }
 }
 @media screen and (max-width:355px) {
     .nav > .name-header >img {
@@ -267,13 +271,20 @@
         --swid : 90vw;
         --sx:-5vw;
     }
+    .skills-text >h4 {
+        font-size: 5.5vw ;
+    }
     .link-wrapper {
-        margin: 2% 4%;
+        margin: 2% 2%;
     }
     .contact-links-wrapper {
         align-self: center;
+        margin: 2% 3%;
     }
-    .skills-text >h4 {
-        font-size: 5.5vw ;
+    .link-icon {
+        font-size: 125%;
+    }
+    #contact-text {
+        font-size: 20px;
     }
 }
