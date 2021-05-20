@@ -275,7 +275,7 @@ body {
     text-align: center;
 }
 .artinfo {
-    color: rgb(179, 179, 174);
+    color: #eafaf5;
 }
 .artlink {
     color: rgb(108, 135, 158);
@@ -524,15 +524,6 @@ body {
     animation: flip 5s forwards;
 }
 
-/* @keyframes flip {
-    from {
-        transform: perspective(100px) scaleX(-1);
-    }  
-    to {
-        transform:  perspective(100px) scaleX(0.5);
-    } 
-} */
-
 .myname {
     font-size: 300%;
     font-weight: 700;
@@ -611,8 +602,8 @@ body {
 
 .circle {
     border-radius: 50%;
-    width: var(--w) !important;
-    height: var(--w) !important;
+    width: var(--w) ;
+    height: var(--w) ;
     margin: 10% auto;
     align-items: center;
     position: relative;

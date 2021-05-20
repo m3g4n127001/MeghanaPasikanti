@@ -2,7 +2,6 @@
     --top : 0;
     --height : 40vh;
     --sx:-25vw;
-    --sy:0vw;
     --swid:50vw;
 }
 
@@ -20,8 +19,8 @@
 @keyframes moveup {
     from {
         background-color: transparent;
-        width: 50vw;
-        transform: translateX(var(--sy));
+        width: var(--swid);
+        transform: translateX(0);
     }
     to {
         transform: translateX(var(--sx));
