@@ -696,15 +696,17 @@ body {
     --lvl:-60%;
 }
 .html {
-    background: linear-gradient(254deg, rgb(81, 149, 150) 0%, rgb(139, 121, 82) 100%);
+    /* background: linear-gradient(254deg, rgb(81, 149, 150) 0%, rgb(139, 121, 82) 100%); */
+    background:  radial-gradient(circle at 60% 60%, #517892 33%, #6b6bf3 95%);
     --lvl:-70%;
 }
 .css {
-    background: linear-gradient(90deg, rgb(95, 202, 188) 0%, rgba(136,136,186,1) 30%, rgb(132, 139, 101) 100%);
+    background:  radial-gradient(circle at 100px 100px, #ff8aeb, rgb(78, 82, 114));
+    /* background: linear-gradient(90deg, rgb(95, 202, 188) 0%, rgba(136,136,186,1) 30%, rgb(132, 139, 101) 100%); */
     --lvl:-70%;
 }
 .js {
-    background: linear-gradient(90deg, rgba(134,128,248,1) 0%, rgb(116, 75, 75) 30%, rgb(137, 81, 145) 100%);
+    background: linear-gradient(90deg, rgb(109, 162, 179) 0%, rgb(118, 49, 121) 30%, rgb(203, 103, 214) 100%);
     --lvl:-65%;
 }
 .react {
@@ -712,11 +714,11 @@ body {
     --lvl:-60%;
 }
 .bootstrap {
-    background: linear-gradient(90deg, rgb(108, 84, 136) 0%, rgb(144, 156, 124) 30%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg,  rgb(160, 135, 184) 0%, rgb(92, 31, 100) 30%, rgb(89, 68, 114) 100%);
     --lvl:-55%;
 }
 .arduino {
-    background: linear-gradient(90deg, rgb(78, 99, 3) 0%, rgb(95, 172, 172) 30%, rgb(190, 118, 175) 100%);
+    background:  radial-gradient(circle at 100px 100px, #5cabff, #000);
     --lvl:-50%;
 }
 /* contact css  */

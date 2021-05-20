@@ -85,7 +85,7 @@ function myFunction(num)
                 s[i].classList.add('circleani');
                 c[i].innerText="0";
             }
-            flexFont();
+
             setTimeout(() => {
                 if(expanded)
                     docounting();
@@ -132,6 +132,7 @@ flexFont = function () {
 function docounting() 
 {
     const counters=document.querySelectorAll('.counter');
+    const speed=400;
     counters.forEach(counter => {
         const updateCount = () => {
             const target=+counter.getAttribute('data-target');
