@@ -43,6 +43,7 @@ function myFunction(num)
         expanded = false;
 
         r.style.setProperty('--height', '40vh')
+        r.style.setProperty('--scroll', 'hidden')
         elep[0].classList.remove('outani')
         ele[0].classList.remove('outani')
         ele[0].classList.remove('upani')
@@ -66,7 +67,7 @@ function myFunction(num)
     }
     else {
         expanded = true;
-        
+        r.style.setProperty('--scroll', 'scroll')
         r.style.setProperty('--height','100vh')
         ele[0].classList.add("upani");
         elep[0].classList.add('outani')
@@ -162,8 +163,9 @@ function dropmenu()
     }
     else
     {
-        ele[0].style.display="block";
-        ele[0].style.position="absolute";
+        ele[0].style.display="inline-block";
+        ele[0].style.visibility = 'visible';
+        ele[0].style.position="fixed";
         ele[0].style.boxShadow="0px 8px 16px 0px rgba(0,0,0,0.8)";
     }
 }

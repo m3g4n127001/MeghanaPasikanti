@@ -5,9 +5,6 @@
     --swid:50vw;
 }
 
-.disabled {
-    transform: translate3d(0px, 0, 0) !important;
-}
 
 .upani{
     animation-name : moveup ;
@@ -102,18 +99,3 @@
         transform: translateX(0);
     }
 }
-
-
-.swiper-slide-duplicate-active  .arttagani {
-    display: block;
-    animation: tagani 1s forwards;
-}
-@keyframes tagani {
-    from {
-        font-size: 0;
-    }
-    to {
-        font-size: 32px;
-    }
-}
-
