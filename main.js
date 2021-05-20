@@ -133,7 +133,7 @@ flexFont = function () {
 function docounting() 
 {
     const counters=document.querySelectorAll('.counter');
-    const speed=400;
+    speed=400;
     counters.forEach(counter => {
         const updateCount = () => {
             const target=+counter.getAttribute('data-target');
@@ -141,7 +141,7 @@ function docounting()
             if(count<target && expanded)
             {
                 counter.innerText++;
-                setTimeout(updateCount,(15-target/10));
+                setTimeout(updateCount,(25-target/10));
             }
             else 
             {

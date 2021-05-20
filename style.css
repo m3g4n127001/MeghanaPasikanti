@@ -101,23 +101,20 @@ body {
 }
 .text1 > h4 {
     font-size: var(--fnt);
-    color: #ffffff;
+    color: #dbdbdb;
     margin: 0;
-    opacity: 0.8;
-}
-.text2 > h4 {
-    font-size: var(--fnt);
-    color: #ffffff;
-    margin: 0;
-    flex-shrink: 2;
-    opacity: 0.8;
-    font-weight: 600;
 }
 .text2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+.text2 > h4 {
+    font-size: var(--fnt);
+    color: #dbdbdb;
+    margin: 0;
+    flex-shrink: 2;
 }
 .text2 > img {
     width: 50%;
@@ -279,7 +276,7 @@ body {
     text-align: center;
 }
 .artinfo {
-    color: rgb(179, 179, 174);
+    color: #eafaf5;
 }
 .artlink {
     color: rgb(108, 135, 158);
@@ -528,15 +525,6 @@ body {
     animation: flip 5s forwards;
 }
 
-/* @keyframes flip {
-    from {
-        transform: perspective(100px) scaleX(-1);
-    }  
-    to {
-        transform:  perspective(100px) scaleX(0.5);
-    } 
-} */
-
 .myname {
     font-size: 300%;
     font-weight: 700;
@@ -615,8 +603,8 @@ body {
 
 .circle {
     border-radius: 50%;
-    width: var(--w) !important;
-    height: var(--w) !important;
+    width: var(--w) ;
+    height: var(--w) ;
     margin: 10% auto;
     align-items: center;
     position: relative;
@@ -769,6 +757,11 @@ body {
 .link-wrapper {
     border-radius: 2000px;
     float: left;
+}
+.link-icon {
+    font-size: 200%; 
+    color: rgb(83, 144, 148); 
+    text-decoration: none;
 }
 .link-icon:hover {
     cursor:pointer;

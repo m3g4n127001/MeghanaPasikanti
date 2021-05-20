@@ -23,8 +23,6 @@
         justify-content: center;
         align-items: center;
     }
-    
-    
 }
 
 @media screen and (max-width:950px) and (min-width:890px) {
@@ -62,7 +60,6 @@
         --fnt : 3.5vw;
         --swid : 60vw;
         --sx:-20vw;
-        --sy:5vw;
         --w:10vw;
     }
     .link-icon {
@@ -78,8 +75,6 @@
         font-size: 2vw;
     }
 }
-
-
 
 @media screen and (max-width:765px) {
     .link-wrapper {
@@ -112,12 +107,24 @@
         font-size: 24px;
         font-weight: 500;
     }
+    .aboutDesc {
+        font-size: 125%;
+    }
+    .aboutWrapper .resumelink {
+        padding: 6px 8px;
+    }
+    .aboutWrapper .resumelink > a{
+        font-size: 3vw;
+    }
+    .myname {
+        font-size: 170%;
+    }
     .proCard {
         flex: 100%;
         padding: 0 5%;
     }
-    
 }
+
 
 @media screen and (max-width:700px) {
     .links {
@@ -163,8 +170,9 @@
         contain: content;
         font-size: 20px;
         white-space: pre-wrap;
-        overflow:visible;
+        overflow:hidden;
         padding: 0px 10px;
+        z-index: 19;
     }
     .dropdown-list-res a:active{
         background-color: rgb(61, 67, 75);
@@ -190,13 +198,14 @@
         --fnt:4vw;
         --swid:70vw;
         --sx:-15vw;
-        --sy:10vw;
         --w:13vw;
     }
     .body {
         padding-top: 10vw;
     }
-    
+    .percentage ,.counter {
+        font-size: 3vw;
+    }
 }
 
 
@@ -223,25 +232,38 @@
         --fnt:5vw;
         --swid : 80vw;
         --sx:-10vw;
-        --sy:15vw;
-    }
-    .myname {
-        font-size: 200%;
+        --w:16vw;
     }
     #contact-text {
         font-size: 25px;
     }
     .link-wrapper {
-        margin: 2% 5%;
+        margin: 2% 2%;
     }
     .skills-wrapper > .row  {
-        margin:auto 3%;
+        margin:0 ;
     }
     .skills-text >h4 {
         font-size: 4.5vw ;
     }
     .skills-text {
         padding-top: 30px;
+    }
+    .skills-wrapper > .row > .col-md-3,.col-sm-6,.col-xs-12 {
+        flex: 29%;
+    }
+    .circle {
+        width: 17vw;
+        height: 17vw;
+    }
+    .aboutDesc {
+        font-size: 100%;
+    }
+    .aboutWrapper .resumelink > a{
+        font-size: 4vw;
+    }
+    .link-icon {
+        font-size: 150%;
     }
 }
 @media screen and (max-width:355px) {
@@ -256,15 +278,21 @@
     :root {
         --swid : 90vw;
         --sx:-5vw;
-        --sy:20vw;
-    }
-    .link-wrapper {
-        margin: 2% 4%;
-    }
-    .contact-links-wrapper {
-        align-self: center;
     }
     .skills-text >h4 {
         font-size: 5.5vw ;
+    }
+    .link-wrapper {
+        margin: 2% 2%;
+    }
+    .contact-links-wrapper {
+        align-self: center;
+        margin: 2% 3%;
+    }
+    .link-icon {
+        font-size: 125%;
+    }
+    #contact-text {
+        font-size: 20px;
     }
 }
