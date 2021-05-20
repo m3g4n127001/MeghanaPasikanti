@@ -24,11 +24,14 @@
         align-items: center;
     }
 }
+
 @media screen and (max-width:950px) and (min-width:890px) {
     :root {
         --clr:white;
     }
 }
+
+
 @media screen and (max-width:950px) and (min-width : 700px){
     .nav > li > a {
         font-size: 2.5vw;
@@ -72,6 +75,7 @@
         font-size: 2vw;
     }
 }
+
 @media screen and (max-width:765px) {
     .link-wrapper {
         margin: 2% 2%;
@@ -117,6 +121,8 @@
     }
     
 }
+
+
 @media screen and (max-width:700px) {
     .links {
         display: none;
@@ -142,15 +148,15 @@
     }
     .dropdown-list-res{
         display: none;
-        background-color: rgb(76, 85, 92);
-        border-radius: 10px;
+        background-color: rgb(27, 34, 39);
+        z-index: 100;
     }
     .dropdown-list-res a{
         display: block;
         text-decoration: none;
         text-shadow: none;
         margin: 2%;
-        color: black;
+        color: rgb(253, 252, 252);
         width: auto;
         contain: content;
         font-size: 20px;

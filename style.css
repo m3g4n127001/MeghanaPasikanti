@@ -110,6 +110,7 @@ body {
     margin: 0;
     flex-shrink: 2;
     opacity: 0.8;
+    font-weight: 600;
 }
 .text2 {
     display: flex;
