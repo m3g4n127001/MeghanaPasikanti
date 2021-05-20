@@ -23,6 +23,9 @@
         justify-content: center;
         align-items: center;
     }
+    .protext {
+        font-size: 2.5vw;
+    }
 }
 
 @media screen and (max-width:950px) and (min-width:890px) {
@@ -32,7 +35,7 @@
 }
 
 
-@media screen and (max-width:950px) and (min-width : 700px){
+@media screen and (max-width:950px) and (min-width : 710px){
     .nav > li > a {
         font-size: 2.5vw;
         color: white;
@@ -74,6 +77,16 @@
     .percentage {
         font-size: 2vw;
     }
+    .skills-text > h4 {
+        font-size: 3vw;
+    }
+    .skills-text {
+        padding: 3vw 0;
+    }
+    .protext {
+        font-size: 3vw;
+        padding-top: 2vw;
+    }
 }
 
 @media screen and (max-width:765px) {
@@ -108,10 +121,13 @@
         font-weight: 500;
     }
     .aboutDesc {
-        font-size: 125%;
+        font-weight: 500;
+        font-size: 18px;    
     }
     .aboutWrapper .resumelink {
         padding: 6px 8px;
+        font-weight: 500;
+        font-size: 18px;  
     }
     .aboutWrapper .resumelink > a{
         font-size: 3vw;
@@ -122,10 +138,20 @@
     .proCard {
         flex: 100%;
     }
+    .fullName-wrapper {
+        width: 50%;
+    }
+    .link-icon {
+        font-size: 125%;
+    }
+    #contact-text {
+        font-weight: 500;
+        font-size: 18px;
+    }
 }
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:710px) {
     .links {
         display: none;
     }
@@ -198,6 +224,20 @@
     .percentage ,.counter {
         font-size: 3vw;
     }
+    .protext{
+        font-size: 3vw;
+        padding-top: 4vw;
+    }
+    .skills-text > h4{
+        font-size: 2.5vw;
+    }
+    .skills-text {
+        padding: 3vw 0;
+    }
+    #contact-text {
+        font-weight: 500;
+        font-size: 18px;
+    }
 }
 
 
@@ -257,6 +297,35 @@
     .link-icon {
         font-size: 150%;
     }
+    .protext {
+        font-size: 4vw;
+    }
+    .skill-name {
+        font-size: 10vw;
+        font-weight: bold;
+    }
+    .proCard {
+        width: 50%;
+    }
+    .proDesc  {
+        font-size: 3.5vw;
+    }
+    .proTitle{
+        font-size: 5vw;
+    }
+    .techUsed > span  {
+        font-size: 3vw;
+    }
+    .proLink > a {
+        font-size: 3vw;
+    }
+    .proLink {
+        padding: 1vw;
+        border: 2px solid black;
+    }
+    #proWrapper {
+        margin: 0 2vw;
+    }
 }
 @media screen and (max-width:355px) {
     .nav > .name-header >img {
@@ -285,6 +354,9 @@
         font-size: 125%;
     }
     #contact-text {
-        font-size: 20px;
+        font-size: 18px;
+    }
+    .protext {
+        font-size: 5vw;
     }
 }
