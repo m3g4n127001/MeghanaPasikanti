@@ -123,13 +123,4 @@
         font-size: 32px;
     }
 }
-.resize {
-    z-index: 10;
-    resize: horizontal;
-}
-
-
-.center {
-    margin: 0 auto;
-}
 

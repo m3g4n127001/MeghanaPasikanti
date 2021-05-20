@@ -1,3 +1,123 @@
+@media screen and (max-width:1100px) {
+    .nav > .name-header > img {
+        margin-left: -10px;
+    }
+    
+    .percentage , .counter{
+        font-size: 2vw;
+    }
+    #secondCol {
+        display: none;
+    }
+    #secondColDuplicate {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    #fourthCol {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .gridColumn {
+        flex: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+}
+
+@media screen and (max-width:950px) and (min-width:890px) {
+    :root {
+        --clr:white;
+    }
+}
+
+
+@media screen and (max-width:950px) and (min-width : 700px){
+    .nav > li > a {
+        font-size: 2.5vw;
+        color: white;
+        font-weight: normal;
+    }
+    .nav > .name-header > img{
+        height: 40px;
+        width: auto;
+        padding: 0px;
+        margin: 1vw 0;
+    }
+    .text3  {
+        border-right: transparent;
+        margin: 10px 20px;
+        
+    }
+    .text3 > #intro-text {
+        border-color: transparent;
+    }
+    .text2 > img {
+        margin-top: 10px;
+    }
+    :root {
+        --clr:transparent;
+        --fnt : 3.5vw;
+        --swid : 60vw;
+        --sx:-20vw;
+        --sy:5vw;
+        --w:10vw;
+    }
+    .link-icon {
+        font-size: 250%;
+    }
+    .contact-links-wrapper {
+        margin: 3% 5%;
+    }
+    .fullName-wrapper {
+        width: 70%;
+    }
+    .percentage {
+        font-size: 2vw;
+    }
+}
+
+
+
+@media screen and (max-width:765px) {
+    .link-wrapper {
+        margin: 2% 2%;
+        padding-bottom: 7%;
+    }
+    .fullName-wrapper {
+        width: 80%;
+    }
+    :root {
+        --w:12vw;
+    }
+    .percentage , .counter{
+        font-size: 2.5vw;
+    }
+    .gridColumn {
+        flex: 100%;
+        padding: 0 10%;
+    }
+    #fourthCol {
+        display: none;
+    }
+    #secondColDuplicate {
+        display: none;
+    }
+    #secondCol {
+        display: flex;
+    }
+    div, h1, h2, h3, h4, h5 ,h6, p, a, span{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .proCard {
+        flex: 100%;
+    }
+    
+}
+
 @media screen and (max-width:700px) {
     .links {
         display: none;
@@ -23,15 +143,15 @@
     }
     .dropdown-list-res{
         display: none;
-        background-color: rgb(76, 85, 92);
-        border-radius: 10px;
+        background-color: rgb(27, 34, 39);
+        z-index: 100;
     }
     .dropdown-list-res a{
         display: block;
         text-decoration: none;
         text-shadow: none;
         margin: 2%;
-        color: black;
+        color: rgb(253, 252, 252);
         width: auto;
         contain: content;
         font-size: 20px;
@@ -140,116 +260,4 @@
     .skills-text >h4 {
         font-size: 5.5vw ;
     }
-}
-@media screen and (max-width:950px) and (min-width:890px) {
-    :root {
-        --clr:white;
-    }
-}
-@media screen and (max-width:950px) and (min-width : 700px){
-    .nav > li > a {
-        font-size: 2.5vw;
-        color: white;
-        font-weight: normal;
-    }
-    .nav > .name-header > img{
-        height: 40px;
-        width: auto;
-        padding: 0px;
-        margin: 1vw 0;
-    }
-    .text3  {
-        border-right: transparent;
-        margin: 10px 20px;
-        
-    }
-    .text3 > #intro-text {
-        border-color: transparent;
-    }
-    .text2 > img {
-        margin-top: 10px;
-    }
-    :root {
-        --clr:transparent;
-        --fnt : 3.5vw;
-        --swid : 60vw;
-        --sx:-20vw;
-        --sy:5vw;
-        --w:10vw;
-    }
-    .link-icon {
-        font-size: 250%;
-    }
-    .contact-links-wrapper {
-        margin: 3% 5%;
-    }
-    .fullName-wrapper {
-        width: 70%;
-    }
-    .percentage {
-        font-size: 2vw;
-    }
-}
-
-@media screen and (max-width:1100px) {
-    .nav > .name-header > img {
-        margin-left: -10px;
-    }
-    
-    .percentage , .counter{
-        font-size: 2vw;
-    }
-    #secondCol {
-        display: none;
-    }
-    #secondColDuplicate {
-        display: flex;
-        justify-content: flex-start;
-    }
-    
-    #fourthCol {
-        display: flex;
-        justify-content: flex-start;
-    }
-    .gridColumn {
-        flex: 50%;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    
-    
-}
-@media screen and (max-width:765px) {
-    .link-wrapper {
-        margin: 2% 2%;
-        padding-bottom: 7%;
-    }
-    .fullName-wrapper {
-        width: 80%;
-    }
-    :root {
-        --w:12vw;
-    }
-    .percentage , .counter{
-        font-size: 2.5vw;
-    }
-    .gridColumn {
-        flex: 100%;
-        padding: 0 10%;
-    }
-    #fourthCol {
-        display: none;
-    }
-    #secondColDuplicate {
-        display: none;
-    }
-    #secondCol {
-        display: flex;
-    }
-    div, h1, h2, h3, h4, h5 ,h6, p, a, span{
-        font-size: 18px;
-        font-weight: 500;
-    }
-    
 }
