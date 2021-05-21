@@ -140,7 +140,7 @@ function dropmenu()
     if(ele[0].style.display!="none" && ele[0].style.display!="")
     {
         ele[0].style.display="none";
-        document.getElementsByClassName('dropdown-icon-res')[0].style.opacity=0.3;
+        document.getElementsByClassName('dropdown-icon-res')[0].style.opacity=0.5;
     }
     else
     {
@@ -148,7 +148,7 @@ function dropmenu()
         ele[0].style.visibility = 'visible';
         ele[0].style.position="fixed";
         ele[0].style.boxShadow="0px 8px 16px 0px rgba(0,0,0,0.8)";
-        document.getElementsByClassName('dropdown-icon-res')[0].style.opacity=0.5;
+        document.getElementsByClassName('dropdown-icon-res')[0].style.opacity=0.7;
     }
 }
 function clickedbody(e) 
@@ -159,6 +159,6 @@ function clickedbody(e)
     {
         let ele=document.getElementsByClassName('dropdown-list-res');
         ele[0].style.display="none";
-        document.getElementsByClassName('dropdown-icon-res')[0].style.opacity=0.3;
+        document.getElementsByClassName('dropdown-icon-res')[0].style.opacity=0.5;
     }
 }

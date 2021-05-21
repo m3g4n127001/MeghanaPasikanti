@@ -685,13 +685,11 @@ body {
     --lvl:-60%;
 }
 .html {
-    /* background: linear-gradient(254deg, rgb(81, 149, 150) 0%, rgb(139, 121, 82) 100%); */
     background:  radial-gradient(circle at 60% 60%, #517892 33%, #979799 95%);
     --lvl:-70%;
 }
 .css {
     background:  radial-gradient(circle at 100px 100px, rgb(95, 202, 188), rgba(238,174,202,1));
-    /* background: linear-gradient(90deg, rgb(95, 202, 188) 0%, rgba(136,136,186,1) 30%, rgb(132, 139, 101) 100%); */
     --lvl:-70%;
 }
 .js {
