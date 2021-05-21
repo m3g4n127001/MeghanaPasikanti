@@ -642,7 +642,7 @@ body {
     color: rgb(209, 207, 207);
 }
 .skills-text {
-    padding-top: 50px;
+    padding: 30px 0 2vw 0;
 }
 .percentage {
     width: 2vw;
