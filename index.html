@@ -40,7 +40,7 @@
     <script src="main.js"></script>
   </head>
   
-  <body onload="stoploading()" style="scrollbar-width: 0;">
+  <body onload="stoploading()" style="scrollbar-width: 0;" onclick="clickedbody(event)">
     <div id="loader" 
     style="width: 100%; 
             height: 100%; 
@@ -72,19 +72,19 @@
               <div class="dropdown-list-res" >
                 <ul class="bar-nav" >
                   <li>
-                    <a href="#" onclick="gotoslide(5)" >About</a>
+                    <a href="#" onclick="gotoslide(5)" class="menitem">About</a>
                   </li>
                   <li>
-                    <a href="#" onclick="gotoslide(1)" >Skills</a>
+                    <a href="#" onclick="gotoslide(1)" class="menitem" >Skills</a>
                   </li>
                   <li>
-                    <a href="#" onclick="gotoslide(2)"  >Projects</a>
+                    <a href="#" onclick="gotoslide(2)"  class="menitem">Projects</a>
                   </li>
                   <li>
-                    <a href="#" onclick="gotoslide(3)" >Extracurriculars</a>
+                    <a href="#" onclick="gotoslide(3)" class="menitem">Extracurriculars</a>
                   </li>
                   <li >
-                    <a href="#" onclick="gotoslide(4)" >Contact</a>
+                    <a href="#" onclick="gotoslide(4)" class="menitem">Contact</a>
                   </li>
                 </ul>
               </div>

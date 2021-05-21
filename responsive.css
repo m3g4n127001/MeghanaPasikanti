@@ -26,9 +26,6 @@
     .artdesc, .artinfo {
         width: 80%;
     }
-    /* .protext {
-        font-size: 2.5vw;
-    } */
 }
 
 @media screen and (max-width:950px) and (min-width:890px) {
@@ -74,11 +71,8 @@
     .contact-links-wrapper {
         margin: 3% 5%;
     }
-    .percentage {
+    .percentage ,.counter {
         font-size: 2vw;
-    }
-    .skills-text > h4 {
-        font-size: 100%;
     }
 }
 
@@ -92,6 +86,7 @@
     }
     :root {
         --w:12vw;
+        --skilfnt : 1.2;
     }
     .percentage , .counter{
         font-size: 2.5vw;
@@ -149,7 +144,6 @@
     .proLink {
         padding: 0 10px;
     }
-    
 }
 
 
@@ -159,10 +153,15 @@
         display: none;
     }
     .header .nav {
-        justify-content: space-between;
+        flex: 50%;
+        justify-content: center;
+        align-items: center;
     }
-    .name-header{
-        margin-right: 25vw;
+    .name-header {
+        margin: 1vw auto;
+    }
+    .bar-nav {
+        list-style-type: none;
     }
     .dropdown-res {
         display: block;
@@ -170,16 +169,13 @@
         margin-left: 20px;
         z-index: 2;
     }
-    .dropdown-res > button {
-        background-color: transparent;
-    }
     .fa-bars {
         font-size: 7vw;
         color: white;
     }
     .dropdown-icon-res {
         color: rgb(44, 41, 41);
-        opacity: 0.2;
+        opacity: 0.3;
     }
     .dropdown-list-res{
         display: none;
@@ -187,6 +183,7 @@
         visibility: hidden;
         background-color: rgb(27, 34, 39);
         opacity: 1;
+        width: auto;
     }
     .dropdown-list-res a{
         display: block;
@@ -227,6 +224,7 @@
         --swid:70vw;
         --sx:-15vw;
         --w:13vw;
+        --skilfnt : 1.4;
     }
     .body {
         padding-top: 10vw;
@@ -246,16 +244,13 @@
 
 @media screen and (max-width:550px) {
     .header .nav {
-        justify-content: space-around;
+        flex: 50%;
+        justify-content: center;
+        align-items: center;
     }
     .name-header{
-        margin-right: 0;
-        margin-left: 0;
+        margin: 1vw auto;
         height: 11vh;
-    }
-    .dropdown-res {
-        margin-left: 0;
-        
     }
     .text1 >h4 {
         font-size: 6vw;
@@ -268,6 +263,7 @@
         --swid : 80vw;
         --sx:-10vw;
         --w:16vw;
+        --skilfnt:1.8;
     }
     #contact-text {
         font-size: 25px;
@@ -287,6 +283,10 @@
     .circle {
         width: 17vw;
         height: 17vw;
+    }
+    .percentage , .counter{
+        font-size: 3vw;
+        font-weight: bold;
     }
     .aboutDesc {
         font-size: 100%;
@@ -337,19 +337,24 @@
         width: 100%;
     }
 }
-
+@media screen and (max-width:365px) and (min-width:355px) {
+    .dropdown-res {
+        margin-left: 10px;
+    }
+}
 @media screen and (max-width:355px) {
     .nav > .name-header >img {
-        margin: 1vw 2vw;
+        margin: 1vw auto;
         height: 15vw;
     }
     .text2  img {
-        margin: 1vw 0;
+        margin-top: 1vw;
         width: 70%;
     }
     :root {
         --swid : 90vw;
         --sx:-5vw;
+        --skilfnt : 2;
     }
     .skills-text >h4 {
         font-size: 100% ;

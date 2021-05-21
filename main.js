@@ -1,5 +1,3 @@
-let vh= window.innerHeight*0.01;
-document.documentElement.style.setProperty('--vh','${vh}px');
 
 let speed=150;
 let i=0;
@@ -14,18 +12,17 @@ function typeWriter()
         setTimeout(typeWriter,speed);
     }
 }
-
 let r = document.querySelector(':root');
 let expanded = false;
 function myFunction(num)
 {
     console.log(window.getComputedStyle(document.documentElement).getPropertyValue('--w'));
-    document.getElementsByClassName('dropdown-list-res')[0].style.display="none";
     let ele = document.getElementsByClassName("swiper-slide-active");
     let elep=document.getElementsByClassName("swiper-slide-prev");
     if(expanded)
     {
         expanded = false;
+        
         r.style.setProperty('--height', '40vh')
         r.style.setProperty('--scroll', 'hidden')
         elep[0].classList.remove('outani')
@@ -70,13 +67,13 @@ function myFunction(num)
                 s[i].classList.add('circleani');
                 c[i].innerText="0";
             }
-
+            
             setTimeout(() => {
                 if(expanded)
                     docounting();
-            }, 2000);
-        }
-        else if(num==4)
+                }, 2000);
+            }
+            else if(num==4)
         {
             let a=document.getElementsByClassName('arttag')[0];
             a.style.innerText="lskdh";
@@ -94,21 +91,24 @@ function myFunction(num)
 
 flexFont = function () {
     var divs = document.getElementsByClassName('skill-name');
-    // console.log(divs.length);
     for(var i = 0; i < divs.length; i++) {
         var len=divs[i].innerText.length; 
         if(len<=2)
-            len+=1.5;
+        len+=1.5;
         else if(len==5)
-            len--;
+        len--;
         else if(len>=6&&len<=7)
-            len-=3;
+        len-=3;
         else if(len>7 && len<=9)
-            len-=5;
+        len-=5;
         else if(len>9)
-            len-=6
+        len-=6
         var fs=6/len;
-        divs[i].style.fontSize = fs+'vw';
+        var extra=window.getComputedStyle(document.documentElement).getPropertyValue('--skilfnt');
+        // var extra=r.getPropertyValue('--skilfnt');
+        console.log("extra font is "+extra+" this much")
+        divs[i].style.fontSize = (extra*fs)+'vw';
+        console.log("total font size is "+(extra*fs)+'px')
     }
 };
 
@@ -117,7 +117,6 @@ flexFont = function () {
 function docounting() 
 {
     const counters=document.querySelectorAll('.counter');
-    speed=100;
     counters.forEach(counter => {
         const updateCount = () => {
             const target=+counter.getAttribute('data-target');
@@ -142,14 +141,25 @@ function dropmenu()
     let ele=document.getElementsByClassName('dropdown-list-res');
     if(ele[0].style.display!="none" && ele[0].style.display!="")
     {
-        console.log("if")
         ele[0].style.display="none";
+        document.getElementsByClassName('dropdown-icon-res')[0].style.opacity=0.3;
     }
     else
     {
         ele[0].style.display="inline-block";
         ele[0].style.visibility = 'visible';
         ele[0].style.position="fixed";
-        ele[0].style.boxShadow="0px 8px 16px 0px rgba(0,0,0,0.8)";
+        document.getElementsByClassName('dropdown-icon-res')[0].style.opacity=0.5;
+    }
+}
+function clickedbody(e) 
+{
+
+    var target=e.srcElement || e.target;
+    if(target.className!="fa fa-bars" && target.className!="menitem")
+    {
+        let ele=document.getElementsByClassName('dropdown-list-res');
+        ele[0].style.display="none";
+        document.getElementsByClassName('dropdown-icon-res')[0].style.opacity=0.3;
     }
 }
