@@ -116,7 +116,7 @@ body {
     margin: 0;
     flex-shrink: 2;
 }
-.text2 > img {
+.text2  img {
     width: 50%;
     height: auto;
     padding: 0 20px;
