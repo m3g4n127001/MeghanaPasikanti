@@ -23,7 +23,7 @@
         transform: translateX(var(--sx));
         transition: smooth;
         background-color: #141A1C;
-        height: var(--height);
+        height: 80vh;
         width: 100vw;
     }
 }
@@ -51,7 +51,7 @@
     from {
         background-color: #141A1C;
         width: 100vw;
-        height: 100vh;
+        height: 80vh;
         transform: translateX(var(--sx));
     }
     to {
