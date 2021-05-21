@@ -149,6 +149,7 @@
     .proLink {
         padding: 0 10px;
     }
+    
 }
 
 
@@ -226,6 +227,7 @@
         --swid:70vw;
         --sx:-15vw;
         --w:13vw;
+        --ptop:20vh;
     }
     .body {
         padding-top: 10vw;
