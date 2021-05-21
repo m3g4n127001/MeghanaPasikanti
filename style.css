@@ -62,8 +62,8 @@ body {
     height: 60px;
     width: auto;
     padding: 0px;
-    margin: 0;
-    margin-left: -100px;
+    margin: 0 auto;
+    /* margin-left: -100px; */
 }
 .nav > li {
     padding:5px 15px;

@@ -2,7 +2,6 @@
     .nav > .name-header > img {
         margin-left: -10px;
     }
-    
     .percentage , .counter{
         font-size: 2vw;
     }
@@ -44,7 +43,10 @@
     .nav > .name-header > img{
         height: 40px;
         width: auto;
-        /* margin: 1vw 0; */
+        margin: 1vw 0;
+    }
+    .nav > li {
+        padding:0px;
     }
     .text3  {
         border-right: transparent;
@@ -55,7 +57,7 @@
         border-color: transparent;
     }
     .text2  img {
-        /* margin-top: 10px; */
+        margin-top: 10px;
     }
     :root {
         --clr:transparent;
@@ -86,6 +88,9 @@
     :root {
         --w:12vw;
         --skilfnt : 1.2;
+    }
+    .nav > li {
+        padding:0px;
     }
     .percentage , .counter{
         font-size: 2.5vw;
@@ -151,13 +156,16 @@
     .links {
         display: none;
     }
+    .nav > li {
+        padding:0px;
+    }
     .header .nav {
         flex: 50%;
         justify-content: center;
         align-items: center;
     }
     .name-header {
-        /* margin: 1vw auto; */
+        margin: 1vw auto;
     }
     .bar-nav {
         list-style-type: none;
@@ -195,7 +203,6 @@
         font-size: 20px;
         white-space: pre-wrap;
         overflow:hidden;
-        padding: 0px 10px;
         z-index: 19;
     }
     .dropdown-list-res a:active{
@@ -247,9 +254,11 @@
         justify-content: center;
         align-items: center;
     }
+    .nav > li {
+        padding:0px;
+    }
     .name-header{
-        /* margin: 1vw auto; */
-        height: 11vh;
+        margin: 1vw auto;
     }
     .text1 >h4 {
         font-size: 6vw;
@@ -343,11 +352,11 @@
 }
 @media screen and (max-width:355px) {
     .nav > .name-header >img {
-        /* margin: 1vw auto; */
+        margin: 1vw auto;
         height: 15vw;
     }
     .text2  img {
-        /* margin-top: 1vw; */
+        margin-top: 1vw;
         width: 70%;
     }
     :root {
