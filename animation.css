@@ -19,6 +19,7 @@
         background-color: transparent;
         width: var(--swid);
         transform: translateX(0);
+        height: 40%;
     }
     to {
         transform: translateX(var(--sx));
@@ -52,12 +53,12 @@
     from {
         background-color: #141A1C;
         width: 100vw;
-        height: 40%;
+        height: 100%;
         transform: translateX(var(--sx));
     }
     to {
         background-color: transparent;
-        height: 40vh;
+        height: 40%;
         width: var(--swid);
         transform: translateX(0);
         overflow: hidden;
