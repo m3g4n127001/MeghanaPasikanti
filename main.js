@@ -105,10 +105,8 @@ flexFont = function () {
         len-=6
         var fs=6/len;
         var extra=window.getComputedStyle(document.documentElement).getPropertyValue('--skilfnt');
-        // var extra=r.getPropertyValue('--skilfnt');
         console.log("extra font is "+extra+" this much")
         divs[i].style.fontSize = (extra*fs)+'vw';
-        console.log("total font size is "+(extra*fs)+'px')
     }
 };
 
@@ -149,6 +147,7 @@ function dropmenu()
         ele[0].style.display="inline-block";
         ele[0].style.visibility = 'visible';
         ele[0].style.position="fixed";
+        ele[0].style.boxShadow="0px 8px 16px 0px rgba(0,0,0,0.8)";
         document.getElementsByClassName('dropdown-icon-res')[0].style.opacity=0.5;
     }
 }

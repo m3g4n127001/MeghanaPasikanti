@@ -690,25 +690,25 @@ body {
     --lvl:-70%;
 }
 .css {
-    background:  radial-gradient(circle at 100px 100px, #ff8aeb, rgb(78, 82, 114));
+    background:  radial-gradient(circle at 100px 100px, rgb(95, 202, 188), rgba(238,174,202,1));
     /* background: linear-gradient(90deg, rgb(95, 202, 188) 0%, rgba(136,136,186,1) 30%, rgb(132, 139, 101) 100%); */
     --lvl:-70%;
 }
 .js {
-    background: linear-gradient(90deg, rgb(109, 162, 179) 0%, rgb(118, 49, 121) 30%, rgb(203, 103, 214) 100%);
+    background: linear-gradient(90deg, rgb(109, 162, 179) 0%, rgb(203, 103, 214) 100%);
     --lvl:-65%;
 }
 .react {
-    background: linear-gradient(90deg, rgb(206, 194, 154) 0%, rgb(25, 112, 79) 30%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgb(206, 194, 154) 0%, rgb(42, 170, 121) 30%, rgba(0,212,255,1) 100%);
     --lvl:-60%;
 }
 .bootstrap {
-    background: linear-gradient(90deg,  rgb(160, 135, 184) 0%, rgb(92, 31, 100) 30%, rgb(89, 68, 114) 100%);
+    background: linear-gradient(90deg,  rgb(253, 198, 134) 0%, rgb(255, 155, 155) 30%, rgb(220, 199, 255) 100%);
     --lvl:-55%;
 }
-.arduino {
-    background:  radial-gradient(circle at 100px 100px, #5cabff, #000);
-    --lvl:-50%;
+.java {
+    background:  radial-gradient(circle at 100px 100px, #5cff9b, rgb(54, 51, 51));
+    --lvl:-45%;
 }
 /* contact css  */
 .contact-container {
