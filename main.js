@@ -1,3 +1,6 @@
+let vh= window.innerHeight*0.01;
+document.documentElement.style.setProperty('--vh','${vh}px');
+
 let speed=150;
 let i=0;
 let text="Welcome to my world. Have a nice day :) ";

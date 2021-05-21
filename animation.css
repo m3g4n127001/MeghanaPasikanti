@@ -3,7 +3,7 @@
     --height : 40vh;
     --sx:-25vw;
     --swid:50vw;
-    --ptop:0vh;
+    --vh : 1vh;
 }
 
 
@@ -25,8 +25,8 @@
         transition: smooth;
         background-color: #141A1C;
         height: 100vh;
+        height: calc(var(--vh, 1vh)*100);
         width: 100vw;
-        padding-top: var(--ptop);
     }
 }
 
@@ -54,6 +54,7 @@
         background-color: #141A1C;
         width: 100vw;
         height: 100vh;
+        height: calc(var(--vh, 1vh)*100);
         transform: translateX(var(--sx));
     }
     to {

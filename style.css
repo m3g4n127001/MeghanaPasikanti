@@ -8,6 +8,7 @@
     --swid:50vw;
     --ext:10%;
     --scroll : hidden;
+    --vh : 1vh;
 }
 html,body {
     position: relative;
