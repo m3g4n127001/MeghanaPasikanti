@@ -701,7 +701,7 @@ body {
     --lvl:-60%;
 }
 .bootstrap {
-    background: linear-gradient(90deg,  rgb(253, 198, 134) 0%, rgb(255, 155, 155) 30%, rgb(220, 199, 255) 100%);
+    background: linear-gradient(90deg,  rgb(255, 211, 162) 0%, rgb(255, 177, 177) 30%, rgb(220, 199, 255) 100%);
     --lvl:-55%;
 }
 .java {
