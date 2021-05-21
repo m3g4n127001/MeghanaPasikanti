@@ -258,7 +258,7 @@ body {
 .arttag{
     font-weight: 800;
     font-size: 30px;
-    color:rgb(105, 105, 105);
+    color:rgb(209, 207, 207);;
     word-wrap: keep-word;
     white-space: pre-wrap;
     margin-top: 20px;
@@ -270,9 +270,11 @@ body {
     word-wrap: keep-word;
     font-weight: 700;
     font-size: 24px;
-    color: whitesmoke;
+    /* color: whitesmoke; */
     width: 80%;
     margin: 0 auto;
+    color: rgb(209, 207, 207);
+    width: 80%;
     text-align: center;
 }
 .artinfo {
@@ -386,7 +388,14 @@ body {
     background-color: #233033;
     padding: 10px;    
 }
-
+.protext {
+    color:rgb(209, 207, 207);;
+    font-size: 2vw;
+    margin: 1vw 0;
+    padding-top: 1vw;
+    word-break: keep-all;
+    white-space: pre-wrap;
+}
 #proWrapper {
     background-color: #233033;
     height: auto;
@@ -746,7 +755,7 @@ body {
     word-break: keep-all;
     text-align: left;
     margin: 1% 5%;
-    color: rgb(182, 186, 201);
+    color: rgb(209, 207, 207);;
 }
 .contact-links-wrapper {
     width: 100%;
