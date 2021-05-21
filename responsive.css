@@ -26,9 +26,9 @@
     .artdesc, .artinfo {
         width: 80%;
     }
-    .protext {
+    /* .protext {
         font-size: 2.5vw;
-    }
+    } */
 }
 
 @media screen and (max-width:950px) and (min-width:890px) {
@@ -74,21 +74,11 @@
     .contact-links-wrapper {
         margin: 3% 5%;
     }
-    .fullName-wrapper {
-        width: 70%;
-    }
     .percentage {
         font-size: 2vw;
     }
     .skills-text > h4 {
-        font-size: 3vw;
-    }
-    .skills-text {
-        padding: 3vw 0;
-    }
-    .protext {
-        font-size: 3vw;
-        padding-top: 2vw;
+        font-size: 100%;
     }
 }
 
@@ -136,23 +126,31 @@
         font-size: 3vw;
     }
     .myname {
-        font-size: 170%;
+        font-size: 120%;
     }
-    .proCard {
-        flex: 100%;
-        padding: 0 5%;
-    }
-    .fullName-wrapper {
-        width: 50%;
-    }
-    .link-icon {
-        font-size: 125%;
+    .link-icon img{
+        width: 75%;
+        
     }
     #contact-text {
         font-weight: 500;
         font-size: 18px;
     }
+    .proCard {
+        flex: 100%;
+        padding: 0 5%;
+    }
+    .proTitle {
+        font-size: 150%;
+    }
+    .techUsed span {
+        font-size: 80%;
+    }
+    .proLink {
+        padding: 0 10px;
+    }
 }
+
 
 
 @media screen and (max-width:710px) {
@@ -235,15 +233,8 @@
     .percentage ,.counter {
         font-size: 3vw;
     }
-    .protext{
-        font-size: 3vw;
-        padding-top: 4vw;
-    }
     .skills-text > h4{
-        font-size: 2.5vw;
-    }
-    .skills-text {
-        padding: 3vw 0;
+        font-size: 100%;
     }
     #contact-text {
         font-weight: 500;
@@ -287,10 +278,7 @@
         margin:0 ;
     }
     .skills-text >h4 {
-        font-size: 4.5vw ;
-    }
-    .skills-text {
-        padding-top: 30px;
+        font-size: 100% ;
     }
     .skills-wrapper > .row > .col-md-3,.col-sm-6,.col-xs-12 {
         flex: 29%;
@@ -305,39 +293,50 @@
     .aboutWrapper .resumelink > a{
         font-size: 4vw;
     }
+    .fullName-wrapper {
+        width: 100%;
+    }
     .link-icon {
         font-size: 150%;
     }
-    .protext {
-        font-size: 4vw;
-    }
     .skill-name {
         font-size: 10vw;
-        font-weight: bold;
+        font-weight: 900;
     }
-    .proCard {
-        width: 50%;
+    .hoverContent div{
+        width: 80%;
     }
-    .proDesc  {
-        font-size: 3.5vw;
+    .hoverContent div a{
+        padding: 0 10px;
     }
     .proTitle{
-        font-size: 5vw;
+        font-size: 125%;
     }
-    .techUsed > span  {
-        font-size: 3vw;
+    .proDesc{
+        font-size: 80%;
     }
-    .proLink > a {
-        font-size: 3vw;
+    .techUsed span{
+        font-size: 70%;
     }
-    .proLink {
-        padding: 1vw;
-        border: 2px solid black;
+    .proLink a:hover {
+        z-index: 2;
+        animation: hover 0.5s forwards;
     }
-    #proWrapper {
-        margin: 0 2vw;
+    @keyframes hover {
+        from {
+            font-size: 100%;
+        }
+        to {
+            font-size: 120%;
+        }
+    }
+    .artdesc, .artinfo{
+        font-size: 75%;
+        padding: 0;
+        width: 100%;
     }
 }
+
 @media screen and (max-width:355px) {
     .nav > .name-header >img {
         margin: 1vw 2vw;
@@ -352,7 +351,7 @@
         --sx:-5vw;
     }
     .skills-text >h4 {
-        font-size: 5.5vw ;
+        font-size: 100% ;
     }
     .link-wrapper {
         margin: 2% 2%;
@@ -367,7 +366,11 @@
     #contact-text {
         font-size: 18px;
     }
-    .protext {
-        font-size: 5vw;
+    .proTitle {
+        font-size: 100%;
+    }
+    .hoverContent div a{
+        font-size: 90%;
+        padding: 2px;
     }
 }

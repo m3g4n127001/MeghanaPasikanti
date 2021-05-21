@@ -127,7 +127,7 @@ body {
     font-size: var(--fnt);
     border-right: 2px solid  var(--clr);
     animation: blink .75s step-end infinite;
-    opacity: 0.8;
+    text-align: center;
 }
 @keyframes blink {
     from,to {
@@ -180,9 +180,6 @@ body {
     
 }
 
-#four > .container {
-    background-color: #233033 ;
-}
 .swiper-container> .swiper-wrapper {
     white-space: nowrap;
     display: flex;
@@ -247,13 +244,11 @@ body {
     height: auto;
     column-gap: 1vw;
     text-align: center;
+    padding-top: 20px;
 }
 
 /* extracurriculars */
 
-#four > .slide {
-    padding-top: 1vw;
-}
 
 .arttag{
     font-weight: 800;
@@ -390,9 +385,8 @@ body {
 }
 .protext {
     color:rgb(209, 207, 207);;
-    font-size: 2vw;
-    margin: 1vw 0;
-    padding-top: 1vw;
+    font-size: 24px;
+    /* margin: 1vw 0; */
     word-break: keep-all;
     white-space: pre-wrap;
 }
@@ -464,6 +458,7 @@ body {
     margin-left: 5px;
     margin-top: 5px;
     border-radius: 5px;
+    font-size: 100%;
 
 }
 
@@ -510,17 +505,12 @@ body {
     flex-direction: column;
     justify-content:safe;
     align-items: center;
-    padding: 1vh;
     overflow-y: scroll;
-    padding-top: 2vw;
     padding-bottom: 3vw;
     margin: 0 auto;
     width: 100%;
 }
 
-#one > .container {
-    padding: 0;
-}
 #one {
     overflow-x: hidden;
 }
@@ -640,12 +630,10 @@ body {
 .skills-text > h4 {
     word-wrap: keep-word;
     white-space: pre-wrap;
-    font-size: 30px;
+    font-size: 200%;
     color: rgb(209, 207, 207);
 }
-.skills-text {
-    padding: 30px 0 2vw 0;
-}
+
 .percentage {
     width: 2vw;
     height: 1vh;
@@ -760,8 +748,9 @@ body {
 .contact-links-wrapper {
     width: 100%;
     height: 100%;
-    margin: 2% 5%;
+    margin: 3% 5%;
     padding-bottom: 7%;
+
 }
 .link-wrapper {
     border-radius: 2000px;
@@ -772,7 +761,7 @@ body {
     text-decoration: none;
 }
 .link-icon > img {
-    width: 40%;
+    width: 50%;
 }
 .link-icon:hover {
     cursor:pointer;
