@@ -23,6 +23,9 @@
         justify-content: center;
         align-items: center;
     }
+    .artdesc, .artinfo {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width:950px) and (min-width:890px) {
@@ -123,6 +126,10 @@
         flex: 100%;
         padding: 0 5%;
     }
+    .artdesc, .artinfo {
+        width: 80%;
+    }
+
 }
 
 

@@ -271,7 +271,7 @@ body {
     font-weight: 700;
     font-size: 24px;
     color: whitesmoke;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
 }
@@ -416,7 +416,6 @@ body {
     height: inherit;
 } 
 
-
 .proTitle {
     border-radius: 99px;
     font-size: 200%;
@@ -526,7 +525,8 @@ body {
 }
 
 .myname {
-    font-size: 300%;
+    display: inline;
+    font-size: 150%;
     font-weight: 700;
     color: rgb(172, 158, 83);
     word-wrap: keep-word;
@@ -759,9 +759,11 @@ body {
     float: left;
 }
 .link-icon {
-    font-size: 200%; 
     color: rgb(83, 144, 148); 
     text-decoration: none;
+}
+.link-icon > img {
+    width: 40%;
 }
 .link-icon:hover {
     cursor:pointer;
