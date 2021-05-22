@@ -12,7 +12,7 @@
         display: flex;
         justify-content: flex-start;
     }
-    
+
     #fourthCol {
         display: flex;
         justify-content: flex-start;
@@ -51,7 +51,7 @@
     .text3  {
         /* border-right: transparent; */
         /* margin: 10px 20px; */
-        
+
     }
     .text3 > #intro-text {
         /* border-color: transparent; */
@@ -74,6 +74,9 @@
     }
     .percentage ,.counter {
         font-size: 2vw;
+    }
+    .proTitle {
+        margin: auto 5%;
     }
 }
 
@@ -114,12 +117,12 @@
     }
     .aboutDesc {
         font-weight: 500;
-        font-size: 18px;    
+        font-size: 18px;
     }
     .aboutWrapper .resumelink {
         padding: 6px 8px;
         font-weight: 500;
-        font-size: 18px;  
+        font-size: 18px;
     }
     .aboutWrapper .resumelink > a{
         font-size: 3vw;
@@ -129,7 +132,7 @@
     }
     .link-icon img{
         width: 75%;
-        
+
     }
     #contact-text {
         font-weight: 500;
@@ -141,6 +144,8 @@
     }
     .proTitle {
         font-size: 150%;
+        /* padding: auto 5%; */
+        margin: auto 5%;
     }
     .techUsed span {
         font-size: 80%;
@@ -150,6 +155,9 @@
     }
     .text2 > img {
         padding-left: 20px;
+    }
+    #proWrapper > .proCard > .cardWrapper  {
+        background: linear-gradient(360deg, rgb(53, 84, 128) 0%, rgb(96, 126, 138) 100%);
     }
 }
 
@@ -394,12 +402,12 @@
     .hoverContent div a{
         font-size: 90%;
         padding: 2px;
-        
+
     }
 }
 
 
-/** 
+/**
  * iPad with portrait orientation.
  */
  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
@@ -407,8 +415,8 @@
         --height:1024px;
     }
   }
-  
-  /** 
+
+  /**
    * iPad with landscape orientation.
    */
   @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
@@ -416,7 +424,7 @@
       --height: 768px;
     }
   }
-  
+
   /**
    * iPhone 5
    * You can also target devices with aspect ratio.
