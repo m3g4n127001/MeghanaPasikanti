@@ -75,6 +75,9 @@
     .percentage ,.counter {
         font-size: 2vw;
     }
+    .proTitle {
+        margin: auto 5%;
+    }
 }
 
 @media screen and (max-width:765px) {
@@ -141,6 +144,7 @@
     }
     .proTitle {
         font-size: 150%;
+        margin : auto 5%;
     }
     .techUsed span {
         font-size: 80%;
