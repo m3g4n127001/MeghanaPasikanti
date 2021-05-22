@@ -233,6 +233,8 @@
         --sx:-15vw;
         --w:13vw;
         --skilfnt : 1.4;
+        /* --height : 100vh; */
+        --ptop : 10vh;
     }
     /* .body {
         padding-top: 10vw;
@@ -274,7 +276,7 @@
         --sx:-10vw;
         --w:16vw;
         --skilfnt:1.8;
-        --height : 85vh;
+        /* --height : 85vh; */
     }
     #contact-text {
         font-size: 25px;
@@ -424,13 +426,11 @@
 
   @media screen and (device-width:450px) and (device-height:900px) and (orientation:portrait){
       :root {
-          --height : 80vh;
-          --dhei : 80vh;
+          --ptop:15vh;
       }
   }
   @media screen and(device-width:450px) and (device-height : 650px) {
       :root {
-            --height : 85vh;
-            --dhei : 85vh;
+            --ptop : 10vh;
       }
   }

@@ -1,9 +1,10 @@
 :root{
     --top : 0;
-    --height : 100vh;
+    --height:100vh;
     --sx:-25vw;
     --swid:50vw;
     --dhei : 100vh;
+    --ptop: 0vh;
 }
 
 
@@ -18,14 +19,17 @@
     from {
         background-color: transparent;
         width: var(--swid);
+        height: 40vh;
         transform: translateX(0);
     }
     to {
         transform: translateX(var(--sx));
         transition: smooth;
         background-color: #141A1C;
-        height: var(--height);
+        height: 100vh;
+        /* height: var(--height); */
         width: 100vw;
+        padding-top: var(--ptop);
     }
 }
 
@@ -52,7 +56,8 @@
     from {
         background-color: #141A1C;
         width: 100vw;
-        height: var(--dhei) ;
+        height: 100vh;
+        /* height: var(--dhei) ; */
         transform: translateX(var(--sx));
     }
     to {
