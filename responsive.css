@@ -148,6 +148,9 @@
     .proLink {
         padding: 0 10px;
     }
+    .text2 > img {
+        padding-left: 20px;
+    }
 }
 
 
