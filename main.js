@@ -19,6 +19,8 @@ function myFunction(num)
     console.log(window.getComputedStyle(document.documentElement).getPropertyValue('--w'));
     let ele = document.getElementsByClassName("swiper-slide-active");
     let elep=document.getElementsByClassName("swiper-slide-prev");
+    r.style.setProperty('--height',Math.round(window.innerHeight-56)+'px')
+    console.log(r. style.getPropertyValue('--height'))
     if(expanded)
     {
         expanded = false;
