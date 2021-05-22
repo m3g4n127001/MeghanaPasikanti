@@ -12,6 +12,15 @@ function typeWriter()
         setTimeout(typeWriter,speed);
     }
 }
+
+// const appheight = () => {
+//     const doc=document.documentElement;
+//     doc.style.setProperty('--app-height','${window.innerHeight/10}rem')
+//     console.log(doc.style.getPropertyValue('--app-height'))
+// }
+// window.addEventListener('resize',appheight)
+// appheight();
+
 let r = document.querySelector(':root');
 let expanded = false;
 function myFunction(num)
