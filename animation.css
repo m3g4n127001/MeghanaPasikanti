@@ -5,6 +5,26 @@
     --swid:50vw;
 }
 
+.mdl-layout {
+    overflow: visible;
+}
+.mdl-layout__drawer {
+    position: fixed;
+}
+.mdl-layout__content {
+    display: block;
+    overflow: visible;
+    margin-top: 64px;
+}
+.is-small-screen .mdl-layout__content {
+    margin-top: 56px;
+}
+.mdl-layout__header {
+    position: fixed;
+}
+.mdl-layout__obfuscator {
+    position: fixed;
+}
 
 .upani{
     animation-name : moveup ;
@@ -23,7 +43,7 @@
         transform: translateX(var(--sx));
         transition: smooth;
         background-color: #141A1C;
-        height: 100vmin;
+        height: 100vh;
         width: 100vw;
     }
 }
@@ -51,8 +71,8 @@
     from {
         background-color: #141A1C;
         width: 100vw;
+        height: 100vh;
         transform: translateX(var(--sx));
-        height: 100vmin;
     }
     to {
         background-color: transparent;
