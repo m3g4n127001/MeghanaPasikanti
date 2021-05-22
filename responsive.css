@@ -155,6 +155,9 @@
     .text2 > img {
         padding-left: 20px;
     }
+    #proWrapper > .proCard > .cardWrapper  {
+        background: linear-gradient(360deg, rgb(53, 84, 128) 0%, rgb(96, 126, 138) 100%);
+    }
 }
 
 
