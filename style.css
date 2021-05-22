@@ -41,7 +41,14 @@ body {
 .container-fluid ::-webkit-scrollbar{
     display: none;
 }
-
+.container-fluid {
+    @supports (-webkit-apperance:none){
+        .os-android & {
+            min-height: calc(100vh-56px);
+            --height : calc(100vh-56px);
+        }
+    }
+}
 /* navigation bar css */ /* header*/
 .header {
     top: 0;
