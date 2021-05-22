@@ -273,6 +273,7 @@
         --sx:-10vw;
         --w:16vw;
         --skilfnt:1.8;
+        --height : 85vh;
     }
     #contact-text {
         font-size: 25px;
@@ -387,5 +388,48 @@
     .hoverContent div a{
         font-size: 90%;
         padding: 2px;
+        
     }
 }
+
+
+/** 
+ * iPad with portrait orientation.
+ */
+ @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+    :root {
+        --height:1024px;
+    }
+  }
+  
+  /** 
+   * iPad with landscape orientation.
+   */
+  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+    .root {
+      --height: 768px;
+    }
+  }
+  
+  /**
+   * iPhone 5
+   * You can also target devices with aspect ratio.
+   */
+  @media screen and (device-aspect-ratio: 40/71) {
+    .root {
+      --height: 500px;
+    }
+  }
+
+  @media screen and (device-width:450px) and (device-height:900px) and (orientation:portrait){
+      :root {
+          --height : 80vh;
+          --dhei : 80vh;
+      }
+  }
+  @media screen and(device-width:450px) and (device-height : 650px) {
+      :root {
+            --height : 85vh;
+            --dhei : 85vh;
+      }
+  }

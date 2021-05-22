@@ -13,14 +13,6 @@ function typeWriter()
     }
 }
 
-// const appheight = () => {
-//     const doc=document.documentElement;
-//     doc.style.setProperty('--app-height','${window.innerHeight/10}rem')
-//     console.log(doc.style.getPropertyValue('--app-height'))
-// }
-// window.addEventListener('resize',appheight)
-// appheight();
-
 let r = document.querySelector(':root');
 let expanded = false;
 function myFunction(num)
@@ -30,6 +22,7 @@ function myFunction(num)
     let elep=document.getElementsByClassName("swiper-slide-prev");
     r.style.setProperty('--height',Math.round(window.innerHeight-56)+'px')
     console.log(r. style.getPropertyValue('--height'))
+
     if(expanded)
     {
         expanded = false;
