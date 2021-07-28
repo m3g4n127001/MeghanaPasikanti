@@ -490,7 +490,7 @@ body {
     font-weight: 600;
    
 }
-.proLink a:hover {
+/* .proLink a:hover {
     z-index: 2;
     animation: hover 0.5s forwards;
 }
@@ -501,7 +501,7 @@ body {
     to {
         font-size: 30px;
     }
-}
+} */
 
 
 /* about */
@@ -575,7 +575,7 @@ body {
     flex-shrink: 1;
 }
 
-.aboutWrapper > div > a:hover {
+/* .aboutWrapper > div > a:hover {
     animation: expand 1s forwards;
 }
 
@@ -586,7 +586,7 @@ body {
     to {
         font-size: 30px;
     }
-}
+} */
 /* skills page css */
 
 #two > .container {
